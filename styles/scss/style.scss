@@ -127,43 +127,49 @@ $bold: bold;
 }
 
 .scroll-menu {
+  display: none;
   z-index: 1000;
-  cursor: pointer;
   position: fixed;
   top: 30%;
   left: 5%;
-  &__button{
+  &.vision {
     display: block;
+  }
+  &__button{
+    display: flex;
     margin-top: 20px;
     border: 1px solid white;
     border-radius: 50%;
     opacity: 0.3;
-    //background-color: indianred;
     height: 14px;
     width: 14px;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s linear;
+    &.active {
+      opacity: 1;
+      .scroll-menu__point {
+        opacity: 1;
+      }
+    }
   }
   &__point {
     display: block;
     text-decoration: none;
-    color: white;
     padding: 5px;
-    //background-color: white;
-    //border: 1px solid white;
-    //border-radius: 50%;
-    //height: 10px;
-    //width: 10px;
-    //opacity: 1;
-  }
-  &__active {
-    display: block;
-    margin-top: 20px;
-    border: 1px solid white;
+    background-color: white;
+    opacity: 0;
     border-radius: 50%;
-    height: 14px;
-    width: 14px;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
   }
+
 }
 
 section  {
   color: white;
+ text-align: center;
 }

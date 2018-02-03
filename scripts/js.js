@@ -2,16 +2,15 @@ $(document).ready(function () {
   $('#fullpage').fullpage(
     {
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
-      menu: '#scrollMenu'
-      // lockAnchors: false,
-      // slidesNavigation: true,
-      // navigation: true,
-      // navigationPosition: 'left',
-      // showActiveTooltip: true,
-      // menu: '#scroller-menu',
-      // anchors:['slide1', 'slide2', 'slide3', 'slide4'],
-      // navigationTooltips: ['firstSlide', 'secondSlide'],
-      // slidesNavPosition: 'bottom'
+      menu: '#scrollMenu',
+      onLeave: function(index, nextIndex){
+        var scrollMenuElement = $('.scroll-menu');
+        if(nextIndex !== 1) {
+          scrollMenuElement.addClass( 'vision' )
+        } else {
+          scrollMenuElement.removeClass( 'vision' )
+        }
+      }
     }
   );
 });
