@@ -2,6 +2,10 @@
 
 $bold: bold;
 
+body {
+  font-family: sans-serif;
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -181,14 +185,11 @@ section  {
   margin: auto;
   max-width: 1100px;
   height: 600px;
-  //justify-content: center;
-  //align-items: center;
   &__pictures {
     display: block;
     position: relative;
     width: 50%;
     height: 100%;
-    //background-color: greenyellow;
   }
   &__phone-left {
     display: inline-block;
@@ -226,8 +227,28 @@ section  {
     left: 75%;
   }
   &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
     height: 100%;
-    background-color: darkslateblue;
+    text-align: left;
+    color: white;
+    padding-left: 30px;
+    line-height: 1.5;
+  }
+  &__head {
+    font-size: 44px;
+    margin-bottom: 27px;
+  }
+  &__paragraph {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  &__shops {
+    margin-top: 40px;
+  }
+  &__shop {
+    margin-right: 25px;
   }
 }
