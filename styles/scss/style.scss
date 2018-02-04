@@ -127,13 +127,15 @@ $bold: bold;
 }
 
 .scroll-menu {
-  display: none;
+  display: block;
   z-index: 1000;
   position: fixed;
   top: 30%;
   left: 5%;
+  opacity: 0;
+  transition: opacity 0.5s linear;
   &.vision {
-    display: block;
+    opacity: 1;
   }
   &__button{
     display: flex;
@@ -172,4 +174,59 @@ $bold: bold;
 section  {
   color: white;
  text-align: center;
+}
+
+.home-page {
+  display: flex;
+  margin: auto;
+  max-width: 1100px;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+  &__pictures {
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    //background-color: greenyellow;
+  }
+  &__phone-left {
+    display: inline-block;
+    position: absolute;
+    width: 240px;
+    top: 12.5%;
+    left: 0;
+    z-index: 100;
+  }
+  &__phone-center {
+    display: inline-block;
+    position: absolute;
+    width: 250px;
+    top: 10%;
+    left: 33%;
+    z-index: 200;
+    transition: 0.1s;
+    &:hover {
+      width: 255px;
+      top: 9.5%;
+      left: 32.5%;
+      z-index: 500;
+      //.home-page__watch-right {
+      //  left: 72%;
+      //}
+    }
+  }
+  &__watch-right {
+    display: inline-block;
+    position: absolute;
+    width: 205px;
+    top: 50%;
+    left: 66%;
+    z-index: 300;
+  }
+  &__text {
+    width: 50%;
+    height: 100%;
+    background-color: darkslateblue;
+  }
 }
