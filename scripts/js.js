@@ -13,4 +13,11 @@ $(document).ready(function () {
       }
     }
   );
+  $('.home-page__phone-center').hover(function(e) {
+    $(this).addClass('home-page__phone-center--hovered');
+    $('.home-page__watch-right').addClass('home-page__watch-right--shifted');
+  }, function(e) {
+    $(this).removeClass('home-page__phone-center--hovered');
+    $('.home-page__watch-right').removeClass('home-page__watch-right--shifted');
+  })
 });
