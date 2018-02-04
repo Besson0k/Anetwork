@@ -19,5 +19,16 @@ $(document).ready(function () {
   }, function(e) {
     $(this).removeClass('home-page__phone-center--hovered');
     $('.home-page__watch-right').removeClass('home-page__watch-right--shifted');
+  }),
+  $('.home-page__phone-center').click(function () {
+    $('.home-page__phone-left').addClass('home-page__phone-left--shifted');
+    $('.home-page__watch-right').addClass('home-page__watch-right--down');
+    $('.home-page__text').addClass('home-page__text--hidden');
+  });
+  $('.header__home').click(function () {
+    $('.home-page__phone-left').removeClass('home-page__phone-left--shifted');
+    $('.home-page__watch-right').removeClass('home-page__watch-right--down');
+    $('.home-page__text').removeClass('home-page__text--hidden');
+    $.fn.fullpage.moveTo(1);
   })
 });

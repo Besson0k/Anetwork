@@ -202,6 +202,11 @@ section  {
     top: 12.5%;
     left: 0;
     z-index: 100;
+    transition: all 0.2s linear;
+  }
+  &__phone-left--shifted {
+    left: -500px;
+    opacity: 0;
   }
   &__phone-center {
     display: inline-block;
@@ -239,6 +244,11 @@ section  {
   &__watch-right--shifted {
     left: 75%;
   }
+  &__watch-right--down {
+    top: 520px;
+    opacity: 0;
+    z-index: -100;
+  }
   &__text {
     display: flex;
     flex-direction: column;
@@ -249,6 +259,10 @@ section  {
     color: white;
     padding-left: 30px;
     line-height: 1.5;
+    transition: all 0.25s linear;
+  }
+  &__text--hidden {
+    opacity: 0;
   }
   &__head {
     font-size: 44px;
