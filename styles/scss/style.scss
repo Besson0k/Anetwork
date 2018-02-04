@@ -228,6 +228,13 @@ section  {
     left: 32.5%;
     z-index: 350;
   }
+  &__phone-center--shifted {
+    left: 75%;
+    top: 7%;
+    width: 255px;
+    height: 515px;
+    z-index: -100;
+  }
   &__watch-right {
     display: inline-block;
     background-image: url("/Files/home_page/watch_right.png");
