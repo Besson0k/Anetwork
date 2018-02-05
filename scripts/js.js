@@ -38,5 +38,10 @@ $(document).ready(function () {
     $('.home-page__right-text').removeClass('home-page__right-text--shifted');
     $('.home-page__active-phone').removeClass('home-page__active-phone--shifted');
     $.fn.fullpage.moveTo(1);
-  })
+  }),
+    $('.home-page__menu-elements-hover').hover(function(e) {
+      $(this).addClass('home-page__menu-elements--colors');
+    }, function(e) {
+      $(this).removeClass('home-page__menu-elements--colors');
+    })
 });
