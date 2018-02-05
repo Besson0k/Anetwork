@@ -211,17 +211,20 @@ section  {
   &__phone-center {
     display: inline-block;
     position: absolute;
-    background-image: url("/Files/home_page/phone_center.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 250px;
-    height: 505px;
     top: 10.5%;
     left: 33%;
     z-index: 200;
     transition: all 0.2s linear;
   }
-  &__phone-center--hovered {
+  &__active-phone {
+    background-image: url("/Files/home_page/phone_center.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 505px;
+    cursor: pointer;
+  }
+  &__active-phone--hovered {
     width: 255px;
     height: 515px;
     top: 9.5%;
@@ -255,6 +258,104 @@ section  {
     top: 520px;
     opacity: 0;
     z-index: -100;
+  }
+  &__left-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+    height: 515px;
+    right: 300px;
+    top: 0;
+    text-align: right;
+  }
+  &__left-text--elements {
+    margin-right: 80px;
+    position: relative;
+  }
+  &__menu--elements {
+    display: block;
+    height: 33%;
+  }
+  &__menu--name {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  &__right-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 370px;
+    height: 515px;
+    text-align: left;
+    left: 295px;
+    top: 0;
+  }
+  &__right-text--elements {
+    margin-left: 80px;
+    position: relative;
+  }
+  &__rub {
+    width: 35px;
+    height: 35px;
+    background-image: url("/Files/icons/rubl.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 1%;
+    left: 335px;
+  }
+  &__sup {
+    width: 35px;
+    height: 35px;
+    background-image: url("/Files/icons/sup.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 34%;
+    left: 335px;
+  }
+  &__profile {
+    width: 35px;
+    height: 35px;
+    background-image: url("/Files/icons/profile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 67%;
+    left: 335px;
+  }
+  &__info {
+    width: 17px;
+    height: 35px;
+    background-image: url("/Files/icons/info.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 1%;
+    left: 9px;
+  }
+  &__bell {
+    width: 33px;
+    height: 35px;
+    background-image: url("/Files/icons/bell.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 34%;
+    left: 1px;
+  }
+  &__call {
+    width: 35px;
+    height: 35px;
+    background-image: url("/Files/icons/call.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 67%;
+    left: 0;
   }
   &__text {
     display: flex;

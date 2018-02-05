@@ -13,18 +13,18 @@ $(document).ready(function () {
       }
     }
   );
-  $('.home-page__phone-center').hover(function(e) {
-    $(this).addClass('home-page__phone-center--hovered');
+  $('.home-page__active-phone').hover(function(e) {
+    $(this).addClass('home-page__active-phone--hovered');
     $('.home-page__watch-right').addClass('home-page__watch-right--shifted');
   }, function(e) {
-    $(this).removeClass('home-page__phone-center--hovered');
+    $(this).removeClass('home-page__active-phone--hovered');
     $('.home-page__watch-right').removeClass('home-page__watch-right--shifted');
   }),
-  $('.home-page__phone-center').click(function () {
+  $('.home-page__active-phone').click(function () {
     $('.home-page__phone-left').addClass('home-page__phone-left--shifted');
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__text').addClass('home-page__text--hidden');
-    $(this).addClass('home-page__phone-center--shifted');
+    $('.home-page__phone-center').addClass('home-page__phone-center--shifted');
   });
   $('.header__home').click(function () {
     $('.home-page__phone-left').removeClass('home-page__phone-left--shifted');
