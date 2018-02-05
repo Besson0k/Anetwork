@@ -223,12 +223,10 @@ section  {
     width: 250px;
     height: 505px;
     cursor: pointer;
+    transition: all 0.2s linear;
   }
   &__active-phone--hovered {
-    width: 255px;
-    height: 515px;
-    top: 9.5%;
-    left: 32.5%;
+    transform: scale(1.05);
     z-index: 350;
   }
   &__phone-center--shifted {
@@ -236,7 +234,10 @@ section  {
     top: 7%;
     width: 255px;
     height: 515px;
-    z-index: -100;
+  }
+  &__active-phone--shifted {
+    transform: none;
+    cursor: default;
   }
   &__watch-right {
     display: inline-block;
@@ -249,10 +250,11 @@ section  {
     top: 50%;
     left: 66%;
     z-index: 300;
-    transition: all 0.1s linear;
+    transition: all 0.15s linear;
   }
   &__watch-right--shifted {
     left: 75%;
+    z-index: 1000;
   }
   &__watch-right--down {
     top: 520px;
@@ -266,19 +268,26 @@ section  {
     justify-content: center;
     width: 370px;
     height: 515px;
-    right: 300px;
+    right: 900px;
+    transition: all 0.3s linear;
     top: 0;
     text-align: right;
+    opacity: 0;
   }
-  &__left-text--elements {
+  &__left-text--shifted {
+    opacity: 1;
+    right: 300px;
+    z-index: 1000;
+  }
+  &__left-text-elements {
     margin-right: 80px;
     position: relative;
   }
-  &__menu--elements {
+  &__menu-elements {
     display: block;
     height: 33%;
   }
-  &__menu--name {
+  &__menu-name {
     font-size: 32px;
     margin-bottom: 20px;
   }
@@ -290,10 +299,17 @@ section  {
     width: 370px;
     height: 515px;
     text-align: left;
-    left: 295px;
+    transition: all 0.3s linear;
+    left: 900px;
     top: 0;
+    opacity: 0;
   }
-  &__right-text--elements {
+  &__right-text--shifted {
+    opacity: 1;
+    left: 295px;
+    z-index: 1000;
+  }
+  &__right-text-elements {
     margin-left: 80px;
     position: relative;
   }
@@ -367,10 +383,12 @@ section  {
     color: white;
     padding-left: 30px;
     line-height: 1.5;
-    transition: all 0.25s linear;
+    transition: all 0.15s linear;
+    z-index: 900;
   }
   &__text--hidden {
     opacity: 0;
+    z-index: -100;
   }
   &__head {
     font-size: 44px;
@@ -387,3 +405,4 @@ section  {
     margin-right: 25px;
   }
 }
+

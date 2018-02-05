@@ -25,12 +25,18 @@ $(document).ready(function () {
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__text').addClass('home-page__text--hidden');
     $('.home-page__phone-center').addClass('home-page__phone-center--shifted');
+    $('.home-page__left-text').addClass('home-page__left-text--shifted');
+    $('.home-page__right-text').addClass('home-page__right-text--shifted');
+    $(this).addClass('home-page__active-phone--shifted');
   });
   $('.header__home').click(function () {
     $('.home-page__phone-left').removeClass('home-page__phone-left--shifted');
     $('.home-page__watch-right').removeClass('home-page__watch-right--down');
     $('.home-page__text').removeClass('home-page__text--hidden');
     $('.home-page__phone-center').removeClass('home-page__phone-center--shifted');
+    $('.home-page__left-text').removeClass('home-page__left-text--shifted');
+    $('.home-page__right-text').removeClass('home-page__right-text--shifted');
+    $('.home-page__active-phone').removeClass('home-page__active-phone--shifted');
     $.fn.fullpage.moveTo(1);
   })
 });
