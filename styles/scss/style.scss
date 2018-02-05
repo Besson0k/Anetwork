@@ -313,11 +313,41 @@ section {
     margin-left: 80px;
     position: relative;
   }
-  &__menu-elements-hover {
+  &__menu-elements-balance {
     cursor: pointer;
+    &:hover {
+      color: #5d5df1;
+    }
   }
-  &__menu-elements--colors {
-    color: #5d5df1;
+  &__menu-elements-support {
+    cursor: pointer;
+    &:hover {
+      color: #5d5df1;
+    }
+  }
+  &__menu-elements-profile {
+    cursor: pointer;
+    &:hover {
+      color: #5d5df1;
+    }
+  }
+  &__menu-elements-info {
+    cursor: pointer;
+    &:hover {
+      color: #5d5df1;
+    }
+  }
+  &__menu-elements-bell {
+    cursor: pointer;
+    &:hover {
+      color: #5d5df1;
+    }
+  }
+  &__menu-elements-call {
+    cursor: pointer;
+    &:hover {
+      color: #5d5df1;
+    }
   }
   &__rub {
     width: 35px;
