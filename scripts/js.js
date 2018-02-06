@@ -15,6 +15,11 @@ $(document).ready(function () {
         } else {
           $('.ip-telephony__phone-front').removeClass('ip-telephony__phone-front--shifted');
         }
+        if (nextIndex === 3) {
+          $('.balance__phone-front').addClass('balance__phone-front--shifted');
+        } else {
+          $('.balance__phone-front').removeClass('balance__phone-front--shifted');
+        }
       }
     }
   );
