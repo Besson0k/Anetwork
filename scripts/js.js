@@ -10,6 +10,11 @@ $(document).ready(function () {
         } else {
           scrollMenuElement.removeClass('vision')
         }
+        if (nextIndex === 2) {
+          $('.ip-telephony__phone-front').addClass('ip-telephony__phone-front--shifted');
+        } else {
+          $('.ip-telephony__phone-front').removeClass('ip-telephony__phone-front--shifted');
+        }
       }
     }
   );
