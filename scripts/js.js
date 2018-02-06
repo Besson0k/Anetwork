@@ -30,6 +30,11 @@ $(document).ready(function () {
         } else {
           $('.profile__phone-front').removeClass('profile__phone-front--shifted');
         }
+        if (nextIndex === 6) {
+          $('.personal-account__phone-front').addClass('personal-account__phone-front--shifted');
+        } else {
+          $('.personal-account__phone-front').removeClass('personal-account__phone-front--shifted');
+        }
       }
     }
   );
