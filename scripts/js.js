@@ -20,6 +20,11 @@ $(document).ready(function () {
         } else {
           $('.balance__phone-front').removeClass('balance__phone-front--shifted');
         }
+        if (nextIndex === 4) {
+          $('.notification__phone-front').addClass('notification__phone-front--shifted');
+        } else {
+          $('.notification__phone-front').removeClass('notification__phone-front--shifted');
+        }
       }
     }
   );

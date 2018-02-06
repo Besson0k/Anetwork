@@ -466,7 +466,7 @@ section {
     font-size: 20px;
     line-height: 1.5;
     text-align: right;
-    height: 200px;
+    height: 230px;
   }
   &__pictures {
     display: flex;
@@ -483,7 +483,6 @@ section {
     height: 505px;
     background-color: indianred;
     z-index: 100;
-    height: 505px;
     left: 200px;
     transition: all 0.6s linear;
   }
@@ -523,7 +522,7 @@ section {
     font-size: 20px;
     line-height: 1.5;
     text-align: left;
-    height: 200px;
+    height: 230px;
   }
   &__pictures {
     display: flex;
@@ -540,8 +539,7 @@ section {
     height: 505px;
     background-color: indianred;
     z-index: 100;
-    height: 505px;
-    left: 0px;
+    left: 0;
     transition: all 0.6s linear;
   }
   &__phone-front--shifted {
@@ -553,8 +551,79 @@ section {
     position: absolute;
     width: 250px;
     height: 505px;
-    left: 0px;
+    left: 0;
     top: 57px;
     background-color: forestgreen;
+  }
+}
+.notification {
+  display: flex;
+  margin: auto;
+  max-width: 1000px;
+  height: 620px;
+  &__text {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    padding-right: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__text-name {
+    font-size: 44px;
+  }
+  &__text-content {
+    margin-top: 57px;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: right;
+    height: 230px;
+  }
+  &__pictures {
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    padding-left: 20px;
+    align-items: center;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    width: 310px;
+    height: 540px;
+    z-index: 100;
+    left: 200px;
+    background-image: url("/Files/phones/notification-phone-front.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.6s linear;
+  }
+  &__phone-front--shifted {
+    top: -18px;
+    left: 20px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 505px;
+    left: 200px;
+    top: 57px;
+    background-image: url("/Files/phones/notification-phone-back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__watch {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 280px;
+    bottom: 20px;
+    left: -461px;
+    background-image: url("/Files/phones/notification-watch.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
