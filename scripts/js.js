@@ -35,6 +35,11 @@ $(document).ready(function () {
         } else {
           $('.personal-account__phone-front').removeClass('personal-account__phone-front--shifted');
         }
+        if (nextIndex === 7) {
+          $('.information__phone-front').addClass('information__phone-front--shifted');
+        } else {
+          $('.information__phone-front').removeClass('information__phone-front--shifted');
+        }
       }
     }
   );
