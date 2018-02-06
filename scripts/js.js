@@ -25,6 +25,11 @@ $(document).ready(function () {
         } else {
           $('.notification__phone-front').removeClass('notification__phone-front--shifted');
         }
+        if (nextIndex === 5) {
+          $('.profile__phone-front').addClass('profile__phone-front--shifted');
+        } else {
+          $('.profile__phone-front').removeClass('profile__phone-front--shifted');
+        }
       }
     }
   );
