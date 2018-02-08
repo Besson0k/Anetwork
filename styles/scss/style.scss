@@ -807,3 +807,39 @@ section {
     background-color: forestgreen;
   }
 }
+
+.get-ap {
+  display: flex;
+  margin: auto;
+  max-width: 533px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 620px;
+  &__name {
+    display: block;
+    font-size: 44px;
+  }
+  &__content {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 15px;
+  }
+  &__logo {
+    display: block;
+    background-image: url("/Files/logo_anetwork.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 256px;
+    width: 256px;
+    margin-top: 60px;
+  }
+  &__shops {
+    margin-top: 60px;
+  }
+  &__shop {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
