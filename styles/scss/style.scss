@@ -54,7 +54,7 @@ body {
     cursor: pointer;
     transition: color 0.1s linear;
     &:hover {
-      color: $color-hover;
+      transform: scale(1.1);
     }
   }
   &__button {
@@ -68,10 +68,10 @@ body {
     text-decoration: none;
     padding: 10px 21px 13px 21px;
     line-height: 1;
-    transition: color 0.1s linear, border-color 0.1s linear;;
+    transition: all 0.1s linear;;
     &:hover {
-      color: $color-hover;
-      border-color: $color-hover;
+      background-color: white ;
+      color: #251e1a;
     }
   }
 }
@@ -197,7 +197,12 @@ section {
     top: 12.5%;
     left: 0;
     z-index: 100;
+    cursor: pointer;
     transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.05);
+      top: 10%;
+    }
   }
   &__phone-left--shifted {
     left: -500px;
@@ -208,7 +213,7 @@ section {
     position: absolute;
     top: 10.5%;
     left: 33%;
-    z-index: 200;
+    z-index: 300;
     transition: all 0.2s linear;
   }
   &__active-phone {
@@ -219,10 +224,11 @@ section {
     height: 505px;
     cursor: pointer;
     transition: all 0.2s linear;
+    z-index: 500;
   }
   &__active-phone--hovered {
     transform: scale(1.05);
-    z-index: 350;
+    z-index: 500;
   }
   &__phone-center--shifted {
     left: 75%;
@@ -234,6 +240,7 @@ section {
     transform: none;
     cursor: default;
   }
+
   &__watch-right {
     display: inline-block;
     background-image: url("/Files/home_page/watch_right.png");
@@ -245,11 +252,11 @@ section {
     top: 50%;
     left: 66%;
     z-index: 300;
+    cursor: pointer;
     transition: all 0.15s linear;
-  }
-  &__watch-right--shifted {
-    left: 75%;
-    z-index: 1000;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   &__watch-right--down {
     top: 520px;
@@ -263,14 +270,12 @@ section {
     justify-content: center;
     width: 370px;
     height: 515px;
-    right: 900px;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
     top: 0;
     text-align: right;
-    opacity: 0;
+    z-index: -100;
   }
   &__left-text--shifted {
-    opacity: 1;
     right: 300px;
     z-index: 1000;
   }
@@ -295,10 +300,9 @@ section {
     width: 370px;
     height: 515px;
     text-align: left;
-    transition: all 0.3s linear;
-    left: 900px;
+    transition: all 0.2s linear;
     top: 0;
-    opacity: 0;
+    z-index: -100;
   }
   &__right-text--shifted {
     opacity: 1;
@@ -313,6 +317,8 @@ section {
   &__menu-elements-balance {
     cursor: pointer;
     transition: all 0.2s linear;
+    transform: translateX(-1000px);
+    opacity: 0;
     &:hover {
       color: $color-hover;
       .home-page__rub {
@@ -320,9 +326,15 @@ section {
       }
     }
   }
+  &__menu-elements-balance--shifted {
+    transform: translateX(0px);
+    opacity: 1;
+  }
   &__menu-elements-support {
     cursor: pointer;
     transition: all 0.2s linear;
+    transform: translateX(-1000px);
+    opacity: 0;
     &:hover {
       color: $color-hover;
       .home-page__sup {
@@ -330,9 +342,17 @@ section {
       }
     }
   }
+  &__menu-elements-support--shifted {
+    transform: translateX(0px);
+    opacity: 1;
+  }
   &__menu-elements-profile {
+    position: relative;
     cursor: pointer;
     transition: all 0.2s linear;
+    transform: translateX(-1000px);
+
+    opacity: 0;
     &:hover {
       color: $color-hover;
       .home-page__profile {
@@ -340,9 +360,15 @@ section {
       }
     }
   }
+  &__menu-elements-profile--shifted {
+    transform: translateX(0px);
+    opacity: 1;
+  }
   &__menu-elements-info {
     cursor: pointer;
     transition: all 0.2s linear;
+    transform: translateX(1000px);
+    opacity: 0;
     &:hover {
       color: $color-hover;
       .home-page__info {
@@ -350,9 +376,15 @@ section {
       }
     }
   }
+  &__menu-elements-info--shifted {
+    transform: translateX(0px);
+    opacity: 1;
+  }
   &__menu-elements-bell {
     cursor: pointer;
     transition: all 0.2s linear;
+    transform: translateX(1000px);
+    opacity: 0;
     &:hover {
       color: $color-hover;
       .home-page__bell {
@@ -360,15 +392,25 @@ section {
       }
     }
   }
+  &__menu-elements-bell--shifted {
+    transform: translateX(0px);
+    opacity: 1;
+  }
   &__menu-elements-call {
     cursor: pointer;
     transition: all 0.2s linear;
+    transform: translateX(1000px);
+    opacity: 0;
     &:hover {
       color: $color-hover;
       .home-page__call {
         fill: $color-hover;
       }
     }
+  }
+  &__menu-elements-call--shifted {
+    transform: translateX(0px);
+    opacity: 1;
   }
   &__rub {
     display: block;
@@ -389,7 +431,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 34%;
+    top: 1%;
     left: 335px;
   }
   &__profile {
@@ -400,7 +442,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 67%;
+    top: 1%;
     left: 335px;
   }
   &__info {
@@ -422,7 +464,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 34%;
+    top: 1%;
     left: 1px;
   }
   &__call {
@@ -433,7 +475,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 67%;
+    top: 1%;
     left: 0;
   }
   &__text {
@@ -466,6 +508,7 @@ section {
   }
   &__shop {
     margin-right: 25px;
+    text-decoration: none;
   }
 }
 
@@ -866,5 +909,6 @@ section {
   &__shop {
     margin-right: 10px;
     margin-left: 10px;
+    text-decoration: none;
   }
 }
