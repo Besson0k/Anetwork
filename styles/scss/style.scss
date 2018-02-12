@@ -42,7 +42,7 @@ body {
   &__container {
     display: flex;
     margin: auto;
-    max-width: 1100px;
+    max-width: 68.5%;
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -109,7 +109,7 @@ body {
   &__container {
     display: flex;
     margin: auto;
-    max-width: 1100px;
+    max-width: 68.5%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -177,81 +177,79 @@ section {
 
 .home-page {
   display: flex;
+  position: relative;
   margin: auto;
-  max-width: 1100px;
-  height: 600px;
-  &__pictures {
+  max-width: 68.5%;
+  height: 100%;
+  //&__pictures {
+  //  display: block;
+  //  position: relative;
+  //  width: 50%;
+  //  height: 100%;
+  //}
+  &__left-phone {
     display: block;
-    position: relative;
-    width: 50%;
-    height: 100%;
-  }
-  &__phone-left {
-    display: inline-block;
     position: absolute;
+    top: 21.8%;
+    left: 0;
     background-image: url("/Files/home_page/phone_left.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 240px;
-    height: 515px;
-    top: 12.5%;
-    left: 0;
+    background-size: contain;
+    height: 57.2%;
+    width: 21.8%;
     z-index: 100;
     cursor: pointer;
     transition: all 0.2s linear;
     &:hover {
       transform: scale(1.05);
-      top: 10%;
+      top: 20%;
     }
   }
-  &__phone-left--shifted {
+  &__left-phone--shifted {
     left: -500px;
     opacity: 0;
   }
-  &__phone-center {
-    display: inline-block;
+  &__center-phone {
+    display: block;
     position: absolute;
-    top: 10.5%;
-    left: 33%;
-    z-index: 300;
-    transition: all 0.2s linear;
-  }
-  &__active-phone {
+    top: 20%;
+    left: 14.4%;
     background-image: url("/Files/home_page/phone_center.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 250px;
-    height: 505px;
+    background-size: contain;
+    width: 24%;
+    height: 57%;
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: all 0.25s linear;
     z-index: 500;
   }
-  &__active-phone--hovered {
+  &__center-phone--hovered {
     transform: scale(1.05);
     z-index: 500;
   }
-  &__phone-center--shifted {
-    left: 75%;
-    top: 7%;
-    width: 255px;
-    height: 515px;
-  }
-  &__active-phone--shifted {
+  &__center-phone--shifted {
     transform: none;
     cursor: default;
   }
 
+  //&__phone-center--shifted {
+  //  left: 75%;
+  //  top: 7%;
+  //  width: 255px;
+  //  height: 515px;
+  //}
+
   &__watch-right {
-    display: inline-block;
+    display: block;
+    position: absolute;
+    top: 49.3%;
+    left: 29%;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    width: 205px;
-    height: 325px;
-    top: 50%;
-    left: 66%;
-    z-index: 300;
+    background-size: contain;
+    width: 15%;
+    height: 36%;
+    z-index: 1100;
     cursor: pointer;
     transition: all 0.15s linear;
     &:hover {
@@ -262,6 +260,14 @@ section {
     top: 520px;
     opacity: 0;
     z-index: -100;
+  }
+  &__phone-menu {
+    display: inline-block;
+    position: absolute;
+    top: 10.5%;
+    left: 33%;
+    z-index: 300;
+    transition: all 0.2s linear;
   }
   &__left-text {
     position: absolute;
@@ -480,10 +486,12 @@ section {
   }
   &__text {
     display: flex;
+    position: absolute;
     flex-direction: column;
     justify-content: center;
     width: 50%;
     height: 100%;
+    left: 50%;
     text-align: left;
     color: white;
     padding-left: 30px;

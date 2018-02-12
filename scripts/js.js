@@ -56,12 +56,12 @@ $(document).ready(function () {
     }
   );
 
-  $('.home-page__active-phone').hover(function (e) {
-    $(this).addClass('home-page__active-phone--hovered');
+  $('.home-page__center-phone').hover(function (e) {
+    $(this).addClass('home-page__center-phone--hovered');
     // $('.home-page__watch-right').addClass('home-page__watch-right--hover-center-phone-shifted');
       // $('.home-page__phone-left').addClass('home-page__phone-left--hover-center-phone-shifted')
   }, function (e) {
-    $(this).removeClass('home-page__active-phone--hovered');
+    $(this).removeClass('home-page__center-phone--hovered');
     // $('.home-page__watch-right').removeClass('home-page__watch-right--hover-center-phone-shifted');
     // $('.home-page__phone-left').removeClass('home-page__phone-left--hover-center-phone-shifted')
   });
@@ -102,7 +102,7 @@ $(document).ready(function () {
     if (menuOpened) {
       return;
     }
-    $('.home-page__phone-left').addClass('home-page__phone-left--shifted');
+    $('.home-page__left-phone').addClass('home-page__left-phone--shifted');
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__text').addClass('home-page__text--hidden');
     $('.home-page__phone-center').addClass('home-page__phone-center--shifted');
@@ -119,9 +119,9 @@ $(document).ready(function () {
   }
 
   function closeMenu() {
-    $('.home-page__phone-left').removeClass('home-page__phone-left--shifted');
+    $('.home-page__left-phone').removeClass('home-page__left-phone--shifted');
     $('.home-page__watch-right').removeClass('home-page__watch-right--down');
-    $('.home-page__text').removeClass('home-page__text--hidden');
+    $('.home-page__text').rmoveCleass('home-page__text--hidden');
     $('.home-page__phone-center').removeClass('home-page__phone-center--shifted');
     $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
     $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
