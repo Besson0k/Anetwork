@@ -316,7 +316,7 @@ section {
   }
   &__menu-elements-balance {
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.2s linear;
     transform: translateX(-1000px);
     opacity: 0;
     &:hover {
@@ -332,7 +332,7 @@ section {
   }
   &__menu-elements-support {
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.4s linear;
     transform: translateX(-1000px);
     opacity: 0;
     &:hover {
@@ -349,7 +349,7 @@ section {
   &__menu-elements-profile {
     position: relative;
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.6s linear;
     transform: translateX(-1000px);
 
     opacity: 0;
@@ -366,7 +366,7 @@ section {
   }
   &__menu-elements-info {
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.2s linear;
     transform: translateX(1000px);
     opacity: 0;
     &:hover {
@@ -382,7 +382,7 @@ section {
   }
   &__menu-elements-bell {
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.4s linear;
     transform: translateX(1000px);
     opacity: 0;
     &:hover {
@@ -398,7 +398,7 @@ section {
   }
   &__menu-elements-call {
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.6s linear;
     transform: translateX(1000px);
     opacity: 0;
     &:hover {
