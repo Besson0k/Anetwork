@@ -200,15 +200,26 @@ section {
     z-index: 100;
     cursor: pointer;
     transition: all 0.2s linear;
-    &:hover {
-      transform: scale(1.05);
-      top: 20%;
-    }
+  }
+  &__left-phone--hovered {
+    transform: scale(1.05);
+    top: 20%;
+    z-index: 500;
   }
   &__left-phone--shifted {
     left: -500px;
     opacity: 0;
   }
+  &__left-phone--shifted-center {
+    transform: none;
+    cursor: default;
+    left: 33%;
+    top: 18%;
+    width: 29%;
+    height: 62%;
+    z-index: 300;
+  }
+
   &__center-phone {
     display: block;
     position: absolute;
@@ -228,16 +239,17 @@ section {
     z-index: 500;
   }
   &__center-phone--shifted {
+    left: -500px;
+    opacity: 0;
+  }
+  &__center-phone--shifted-center {
     transform: none;
     cursor: default;
+    left: 33%;
+    top: 18%;
+    width: 27%;
+    height: 62%;
   }
-
-  //&__phone-center--shifted {
-  //  left: 75%;
-  //  top: 7%;
-  //  width: 255px;
-  //  height: 515px;
-  //}
 
   &__watch-right {
     display: block;
@@ -261,11 +273,14 @@ section {
     opacity: 0;
     z-index: -100;
   }
+
   &__phone-menu {
     display: inline-block;
     position: absolute;
-    top: 10.5%;
+    top: 18%;
     left: 33%;
+    width: 20%;
+    height: 56%;
     z-index: 300;
     transition: all 0.2s linear;
   }
