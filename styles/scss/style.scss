@@ -1,5 +1,26 @@
 @import "./reset.scss";
 
+@font-face {
+  font-family: HNC-Medium;
+  crs: local(HNC-Medium), url("/Font/HelveticaNeueCyr-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HNC-Roman;
+  crs: local(HNC-Roman), url("/Font/HelveticaNeueCyr-Roman.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HNC-Light;
+  crs: local(HNC-Light), url("/Font/HelveticaNeueCyr-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $bold: bold;
 $color-hover: #5d5df1;
 
@@ -28,7 +49,7 @@ body {
   left: 0;
   display: block;
   width: 100%;
-  height: 83px;
+  height: 8%;
   z-index: 100;
   &:after {
     display: block;
@@ -51,6 +72,7 @@ body {
     display: block;
     color: white;
     font-size: 34px;
+    font-family: HNC-Medium;
     cursor: pointer;
     transition: color 0.1s linear;
     &:hover {
@@ -65,12 +87,13 @@ body {
     border: 1px solid white;
     border-radius: 7px;
     font-size: 19px;
+    font-family: HNC-Roman;
     text-decoration: none;
     padding: 10px 21px 13px 21px;
     line-height: 1;
     transition: all 0.1s linear;;
     &:hover {
-      background-color: white ;
+      background-color: white;
       color: #251e1a;
     }
   }
@@ -82,7 +105,7 @@ body {
   left: 0;
   display: block;
   width: 100%;
-  height: 85px;
+  height: 8%;
   z-index: 100;
   &:before {
     display: block;
@@ -116,11 +139,17 @@ body {
     color: white;
     font-size: 16px;
   }
+  &__text {
+    font-family: HNC-Light;
+    font-size: 19px;
+  }
   &__logo {
     margin-left: 15px;
   }
   &__rda {
     font-weight: $bold;
+    font-family: HNC-Medium;
+    font-size: 19px;
     margin-left: 15px;
   }
 }
@@ -181,12 +210,6 @@ section {
   margin: auto;
   max-width: 68.5%;
   height: 100%;
-  //&__pictures {
-  //  display: block;
-  //  position: relative;
-  //  width: 50%;
-  //  height: 100%;
-  //}
   &__left-phone {
     display: block;
     position: absolute;
@@ -311,7 +334,12 @@ section {
   }
   &__menu-name {
     font-size: 32px;
+    font-family: HNC-Medium;
     margin-bottom: 20px;
+  }
+  &__menu-content {
+    font-family: HNC-Light;
+    font-size: 20px;
   }
   &__right-text {
     position: absolute;
@@ -372,7 +400,6 @@ section {
     cursor: pointer;
     transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.6s linear;
     transform: translateX(-1000px);
-
     opacity: 0;
     &:hover {
       color: $color-hover;
@@ -520,11 +547,13 @@ section {
   }
   &__head {
     font-size: 44px;
+    font-family: HNC-Medium;
     margin-bottom: 27px;
   }
   &__paragraph {
     margin-top: 20px;
     font-size: 20px;
+    font-family: HNC-Light;
   }
   &__shops {
     margin-top: 40px;
@@ -591,6 +620,7 @@ section {
     background-color: forestgreen;
   }
 }
+
 .balance {
   display: flex;
   margin: auto;
@@ -647,6 +677,7 @@ section {
     background-color: forestgreen;
   }
 }
+
 .notification {
   display: flex;
   margin: auto;
@@ -730,6 +761,7 @@ section {
     background-size: cover;
   }
 }
+
 .profile {
   display: flex;
   margin: auto;
@@ -786,6 +818,7 @@ section {
     background-color: forestgreen;
   }
 }
+
 .personal-account {
   display: flex;
   margin: auto;
@@ -842,6 +875,7 @@ section {
     background-color: forestgreen;
   }
 }
+
 .information {
   display: flex;
   margin: auto;

@@ -3,104 +3,98 @@ $(document).ready(function () {
     $('#fullpage').fullpage(
         {
             anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
-            menu: '#scrollMenu',
-            onLeave: function (index, nextIndex) {
-                var scrollMenuElement = $('.scroll-menu');
-                if (nextIndex !== 1) {
-                    scrollMenuElement.addClass('vision')
-                } else {
-                    scrollMenuElement.removeClass('vision')
-                }
-                if (nextIndex === 2) {
-                    $('.ip-telephony__phone-front').addClass('ip-telephony__phone-front--shifted');
-                } else {
-                    $('.ip-telephony__phone-front').removeClass('ip-telephony__phone-front--shifted');
-                }
-
-                if (nextIndex === 3) {
-                    $('.balance__phone-front').addClass('balance__phone-front--shifted');
-                } else {
-                    $('.balance__phone-front').removeClass('balance__phone-front--shifted');
-                }
-
-                if (nextIndex === 4) {
-                    $('.notification__phone-front').addClass('notification__phone-front--shifted');
-                } else {
-                    $('.notification__phone-front').removeClass('notification__phone-front--shifted');
-                }
-
-                if (nextIndex === 5) {
-                    $('.profile__phone-front').addClass('profile__phone-front--shifted');
-                } else {
-                    $('.profile__phone-front').removeClass('profile__phone-front--shifted');
-                }
-
-                if (nextIndex === 6) {
-                    $('.personal-account__phone-front').addClass('personal-account__phone-front--shifted');
-                } else {
-                    $('.personal-account__phone-front').removeClass('personal-account__phone-front--shifted');
-                }
-
-                if (nextIndex === 7) {
-                    $('.information__phone-front').addClass('information__phone-front--shifted');
-                } else {
-                    $('.information__phone-front').removeClass('information__phone-front--shifted');
-                }
-
-                if (index === 1 && !menuOpened) {
-                    openMenu();
-                    scrollMenuElement.removeClass('vision');
-                    return false;
-                }
-            }
+            menu: '#scrollMenu'
+            // onLeave: function (index, nextIndex) {
+            //     var scrollMenuElement = $('.scroll-menu');
+            //     if (nextIndex !== 1) {
+            //         scrollMenuElement.addClass('vision')
+            //     } else {
+            //         scrollMenuElement.removeClass('vision')
+            //     }
+            //     if (nextIndex === 2) {
+            //         $('.ip-telephony__phone-front').addClass('ip-telephony__phone-front--shifted');
+            //     } else {
+            //         $('.ip-telephony__phone-front').removeClass('ip-telephony__phone-front--shifted');
+            //     }
+            //
+            //     if (nextIndex === 3) {
+            //         $('.balance__phone-front').addClass('balance__phone-front--shifted');
+            //     } else {
+            //         $('.balance__phone-front').removeClass('balance__phone-front--shifted');
+            //     }
+            //
+            //     if (nextIndex === 4) {
+            //         $('.notification__phone-front').addClass('notification__phone-front--shifted');
+            //     } else {
+            //         $('.notification__phone-front').removeClass('notification__phone-front--shifted');
+            //     }
+            //
+            //     if (nextIndex === 5) {
+            //         $('.profile__phone-front').addClass('profile__phone-front--shifted');
+            //     } else {
+            //         $('.profile__phone-front').removeClass('profile__phone-front--shifted');
+            //     }
+            //
+            //     if (nextIndex === 6) {
+            //         $('.personal-account__phone-front').addClass('personal-account__phone-front--shifted');
+            //     } else {
+            //         $('.personal-account__phone-front').removeClass('personal-account__phone-front--shifted');
+            //     }
+            //
+            //     if (nextIndex === 7) {
+            //         $('.information__phone-front').addClass('information__phone-front--shifted');
+            //     } else {
+            //         $('.information__phone-front').removeClass('information__phone-front--shifted');
+            //     }
+            //
+            //     if (index === 1 && !menuOpened) {
+            //         openAndroidMenu();
+            //         scrollMenuElement.removeClass('vision');
+            //         return false;
+            //     }
+            // }
         }
     );
 
     $('.home-page__center-phone').hover(function (e) {
         $(this).addClass('home-page__center-phone--hovered');
-        // $('.home-page__watch-right').addClass('home-page__watch-right--hover-center-phone-shifted');
-        // $('.home-page__phone-left').addClass('home-page__phone-left--hover-center-phone-shifted')
     }, function (e) {
         $(this).removeClass('home-page__center-phone--hovered');
-        // $('.home-page__watch-right').removeClass('home-page__watch-right--hover-center-phone-shifted');
-        // $('.home-page__phone-left').removeClass('home-page__phone-left--hover-center-phone-shifted')
     });
 
     $('.home-page__left-phone').hover(function () {
         $(this).addClass('home-page__left-phone--hovered');
-        // $('.home-page__watch-right').addClass('home-page__watch-right--hover-center-phone-shifted');
     }, function () {
         $(this).removeClass('home-page__left-phone--hovered');
-        // $('.home-page__watch-right').removeClass('home-page__watch-right--hover-center-phone-shifted')
     });
 
-    $('.home-page__center-phone').click(openAndroidMenu);
+    $('.home-page__center-phone').click(openIPhoneMenu);
 
-    $('.home-page__left-phone').click(openIPhoneMenu);
+    $('.home-page__left-phone').click(openAndroidMenu);
 
     $('.header__home').click(closeMenu);
 
-    $('.home-page__menu-elements-call').click(function () {
-        $.fn.fullpage.moveTo(2);
-    });
+    // $('.home-page__menu-elements-call').click(function () {
+    //     $.fn.fullpage.moveTo(2);
+    // });
+    //
+    // $('.home-page__menu-elements-balance').click(function () {
+    //     $.fn.fullpage.moveTo(3);
+    // });
+    //
+    // $('.home-page__menu-elements-bell').click(function () {
+    //     $.fn.fullpage.moveTo(4);
+    // });
+    //
+    // $('.home-page__menu-elements-profile').click(function () {
+    //     $.fn.fullpage.moveTo(5);
+    // });
+    //
+    // $('.home-page_menu-elements-info').click(function () {
+    //     $.fn.fullpage.moveTo(7);
+    // });
 
-    $('.home-page__menu-elements-balance').click(function () {
-        $.fn.fullpage.moveTo(3);
-    });
-
-    $('.home-page__menu-elements-bell').click(function () {
-        $.fn.fullpage.moveTo(4);
-    });
-
-    $('.home-page__menu-elements-profile').click(function () {
-        $.fn.fullpage.moveTo(5);
-    });
-
-    $('.home-page_menu-elements-info').click(function () {
-        $.fn.fullpage.moveTo(7);
-    });
-
-    function openAndroidMenu() {
+    function openIPhoneMenu() {
         if (menuOpened) {
             return;
         }
@@ -138,7 +132,7 @@ $(document).ready(function () {
         menuOpened = false;
     }
 
-    function openIPhoneMenu() {
+    function openAndroidMenu() {
         if (menuOpened) {
             return;
         }
