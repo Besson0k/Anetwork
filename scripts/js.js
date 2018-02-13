@@ -2,7 +2,7 @@ $(document).ready(function () {
     var menuOpened = false;
     $('#fullpage').fullpage(
         {
-            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
+            anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage'],
             menu: '#scrollMenu'
             // onLeave: function (index, nextIndex) {
             //     var scrollMenuElement = $('.scroll-menu');
