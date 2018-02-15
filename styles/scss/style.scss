@@ -72,9 +72,9 @@ body {
     display: block;
     color: white;
     font-size: 34px;
-    font-family: HNC-Medium;
+    font-family: HNC-Medium, sans-serif;
     cursor: pointer;
-    transition: color 0.1s linear;
+    transition: transform 0.1s linear;
     &:hover {
       transform: scale(1.1);
     }
@@ -87,7 +87,7 @@ body {
     border: 1px solid white;
     border-radius: 7px;
     font-size: 19px;
-    font-family: HNC-Roman;
+    font-family: HNC-Roman, sans-serif;
     text-decoration: none;
     padding: 10px 21px 13px 21px;
     line-height: 1;
@@ -140,7 +140,7 @@ body {
     font-size: 16px;
   }
   &__text {
-    font-family: HNC-Light;
+    font-family: HNC-Light, sans-serif;
     font-size: 19px;
   }
   &__logo {
@@ -148,7 +148,7 @@ body {
   }
   &__rda {
     font-weight: $bold;
-    font-family: HNC-Medium;
+    font-family: HNC-Medium, sans-serif;
     font-size: 19px;
     margin-left: 15px;
   }
@@ -236,7 +236,7 @@ section {
   &__left-phone--shifted-center {
     transform: none;
     cursor: default;
-    left: 33%;
+    left: 38%;
     top: 18%;
     width: 29%;
     height: 62%;
@@ -268,7 +268,7 @@ section {
   &__center-phone--shifted-center {
     transform: none;
     cursor: default;
-    left: 33%;
+    left: 38%;
     top: 18%;
     width: 27%;
     height: 62%;
@@ -301,7 +301,7 @@ section {
     display: inline-block;
     position: absolute;
     top: 18%;
-    left: 33%;
+    left: 38%;
     width: 20%;
     height: 56%;
     z-index: 300;
@@ -334,11 +334,11 @@ section {
   }
   &__menu-name {
     font-size: 32px;
-    font-family: HNC-Medium;
+    font-family: HNC-Medium, sans-serif;
     margin-bottom: 20px;
   }
   &__menu-content {
-    font-family: HNC-Light;
+    font-family: HNC-Light, sans-serif;
     font-size: 20px;
   }
   &__right-text {
@@ -547,13 +547,13 @@ section {
   }
   &__head {
     font-size: 44px;
-    font-family: HNC-Medium;
+    font-family: HNC-Medium, sans-serif;
     margin-bottom: 27px;
   }
   &__paragraph {
     margin-top: 20px;
     font-size: 20px;
-    font-family: HNC-Light;
+    font-family: HNC-Light, sans-serif;
   }
   &__shops {
     margin-top: 40px;
@@ -561,6 +561,32 @@ section {
   &__shop {
     margin-right: 25px;
     text-decoration: none;
+  }
+
+  &__close-menu-elements {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    top: 10%;
+    right: -3%;
+    cursor: pointer;
+  }
+
+  &__elements--hidden {
+    opacity: 0;
+    z-index: -100;
+  }
+
+  &__balance-page {
+    display: block;
+
+    margin-top: 12%;
+    width: 100%;
+    height: 76%;
+    border-radius: 6px;
+    border: 1px solid #606866;
   }
 }
 
