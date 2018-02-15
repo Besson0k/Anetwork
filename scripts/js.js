@@ -178,7 +178,7 @@ $(document).ready(function () {
     $('.home-page__left-phone').removeClass('home-page__elements--hidden');
     $('.home-page__center-phone').removeClass('home-page__elements--hidden');
     $('.home-page__menu-content').removeClass('home-page__elements--hidden');
-    $('.home-page__rub').removeClass('home-page__elements--hidden');
+    $('.home-page__info').removeClass('home-page__elements--hidden');
   }
 
 });
