@@ -685,7 +685,7 @@ section {
     top: 127px;
     background-image: url("/Files/phones/center-phone_Balance-back.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 198px;
     height: 388px;
   }
@@ -740,7 +740,7 @@ section {
     top: 108px;
     background-image: url("/Files/phones/center-phone_Support.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 198px;
     height: 388px;
   }
@@ -784,7 +784,7 @@ section {
     top: 126px;
     background-image: url("/Files/phones/center-phone_Profile-back.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 198px;
     height: 388px;
   }
@@ -796,13 +796,64 @@ section {
     background-image: url("/Files/phones/center-phone-Profile-front.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 198px;
-    height: 389px;
+    width: 208px;
+    height: 409px;
   }
 }
 
 .information {
-
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 127px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 29px;
+    top: 125px;
+    background-image: url("/Files/phones/center-phone_Info-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 178px;
+    height: 358px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 147px;
+    top: 71px;
+    background-image: url("/Files/phones/center-phone_Info-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 218px;
+    height: 419px;
+  }
 }
 
 .notification {
