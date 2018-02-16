@@ -977,6 +977,41 @@ section {
   }
 }
 
+.final-page {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__button {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 469px;
+    border-radius: 5.6px;
+    border: 1px solid white;
+    font-size: 15px;
+    font-family: HNC-Medium, sans-serif;
+    padding: 10px 20px;
+
+  }
+  &__logo-anetwork {
+    display: block;
+    position: absolute;
+    left: 124px;
+    top: 249px;
+    background-image: url("/Files/logo_anetwork.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 128px;
+    height: 128px;
+  }
+}
+
+
 .get-ap {
   display: flex;
   margin: auto;

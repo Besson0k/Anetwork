@@ -2,7 +2,7 @@ $(document).ready(function () {
   var menuOpened = false;
   $('#fullpage').fullpage(
     {
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage'],
+      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage', 'tenthPage'],
       menu: '#scrollMenu'
       // onLeave: function (index, nextIndex) {
       //     var scrollMenuElement = $('.scroll-menu');
@@ -80,22 +80,6 @@ $(document).ready(function () {
 
   // $('.home-page__menu-elements-call').click(function () {
   //     $.fn.fullpage.moveTo(2);
-  // });
-  //
-  // $('.home-page__menu-elements-balance').click(function () {
-  //     $.fn.fullpage.moveTo(3);
-  // });
-  //
-  // $('.home-page__menu-elements-bell').click(function () {
-  //     $.fn.fullpage.moveTo(4);
-  // });
-  //
-  // $('.home-page__menu-elements-profile').click(function () {
-  //     $.fn.fullpage.moveTo(5);
-  // });
-  //
-  // $('.home-page_menu-elements-info').click(function () {
-  //     $.fn.fullpage.moveTo(7);
   // });
 
   function openIPhoneMenu() {
