@@ -2,21 +2,21 @@
 
 @font-face {
   font-family: HNC-Medium;
-  crs: local(HNC-Medium), url("/Font/HelveticaNeueCyr-Medium.ttf");
+  src: local(HNC-Medium), url("/Font/HelveticaNeueCyr-Medium.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: HNC-Roman;
-  crs: local(HNC-Roman), url("/Font/HelveticaNeueCyr-Roman.ttf");
+  src: local(HNC-Roman), url("/Font/HelveticaNeueCyr-Roman.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: HNC-Light;
-  crs: local(HNC-Light), url("/Font/HelveticaNeueCyr-Light.ttf");
+  src: local(HNC-Light), url("/Font/HelveticaNeueCyr-Light.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -213,13 +213,13 @@ section {
   &__left-phone {
     display: block;
     position: absolute;
-    top: 21.8%;
+    top: 21.8vh;
     left: 0;
     background-image: url("/Files/home_page/phone_left.png");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 57.2%;
-    width: 21.8%;
+    height: 57.2vh;
+    width: 14.9vw;
     z-index: 100;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -238,21 +238,21 @@ section {
     cursor: default;
     left: 38%;
     top: 18%;
-    width: 29%;
-    height: 62%;
+    width: 31vw;
+    height: 57.2vh;
     z-index: 300;
   }
 
   &__center-phone {
     display: block;
     position: absolute;
-    top: 20%;
+    top: 20vh;
     left: 14.4%;
     background-image: url("/Files/home_page/phone_center.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 24%;
-    height: 57%;
+    width: 17.3vw;
+    height: 60.37vh;
     cursor: pointer;
     transition: all 0.25s linear;
     z-index: 500;
@@ -270,20 +270,20 @@ section {
     cursor: default;
     left: 38%;
     top: 18%;
-    width: 27%;
-    height: 62%;
+    width: 31vw;
+    height: 57.2vh;
   }
 
   &__watch-right {
     display: block;
     position: absolute;
-    top: 49.3%;
-    left: 29%;
+    bottom: 0vh;
+    //left: -10vw;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 15%;
-    height: 36%;
+    width: 9.27vw;
+    height: 29.7vh;
     z-index: 1100;
     cursor: pointer;
     transition: all 0.15s linear;
@@ -302,9 +302,10 @@ section {
     position: absolute;
     top: 18%;
     left: 38%;
-    width: 20%;
-    height: 56%;
+    width: 28vw;
+    height: 57.2vh;
     z-index: 300;
+    background-color: indianred;
     transition: all 0.2s linear;
   }
   &__left-text {
