@@ -272,6 +272,7 @@ section {
     top: 18%;
     width: 31vw;
     height: 57.2vh;
+    z-index: -100;
   }
 
   &__watch-right {
@@ -305,7 +306,7 @@ section {
     width: 28vw;
     height: 57.2vh;
     z-index: 300;
-    background-color: indianred;
+    //background-color: indianred;
     transition: all 0.2s linear;
   }
   &__left-text {
@@ -321,7 +322,7 @@ section {
     z-index: -100;
   }
   &__left-text--shifted {
-    right: 300px;
+    left: -70%;
     z-index: 1000;
   }
   &__left-text-elements {
@@ -357,7 +358,7 @@ section {
   }
   &__right-text--shifted {
     opacity: 1;
-    left: 295px;
+    right: -20%;
     z-index: 1000;
   }
   &__right-text-elements {
@@ -371,9 +372,9 @@ section {
     transform: translateX(-1000px);
     opacity: 0;
     &:hover {
-      color: $color-hover;
+      color: #FFCC00;
       .home-page__rub {
-        fill: $color-hover;
+        fill: #FFCC00;
       }
     }
   }
@@ -387,9 +388,9 @@ section {
     transform: translateX(-1000px);
     opacity: 0;
     &:hover {
-      color: $color-hover;
+      color: #FF4160;
       .home-page__sup {
-        fill: $color-hover;
+        fill: #FF4160;
       }
     }
   }
@@ -404,9 +405,9 @@ section {
     transform: translateX(-1000px);
     opacity: 0;
     &:hover {
-      color: $color-hover;
+      color: #5D5DF1;
       .home-page__profile {
-        fill: $color-hover;
+        fill: #5D5DF1;
       }
     }
   }
@@ -420,9 +421,9 @@ section {
     transform: translateX(1000px);
     opacity: 0;
     &:hover {
-      color: $color-hover;
+      color: #FE00BE;
       .home-page__info {
-        stroke: $color-hover;
+        stroke: #FE00BE;
       }
     }
   }
@@ -436,9 +437,9 @@ section {
     transform: translateX(1000px);
     opacity: 0;
     &:hover {
-      color: $color-hover;
+      color: #0069EA;
       .home-page__bell {
-        fill: $color-hover;
+        fill: #0069EA;
       }
     }
   }
@@ -452,9 +453,9 @@ section {
     transform: translateX(1000px);
     opacity: 0;
     &:hover {
-      color: $color-hover;
+      color: #86CA00;
       .home-page__call {
-        fill: $color-hover;
+        fill: #86CA00;
       }
     }
   }
@@ -592,7 +593,58 @@ section {
 }
 
 .general-mobile {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 541px;
+    width: 349px;
+    height: 32px;
+    font-family: HNC-Light, sans-serif;
+    font-size: 13px;
 
+  }
+  &__left-phone {
+    display: block;
+    position: absolute;
+    left: 39px;
+    top: 120px;
+    background-image: url("/Files/home_page/phone_left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 161px;
+    height: 346px;
+  }
+  &__center-phone {
+    display: block;
+    position: absolute;
+    left: 161px;
+    top: 113px;
+    background-image: url("/Files/home_page/phone_center.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 166px;
+    height: 335px;
+  }
+  &__right-watch {
+    display: block;
+    position: absolute;
+    left: 247px;
+    top: 320px;
+    background-image: url("/Files/home_page/watch_right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 180px;
+  }
 }
 
 .profile {
