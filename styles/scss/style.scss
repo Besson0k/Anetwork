@@ -923,7 +923,58 @@ section {
 }
 
 .ip-telephony {
-
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 133px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 27px;
+    top: 126px;
+    background-image: url("/Files/phones/center-phone_Info-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 389px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 86px;
+    background-image: url("/Files/phones/center-phone_IpCall-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 388px;
+  }
 }
 
 .get-ap {
