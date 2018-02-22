@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var menuOpened = false;
+  var menuElementOpened = false;
   $('#fullpage').fullpage(
     {
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage', 'tenthPage'],
@@ -193,6 +194,7 @@ $(document).ready(function () {
     $('.home-page__center-phone').addClass('home-page__elements--hidden');
     $('.home-page__menu-content').addClass('home-page__elements--hidden');
     $('.home-page__info').addClass('home-page__elements--hidden');
+    menuElementOpened = true;
   }
 
   function closeMenuElement() {
@@ -206,6 +208,7 @@ $(document).ready(function () {
     $('.home-page__center-phone').removeClass('home-page__elements--hidden');
     $('.home-page__menu-content').removeClass('home-page__elements--hidden');
     $('.home-page__info').removeClass('home-page__elements--hidden');
+    menuElementOpened = false;
   }
 
 });
