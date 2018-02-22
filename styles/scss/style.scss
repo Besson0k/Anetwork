@@ -257,6 +257,25 @@ section {
     transition: all 0.25s linear;
     z-index: 500;
   }
+  &__center-phone--hover-balance {
+    background-image: url("/Files/home_page/center-phone-Balance.png");
+  }
+  &__center-phone--hover-support {
+    background-image: url("/Files/home_page/center-phone-Support.png");
+  }
+  &__center-phone--hover-profile {
+    background-image: url("/Files/home_page/center-phone-Profile.png");
+  }
+  &__center-phone--hover-info {
+    background-image: url("/Files/home_page/center-phone-Info.png");
+  }
+  &__center-phone--hover-bell {
+    background-image: url("/Files/home_page/center-phone-Bell.png");
+  }
+  &__center-phone--hover-call {
+    background-image: url("/Files/home_page/center-phone-Call.png");
+  }
+
   &__center-phone--hovered {
     transform: scale(1.05);
     z-index: 500;
@@ -278,8 +297,8 @@ section {
   &__watch-right {
     display: block;
     position: absolute;
-    bottom: 0vh;
-    //left: -10vw;
+    top: 49.25vh;
+    left: 24vw;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -303,7 +322,7 @@ section {
     position: absolute;
     top: 18%;
     left: 38%;
-    width: 28vw;
+    width: 22vw;
     height: 57.2vh;
     z-index: 300;
     //background-color: indianred;
@@ -313,16 +332,18 @@ section {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     width: 370px;
-    height: 515px;
+    min-height: 515px;
+    height: 57vh;
     transition: all 0.2s linear;
     top: 0;
+    left: -2000px;
     text-align: right;
     z-index: -100;
   }
   &__left-text--shifted {
-    left: -70%;
+    left: -410px;
     z-index: 1000;
   }
   &__left-text-elements {
@@ -348,17 +369,18 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    //justify-content: center;
     width: 370px;
-    height: 515px;
+    min-height: 515px;
+    height: 57vh;
     text-align: left;
     transition: all 0.2s linear;
     top: 0;
+    right: 2500px;
     z-index: -100;
   }
   &__right-text--shifted {
     opacity: 1;
-    right: -20%;
+    right: -400px;
     z-index: 1000;
   }
   &__right-text-elements {

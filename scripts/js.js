@@ -68,6 +68,49 @@ $(document).ready(function () {
     $(this).removeClass('home-page__left-phone--hovered');
   });
 
+  $('.home-page__menu-elements-balance').hover(function () {
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-balance')
+  }, function () {
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-balance')
+  });
+
+  $('.home-page__menu-elements-support').hover(function () {
+      $('.home-page__center-phone').addClass('home-page__center-phone--hover-support')
+  }, function () {
+      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-support')
+  });
+
+  $('.home-page__menu-elements-profile').hover(function () {
+      $('.home-page__center-phone').addClass('home-page__center-phone--hover-profile')
+  }, function () {
+      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-profile')
+  });
+
+  $('.home-page__menu-elements-info').hover(function () {
+      $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
+  }, function () {
+      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
+  });
+
+  $('.home-page__menu-elements-info').hover(function () {
+      $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
+  }, function () {
+      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
+  });
+
+  $('.home-page__menu-elements-bell').hover(function () {
+      $('.home-page__center-phone').addClass('home-page__center-phone--hover-bell')
+  }, function () {
+      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-bell')
+  });
+
+  $('.home-page__menu-elements-call').hover(function () {
+      $('.home-page__center-phone').addClass('home-page__center-phone--hover-call')
+  }, function () {
+      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-call')
+  });
+
+
   $('.home-page__center-phone').click(openIPhoneMenu);
 
   $('.home-page__left-phone').click(openAndroidMenu);
