@@ -363,6 +363,7 @@ section {
   &__menu-content {
     font-family: HNC-Light, sans-serif;
     font-size: 20px;
+    transition: opacity 0.6s ease;
   }
   &__right-text {
     position: absolute;
@@ -587,7 +588,7 @@ section {
     text-decoration: none;
   }
   &__close-menu-elements {
-    display: block;
+    display: none;
     position: absolute;
     width: 20px;
     height: 20px;
@@ -598,18 +599,25 @@ section {
     right: -3%;
     cursor: pointer;
   }
+  &__close-menu-elements--showed {
+    display: block;
+  }
   &__elements--hidden {
     opacity: 0;
     z-index: -100;
   }
   &__element-page {
-    display: block;
+    display: none;
     height: 76vh;
     border-radius: 20px;
     border: 1px solid #606866;
     margin-top: 12vh;
     width: 100%;
     overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  &__element-page--showed {
+    display: block;
   }
   &__background-element-menu {
     position: relative;
@@ -621,6 +629,7 @@ section {
     background-image: url("/Files/rectangle_3.png");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.5s ease;
   }
 }
 
