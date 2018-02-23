@@ -91,7 +91,7 @@ body {
     text-decoration: none;
     padding: 15px 21px 13px 21px;
     line-height: 1;
-    transition: all 0.1s linear;;
+    transition: all 0.1s linear;
     &:hover {
       background-color: white;
       color: #251e1a;
@@ -581,11 +581,37 @@ section {
     font-family: HNC-Light, sans-serif;
   }
   &__shops {
+    display: flex;
     margin-top: 40px;
+    flex-direction: row
   }
-  &__shop {
+  &__shop-appStore {
+    display: block;
     margin-right: 25px;
     text-decoration: none;
+    background-image: url("/Files/home_page/app_store.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.2 linear;
+    &:hover {
+      background-image: url("/Files/icons/AppStore-hover.png");
+    }
+  }
+  &__shop-googlePay {
+    display: block;
+    margin-right: 25px;
+    text-decoration: none;
+    background-image: url("/Files/home_page/google_play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.2s linear;
+    &:hover {
+      background-image: url("/Files/icons/googlePay-hover.png");
+    }
   }
   &__close-menu-elements {
     display: none;
