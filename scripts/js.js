@@ -204,7 +204,6 @@ $(document).ready(function () {
     $('.home-page__element-page').addClass('home-page__element-page--showed');
     $('.home-page__close-menu-elements').addClass('home-page__close-menu-elements--showed');
     menuElementOpened = true;
-      console.log ("menuElementOpened: ", menuElementOpened);
   }
 
   function closeMenuElement() {
@@ -224,7 +223,6 @@ $(document).ready(function () {
     $('.home-page__element-page').removeClass('home-page__element-page--showed');
     $('.home-page__close-menu-elements').removeClass('home-page__close-menu-elements--showed');
     menuElementOpened = false;
-    console.log ("menuElementOpened: ", menuElementOpened);
   }
 
 });

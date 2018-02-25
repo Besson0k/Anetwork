@@ -254,7 +254,7 @@ section {
     width: 17.3vw;
     height: 60.37vh;
     cursor: pointer;
-    transition: transform 0.25s linear, width 0.25s linear, height 0.25s linear, opacity 0.25s linear;
+    transition: transform 0.25s linear, width 0.2s linear, height 0.25s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
     //transition: all 0.25s linear;
     z-index: 500;
   }
@@ -322,11 +322,10 @@ section {
     display: inline-block;
     position: absolute;
     top: 18%;
-    left: 38%;
-    width: 22vw;
+    left: 48%;
+    width: 1px;
     height: 57.2vh;
     z-index: 300;
-    //background-color: indianred;
     transition: all 0.2s linear;
   }
   &__left-text {
@@ -343,7 +342,7 @@ section {
     z-index: -100;
   }
   &__left-text--shifted {
-    left: -410px;
+    left: -500px;
     z-index: 1000;
   }
   &__left-text-elements {
@@ -380,7 +379,7 @@ section {
   }
   &__right-text--shifted {
     opacity: 1;
-    right: -400px;
+    left: 130px;
     z-index: 1000;
   }
   &__right-text-elements {
@@ -594,7 +593,7 @@ section {
     background-size: contain;
     width: 173px;
     height: 47px;
-    transition: all 0.2 linear;
+    transition: all 0.2s linear;
     &:hover {
       background-image: url("/Files/icons/AppStore-hover.png");
     }
@@ -658,6 +657,8 @@ section {
     transition: all 0.5s ease;
   }
 }
+
+
 //
 //@keyframes flipper-IPone {
 //
@@ -1120,5 +1121,14 @@ section {
     margin-right: 10px;
     margin-left: 10px;
     text-decoration: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .home-page {
+    &__center-phone {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
