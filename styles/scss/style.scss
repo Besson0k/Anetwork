@@ -344,6 +344,15 @@ section {
     opacity: 0;
     z-index: -100;
   }
+  &__service-development {
+    position: absolute;
+    top: 170px;
+    left: 43px;
+    display: block;
+    width: 141px;
+    height: 47px;
+    background-color: #FFCC00;
+  }
 
   &__phone-menu {
     display: inline-block;
