@@ -218,8 +218,8 @@ section {
     background-image: url("/Files/home_page/phone_left.png");
     background-repeat: no-repeat;
     background-size: contain;
-    height: 57.2vh;
-    width: 14.9vw;
+    height: 741px;
+    width: 344px;
     z-index: 100;
     cursor: pointer;
     transition: all 0.2s linear;
@@ -238,8 +238,8 @@ section {
     cursor: default;
     left: 38%;
     top: 18%;
-    width: 31vw;
-    height: 57.2vh;
+    width: 400px;
+    height: 800px;
     z-index: 300;
   }
 
@@ -247,12 +247,12 @@ section {
     display: block;
     position: absolute;
     top: 20vh;
-    left: 14.4%;
+    left: 15.5%;
     background-image: url("/Files/home_page/phone_center.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 17.3vw;
-    height: 60.37vh;
+    width: 360px;
+    height: 782px;
     cursor: pointer;
     transition: transform 0.25s linear, width 0.2s linear, height 0.25s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
     //transition: all 0.25s linear;
@@ -290,21 +290,21 @@ section {
     cursor: default;
     left: 38%;
     top: 18%;
-    width: 31vw;
-    height: 57.2vh;
+    width: 400px;
+    height: 800px;
     z-index: -100;
   }
 
   &__watch-right {
     display: block;
     position: absolute;
-    top: 49.25vh;
-    left: 24vw;
+    top: 50.5vh;
+    left: 21vw;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 9.27vw;
-    height: 29.7vh;
+    width: 267px;
+    height: 481px;
     z-index: 1100;
     cursor: pointer;
     transition: all 0.15s linear;
@@ -322,9 +322,9 @@ section {
     display: inline-block;
     position: absolute;
     top: 18%;
-    left: 48%;
-    width: 1px;
-    height: 57.2vh;
+    left: 38%;
+    width: 400px;
+    height: 800px;
     z-index: 300;
     transition: all 0.2s linear;
   }
@@ -342,7 +342,7 @@ section {
     z-index: -100;
   }
   &__left-text--shifted {
-    left: -500px;
+    left: -420px;
     z-index: 1000;
   }
   &__left-text-elements {
@@ -379,7 +379,7 @@ section {
   }
   &__right-text--shifted {
     opacity: 1;
-    left: 130px;
+    left: 430px;
     z-index: 1000;
   }
   &__right-text-elements {
@@ -1124,11 +1124,47 @@ section {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 2000px) {
   .home-page {
+    &__left-phone {
+      width: 296px;
+      height: 636px;
+    }
+    &__left-phone--shifted-center {
+      left: 38%;
+      top: 18%;
+      width: 355px;
+      height: 650px;
+      z-index: 300;
+    }
     &__center-phone {
-      width: 20px;
-      height: 20px;
+      width: 330px;
+      height: 612px;
+      left: 16%;
+    }
+    &__center-phone--shifted-center {
+      left: 38%;
+      top: 18%;
+      width: 350px;
+      height: 650px;
+    }
+    &__watch-right {
+      width: 224px;
+      height: 395px;
+      top: 45vh;
+      left: 21vw;
+    }
+    &__phone-menu {
+      top: 18%;
+      left: 38%;
+      width: 350px;
+      height: 650px;
+    }
+    &__left-text--shifted {
+      left: -410px;
+    }
+    &__right-text--shifted {
+      left: 360px;
     }
   }
 }
