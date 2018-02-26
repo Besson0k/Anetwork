@@ -26,6 +26,7 @@ $color-hover: #5d5df1;
 
 body {
   font-family: sans-serif;
+  min-width: 1400px;
 }
 
 .background {
@@ -255,8 +256,16 @@ section {
     height: 782px;
     cursor: pointer;
     transition: transform 0.25s linear, width 0.2s linear, height 0.25s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
-    //transition: all 0.25s linear;
     z-index: 500;
+
+  }
+  &__center-phone-motion {
+    animation-name: motion-IPone;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  &__phone-motion--stopped {
+    animation-play-state: paused;
   }
   &__center-phone--hover-balance {
     background-image: url("/Files/home_page/center-phone-Balance.png");
@@ -299,7 +308,7 @@ section {
     display: block;
     position: absolute;
     top: 50.5vh;
-    left: 21vw;
+    left: 30%;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -658,11 +667,6 @@ section {
   }
 }
 
-
-//
-//@keyframes flipper-IPone {
-//
-//}
 
 
 //----------------------------------------------------------------------------------------------------------
@@ -1131,7 +1135,7 @@ section {
       height: 636px;
     }
     &__left-phone--shifted-center {
-      left: 38%;
+      left: 38.5%;
       top: 18%;
       width: 355px;
       height: 650px;
@@ -1140,7 +1144,7 @@ section {
     &__center-phone {
       width: 330px;
       height: 612px;
-      left: 16%;
+      left: 17%;
     }
     &__center-phone--shifted-center {
       left: 38%;
@@ -1151,8 +1155,8 @@ section {
     &__watch-right {
       width: 224px;
       height: 395px;
-      top: 45vh;
-      left: 21vw;
+      top: 47vh;
+      left: 32%;
     }
     &__phone-menu {
       top: 18%;
@@ -1164,7 +1168,15 @@ section {
       left: -410px;
     }
     &__right-text--shifted {
-      left: 360px;
+      left: 350px;
     }
   }
+}
+
+
+@keyframes motion-IPone {
+  0% {transform: translateY(-3px);}
+  25% {transform: translateY(-6px);}
+  75% {transform: translateY(0px);}
+  100% {transform: translateY(-3px);}
 }
