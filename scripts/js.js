@@ -67,9 +67,19 @@ $(document).ready(function () {
 
   $('.home-page__left-phone').hover(function () {
     $(this).addClass('home-page__left-phone--hovered');
+    $(this).removeClass('home-page__left-phone-motion');
   }, function () {
     $(this).removeClass('home-page__left-phone--hovered');
+    $(this).addClass('home-page__left-phone-motion');
   });
+
+  $('.home-page__watch-right').hover(function () {
+      $(this).addClass('home-page__watch-right--hovered');
+      $(this).removeClass('home-page__watch-right-motion');
+  }, function () {
+      $(this).removeClass('home-page__watch-right--hovered');
+      $(this).addClass('home-page__watch-right-motion');
+  })
 
   $('.home-page__menu-elements-balance').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-balance')
@@ -162,7 +172,7 @@ $(document).ready(function () {
     $('.home-page__menu-elements-call').addClass('home-page__menu-elements-call--shifted');
     $('.home-page__right-text').addClass('home-page__right-text--shifted');
     $('.home-page__left-text').addClass('home-page__left-text--shifted');
-    $('.home-page__left-phone').addClass('home-page__left-phone--shifted-center');
+    $('.home-page__left-phone').addClass('home-page__left-phone--shifted-center home-page__phone-motion--stopped');
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted');
     // menuOpened = true;
@@ -178,7 +188,7 @@ $(document).ready(function () {
     $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
     $('.home-page__right-text').removeClass('home-page__right-text--shifted');
     $('.home-page__left-text').removeClass('home-page__left-text--shifted');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--shifted home-page__left-phone--shifted-center home-page__elements--hidden');
+    $('.home-page__left-phone').removeClass('home-page__left-phone--shifted home-page__left-phone--shifted-center home-page__elements--hidden home-page__phone-motion--stopped');
     $('.home-page__watch-right').removeClass('home-page__watch-right--down');
     $('.home-page__center-phone').removeClass('home-page__center-phone--shifted-center home-page__center-phone--shifted home-page__elements--hidden home-page__phone-motion--stopped');
     $('.home-page__menu-content').removeClass('home-page__elements--hidden');

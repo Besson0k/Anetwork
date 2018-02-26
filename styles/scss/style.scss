@@ -225,9 +225,14 @@ section {
     cursor: pointer;
     transition: all 0.2s linear;
   }
+  &__left-phone-motion {
+    animation-name: motion-Android;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
   &__left-phone--hovered {
     transform: scale(1.05);
-    top: 20%;
+    top: 22vh;
     z-index: 500;
   }
   &__left-phone--shifted {
@@ -260,7 +265,7 @@ section {
 
   }
   &__center-phone-motion {
-    animation-name: motion-IPone;
+    animation-name: motion-IPhone;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
@@ -317,9 +322,14 @@ section {
     z-index: 1100;
     cursor: pointer;
     transition: all 0.15s linear;
-    &:hover {
-      transform: scale(1.05);
-    }
+  }
+  &__watch-right--hovered {
+    transform: scale(1.05);
+  }
+  &__watch-right-motion {
+    animation-name: motion-watch;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
   }
   &__watch-right--down {
     top: 520px;
@@ -344,7 +354,7 @@ section {
     justify-content: flex-start;
     width: 370px;
     min-height: 515px;
-    height: 57vh;
+    height: 800px;
     transition: all 0.2s linear;
     top: 0;
     text-align: right;
@@ -380,7 +390,7 @@ section {
     justify-content: flex-start;
     width: 370px;
     min-height: 515px;
-    height: 57vh;
+    height: 800px;
     text-align: left;
     transition: all 0.2s linear;
     top: 0;
@@ -1164,6 +1174,12 @@ section {
       width: 350px;
       height: 650px;
     }
+    &__left-text{
+      height: 650px;
+    }
+    &__right-text{
+      height: 650px;
+    }
     &__left-text--shifted {
       left: -410px;
     }
@@ -1174,9 +1190,23 @@ section {
 }
 
 
-@keyframes motion-IPone {
+@keyframes motion-IPhone {
   0% {transform: translateY(-3px);}
   25% {transform: translateY(-6px);}
   75% {transform: translateY(0px);}
   100% {transform: translateY(-3px);}
+}
+
+@keyframes motion-Android {
+  0% {transform: translateY(-4px);}
+  25% {transform: translateY(0);}
+  75% {transform: translateY(-8px);}
+  100% {transform: translateY(-4px);}
+}
+
+@keyframes motion-watch {
+  0% {transform: translateY(2px);}
+  20% {transform: translateY(0);}
+  50% {transform: translateY(-2px);}
+  100% {transform: translateY(2px);}
 }
