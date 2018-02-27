@@ -93,15 +93,14 @@ body {
     height: 47px;
     border: 1px solid white;
     border-radius: 7px;
-    font-size: 19px;
-    font-family: HNC-Roman, sans-serif;
+    font-size: 17px;
+    font-family: HNC-Light, sans-serif;
     text-decoration: none;
-    padding: 14px 9px 14px 9px;
+    padding: 14px 18px 14px 18px;
     line-height: 1;
     transition: all 0.1s linear;
     &:hover {
-      background-color: white;
-      color: #251e1a;
+      opacity: 0.7;
     }
   }
 }
@@ -135,9 +134,9 @@ body {
     background-color: black;
     opacity: 0.15;
     z-index: 500;
-    &:hover {
-      opacity: 1;
-    }
+  }
+  &:hover:after {
+    opacity: 0.09;
   }
   &__container {
     display: flex;
@@ -315,14 +314,14 @@ section {
   &__watch-right {
     display: block;
     position: absolute;
-    top: 502px;
-    left: 428px;
+    top: 532px;
+    left: 463px;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 246px;
-    height: 387px;
-    z-index: 1100;
+    width: 187px;
+    height: 337px;
+    z-index: 900;
     cursor: pointer;
     transition: all 0.15s linear;
   }
@@ -340,13 +339,38 @@ section {
     z-index: -100;
   }
   &__service-development {
-    position: absolute;
-    top: 170px;
-    left: 43px;
     display: block;
-    width: 141px;
+    position: absolute;
+    top: 150px;
+    left: 18px;
+    width: 140px;
     height: 47px;
-    background-color: #FFCC00;
+    z-index: 1000;
+    transition: all 0.1s linear;
+    overflow: hidden;
+    &:before {
+      display: block;
+      position: absolute;
+      top: -150px;
+      left: -18px;
+      content: " ";
+      z-index: 700;
+      background-image: url("/Files/home_page/watch_right.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 187px;
+      height: 337px;
+      filter: blur(5px);
+    }
+    &:after {
+      display: block;
+      position: absolute;
+      content: " ";
+      width: 140px;
+      height: 47px;
+      z-index: 1200;
+      background-image: url("/Files/icons/service_in_development.png");
+    }
   }
 
   &__phone-menu {
@@ -626,7 +650,7 @@ section {
     height: 47px;
     transition: all 0.2s linear;
     &:hover {
-      background-image: url("/Files/icons/AppStore-hover.png");
+      opacity: 0.7;
     }
   }
   &__shop-googlePay {
@@ -638,9 +662,9 @@ section {
     background-size: contain;
     width: 173px;
     height: 47px;
-    transition: all 0.2s linear;
+    transition: all 0.1s linear;
     &:hover {
-      background-image: url("/Files/icons/googlePay-hover.png");
+      opacity: 0.7;
     }
   }
   &__close-menu-elements {
