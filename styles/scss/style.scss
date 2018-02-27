@@ -28,6 +28,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: HNC-UltraLight;
+  src: local(HNC-UltraLight), url("/Font/HelveticaNeueCyr-UltraLight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 $bold: bold;
 $color-hover: #5d5df1;
 
@@ -217,9 +224,9 @@ section {
   &__left-phone {
     display: block;
     position: absolute;
-    top: 237px;
+    top: 235px;
     left: 0;
-    background-image: url("/Files/home_page/phone_left.png");
+    background-image: url("/Files/home_page/android/phone-general-menu.png");
     background-repeat: no-repeat;
     background-size: contain;
     height: 618px;
@@ -254,13 +261,13 @@ section {
   &__center-phone {
     display: block;
     position: absolute;
-    top: 222px;
-    left: 214px;
-    background-image: url("/Files/home_page/iphone-jet-black.png");
+    top: 226px;
+    left: 210px;
+    background-image: url("/Files/home_page/iphone/iphone-general-menu.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 294px;
-    height: 588px;
+    width: 303px;
+    height: 606px;
     cursor: pointer;
     transition: transform 0.25s linear, width 0.2s linear, height 0.25s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
     z-index: 500;
@@ -319,8 +326,8 @@ section {
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 187px;
-    height: 337px;
+    width: 178px;
+    height: 321px;
     z-index: 900;
     cursor: pointer;
     transition: all 0.15s linear;
@@ -342,7 +349,7 @@ section {
     display: block;
     position: absolute;
     top: 150px;
-    left: 18px;
+    left: 16px;
     width: 140px;
     height: 47px;
     transform: scaleX(1);
@@ -355,7 +362,7 @@ section {
       display: block;
       position: absolute;
       top: -150px;
-      left: -18px;
+      left: -16px;
       content: " ";
       z-index: 700;
       background-image: url("/Files/home_page/watch_right.png");
@@ -378,14 +385,7 @@ section {
   &__service-animated {
     animation-name: service-watch;
     animation-duration: 2s;
-    //animation-play-state: paused;
   }
-  //&__service-animated--played {
-  //  animation-play-state: running;
-  //}
-  //&__service-animated--stopped {
-  //  animation-play-state: initial;
-  //}
 
   &__phone-menu {
     display: inline-block;
@@ -626,11 +626,13 @@ section {
     justify-content: center;
     width: 50%;
     height: 100%;
+    top: 15px;
     left: 50%;
     text-align: left;
     color: white;
-    padding-left: 30px;
-    line-height: 1.5;
+    padding-left: 20px;
+    line-height: 1.43;
+    letter-spacing: 0.7px;
     transition: all 0.15s linear;
     z-index: 900;
   }
@@ -640,17 +642,19 @@ section {
   }
   &__head {
     font-size: 44px;
-    font-family: HNC-Medium, sans-serif;
-    margin-bottom: 27px;
+    margin-bottom: 20px;
+    font-family: HNC-Roman, sans-serif;
   }
   &__paragraph {
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 633px;
     font-size: 20px;
-    font-family: HNC-Thin, sans-serif;
+
+    font-family: HNC-UltraLight, sans-serif;
   }
   &__shops {
     display: flex;
-    margin-top: 60px;
+    margin-top: 63px;
     flex-direction: row
   }
   &__shop-appStore {
