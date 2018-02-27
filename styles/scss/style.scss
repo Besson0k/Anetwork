@@ -317,10 +317,8 @@ section {
   &__center-phone--shifted-center {
     transform: none;
     cursor: default;
-    left: 38%;
-    top: 18%;
-    width: 300px;
-    height: 650px;
+    left: 512px;
+    top: 244px;
     z-index: -100;
   }
 
@@ -396,10 +394,10 @@ section {
   &__phone-menu {
     display: inline-block;
     position: absolute;
-    top: 18%;
-    left: 38%;
-    width: 400px;
-    height: 800px;
+    left: 512px;
+    top: 242px;
+    width: 303px;
+    height: 610px;
     z-index: 300;
     transition: all 0.2s linear;
   }
@@ -407,35 +405,38 @@ section {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 370px;
-    min-height: 515px;
-    height: 800px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 450px;
+    height: 610px;
     transition: all 0.2s linear;
     top: 0;
     text-align: right;
     z-index: -100;
   }
   &__left-text--shifted {
-    left: -420px;
+    left: -490px;
     z-index: 1000;
   }
   &__left-text-elements {
-    margin-right: 80px;
-    position: relative;
+    margin-right: 100px;
+    //position: relative;
     line-height: 1.5;
   }
   &__menu-elements {
     display: block;
     height: 33%;
+    background-color: indianred;
   }
   &__menu-name {
-    font-size: 32px;
-    font-family: HNC-Medium, sans-serif;
-    margin-bottom: 20px;
+
+    font-size: 38px;
+    font-family: HNC-Roman, sans-serif;
+    margin-bottom: 25px;
+    background-color: green;
   }
   &__menu-content {
-    font-family: HNC-Light, sans-serif;
+    font-family: HNC-Thin, sans-serif;
     font-size: 20px;
     transition: opacity 0.6s ease;
   }
@@ -444,9 +445,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 370px;
-    min-height: 515px;
-    height: 800px;
+    width: 450px;
+    height: 610px;
     text-align: left;
     transition: all 0.2s linear;
     top: 0;
@@ -454,11 +454,11 @@ section {
   }
   &__right-text--shifted {
     opacity: 1;
-    left: 430px;
+    left: 350px;
     z-index: 1000;
   }
   &__right-text-elements {
-    margin-left: 80px;
+    margin-left: 90px;
     position: relative;
     line-height: 1.5;
   }
@@ -567,8 +567,8 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1%;
-    left: 335px;
+    top: 0;
+    left: 405px;
   }
   &__sup {
     display: block;
@@ -578,8 +578,8 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1%;
-    left: 335px;
+    top: 0;
+    left: 405px;
   }
   &__profile {
     display: block;
@@ -589,18 +589,18 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1%;
-    left: 335px;
+    top: 0;
+    left: 405px;
   }
   &__info {
     display: block;
     width: 17px;
-    height: 35px;
+    height: 40px;
     stroke: white;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1%;
+    top: 0;
     left: 9px;
   }
   &__bell {
@@ -611,7 +611,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1%;
+    top: 0;
     left: 1px;
   }
   &__call {
@@ -622,7 +622,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 1%;
+    top: 0;
     left: 0;
   }
   &__text {
