@@ -142,25 +142,20 @@ body {
   &__container {
     display: flex;
     margin: auto;
-    max-width: 1320px;
+    width: 100%;
     height: 100%;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     color: white;
     font-size: 16px;
   }
-  &__text {
-    font-family: HNC-Light, sans-serif;
-    font-size: 19px;
-  }
   &__logo {
-    margin-left: 15px;
-  }
-  &__rda {
-    font-weight: $bold;
-    font-family: HNC-Medium, sans-serif;
-    font-size: 19px;
-    margin-left: 15px;
+    width: 107px;
+    height: 24px;
+    background-image: url("/Files/logo.png");
+    text-decoration: none;
+    margin-right: 31px;
+    z-index: 10000;
   }
 }
 
