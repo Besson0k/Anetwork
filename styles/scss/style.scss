@@ -162,6 +162,12 @@ body {
     text-decoration: none;
     margin-right: 31px;
     z-index: 10000;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__logo--opacited {
+    opacity: 0.8;
   }
 }
 

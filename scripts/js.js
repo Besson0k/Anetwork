@@ -82,6 +82,12 @@ $(document).ready(function () {
       $('.home-page__service-development').removeClass('home-page__service-animated')
   });
 
+  $('.footer').hover (function () {
+      $('.footer__logo').addClass('footer__logo--opacited');
+  }, function () {
+      $('.footer__logo').removeClass('footer__logo--opacited');
+  });
+
   $('.home-page__menu-elements-balance').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-balance')
   }, function () {
