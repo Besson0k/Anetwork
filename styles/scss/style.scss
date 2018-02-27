@@ -345,9 +345,12 @@ section {
     left: 18px;
     width: 140px;
     height: 47px;
-    z-index: 1000;
-    transition: all 0.1s linear;
+    transform: scaleX(1);
+    z-index: -20000;
+    transition: all 0.2s linear;
+    border-radius: 5.45px;
     overflow: hidden;
+    opacity: 0;
     &:before {
       display: block;
       position: absolute;
@@ -372,6 +375,17 @@ section {
       background-image: url("/Files/icons/service_in_development.png");
     }
   }
+  &__service-animated {
+    animation-name: service-watch;
+    animation-duration: 2s;
+    //animation-play-state: paused;
+  }
+  //&__service-animated--played {
+  //  animation-play-state: running;
+  //}
+  //&__service-animated--stopped {
+  //  animation-play-state: initial;
+  //}
 
   &__phone-menu {
     display: inline-block;
@@ -1201,4 +1215,18 @@ section {
   20% {transform: translateY(0);}
   50% {transform: translateY(-3px);}
   100% {transform: translateY(3px);}
+}
+
+@keyframes service-watch {
+  0% {}
+  1% {opacity: 0.5;
+      z-index: 1000}
+  10% {transform: scaleX(1.1);
+      opacity: 1;}
+  30% {transform: scaleX(1);
+      opacity: 1;}
+  95% {transform: scaleX(1);
+      opacity: 1;}
+  100% {opacity: 0;
+        z-index: -1000}
 }
