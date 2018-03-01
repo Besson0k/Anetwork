@@ -467,6 +467,9 @@ section {
       .home-page__rub {
         fill: #FFCC00;
       }
+      .home-page__android-rub {
+        fill: #FFCC00;
+      }
     }
   }
   &__menu-elements-balance--shifted {
@@ -481,6 +484,9 @@ section {
     &:hover {
       color: #FF4160;
       .home-page__sup {
+        fill: #FF4160;
+      }
+      .home-page__android-sup {
         fill: #FF4160;
       }
     }
@@ -500,6 +506,9 @@ section {
       .home-page__profile {
         fill: #5D5DF1;
       }
+      .home-page__android-profile {
+        fill: #5D5DF1;
+      }
     }
   }
   &__menu-elements-profile--shifted {
@@ -515,6 +524,9 @@ section {
       color: #FE00BE;
       .home-page__info {
         stroke: #FE00BE;
+      }
+      .home-page__android-info {
+        fill: #FE00BE;
       }
     }
   }
@@ -532,6 +544,9 @@ section {
       .home-page__bell {
         fill: #0069EA;
       }
+      .home-page__android-bell {
+        fill: #0069EA;
+      }
     }
   }
   &__menu-elements-bell--shifted {
@@ -546,6 +561,9 @@ section {
     &:hover {
       color: #86CA00;
       .home-page__call {
+        fill: #86CA00;
+      }
+      .home-page__android-call {
         fill: #86CA00;
       }
     }
@@ -605,6 +623,60 @@ section {
     left: 2px;
     top: 4px;
   }
+
+  &__icons-android {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+  }
+  &__icons-android--hidded {
+    display: none;
+  }
+  &__android-rub {
+    fill: white;
+    width: 34px;
+    height: 34px;
+    left: 415px;
+    top: 1px;
+  }
+  &__android-sup {
+    fill: white;
+    width: 34px;
+    height: 34px;
+    left: 415px;
+    top: 4px;
+  }
+  &__android-profile {
+    fill: white;
+    width: 27px;
+    height: 27px;
+    left: 416px;
+    top: 5px;
+  }
+  &__android-info {
+    width: 34px;
+    height: 44px;
+    fill: white;
+    left: 3px;
+    top: -3px;
+  }
+  &__android-bell {
+    width: 25px;
+    height: 31px;
+    fill: white;
+    left: 5px;
+    top: 5px;
+  }
+  &__android-call {
+    fill: white;
+    width: 32px;
+    height: 35px;
+    left: 5px;
+    top: 4px;
+  }
+
+
   &__text {
     display: flex;
     position: absolute;
