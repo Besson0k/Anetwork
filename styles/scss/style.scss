@@ -596,8 +596,9 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
+    transition: opacity 0.3s linear;
   }
-  &__icons-iphone--hidded {
+  &__icons-iphone--hidden {
     display: none;
   }
   &__rub {
@@ -644,13 +645,13 @@ section {
   }
 
   &__icons-android {
-    display: block;
+    display: none;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
   }
-  &__icons-android--hidded {
-    display: none;
+  &__icons-android--showed {
+    display: block;
   }
   &__android-rub {
     fill: white;
