@@ -832,9 +832,8 @@ section {
   }
   &__box--showed {
     display: block;
-  }
-  &__background-element-menu {
-
+    animation-name: menu-elements-border;
+    animation-duration: 0.7s;
   }
 }
 
@@ -1341,4 +1340,12 @@ section {
       opacity: 1;}
   100% {opacity: 0;
         z-index: -1000}
+}
+
+@keyframes menu-elements-border {
+  0% {transform: scale(0.5);
+      opacity: 0;}
+  50% {transform: scale(1.03);
+    opacity: 1;}
+  100% {transform: scale(1);}
 }
