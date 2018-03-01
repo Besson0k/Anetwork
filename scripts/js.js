@@ -186,6 +186,7 @@ $(document).ready(function () {
     $('.home-page__left-phone').addClass('home-page__left-phone--shifted-center home-page__phone-motion--stopped');
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted');
+    $('.home-page__icons-iphone').addClass('home-page__icons-iphone--hidded');
     // menuOpened = true;
   }
 
@@ -206,6 +207,7 @@ $(document).ready(function () {
     $('.home-page__info').removeClass('home-page__elements--hidden');
     $('.home-page__element-page').removeClass('home-page__element-page--showed');
     $('.home-page__close-menu-elements').removeClass('home-page__close-menu-elements--showed');
+    $('.home-page__icons-iphone').removeClass('home-page__icons-iphone--hidded');
       menuElementOpened = false;
     // $.fn.fullpage.moveTo(1);
     // menuOpened = false;

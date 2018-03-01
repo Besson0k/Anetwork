@@ -257,10 +257,8 @@ section {
   &__left-phone--shifted-center {
     transform: none;
     cursor: default;
-    left: 38%;
-    top: 18%;
-    width: 300px;
-    height: 650px;
+    left: 518px;
+    top: 233px;
     z-index: 300;
   }
 
@@ -429,12 +427,14 @@ section {
     padding-top: 5px;
     font-size: 38px;
     font-family: HNC-Roman, sans-serif;
+    letter-spacing: 0.5px;
     margin-bottom: 30px;
   }
   &__menu-content {
     font-family: HNC-Thin, sans-serif;
     font-size: 20px;
     line-height: 1.5;
+    letter-spacing: 0.2px;
     transition: opacity 0.6s ease;
   }
   &__right-text {
@@ -554,71 +554,56 @@ section {
     transform: translateX(0px);
     opacity: 1;
   }
-  &__rub {
+  &__icons-iphone {
     display: block;
-    width: 35px;
-    height: 35px;
-    fill: white;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 0;
+  }
+  &__icons-iphone--hidded {
+    display: none;
+  }
+  &__rub {
+    fill: white;
+    width: 33px;
+    height: 33px;
     left: 415px;
+    top: 1px;
   }
   &__sup {
-    display: block;
-    width: 35px;
-    height: 35px;
     fill: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
+    width: 33px;
+    height: 33px;
     left: 415px;
+    top: 4px;
   }
   &__profile {
-    display: block;
-    width: 35px;
-    height: 35px;
     fill: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 415px;
+    width: 34px;
+    height: 33px;
+    left: 413px;
+    top: 5px;
   }
   &__info {
-    display: block;
-    width: 17px;
+    width: 30px;
     height: 40px;
     stroke: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 9px;
+    left: 5px;
+    top: -2px;
   }
   &__bell {
-    display: block;
-    width: 33px;
-    height: 35px;
+    width: 30px;
+    height: 33px;
     fill: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 1px;
+    left: 3px;
+    top: 5px;
   }
   &__call {
-    display: block;
-    width: 35px;
-    height: 35px;
     fill: white;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 33.5px;
+    height: 33px;
+    left: 2px;
+    top: 4px;
   }
   &__text {
     display: flex;
