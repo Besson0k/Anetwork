@@ -239,7 +239,8 @@ section {
     width: 287px;
     z-index: 100;
     cursor: pointer;
-    transition: all 0.2s linear;
+    transition: transform 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
+    //transition: all 0.2s linear;
   }
   &__left-phone-motion {
     animation-name: motion-Android;
@@ -249,6 +250,24 @@ section {
   &__left-phone--hovered {
     transform: scale(1.02);
     z-index: 500;
+  }
+  &__left-phone--hover-balance {
+    background-image: url("/Files/home_page/android/phone_balance.png");
+  }
+  &__left-phone--hover-support {
+    background-image: url("/Files/home_page/android/phone_support.png");
+  }
+  &__left-phone--hover-profile {
+    background-image: url("/Files/home_page/android/phone_profile.png");
+  }
+  &__left-phone--hover-info {
+    background-image: url("/Files/home_page/android/phone_info.png");
+  }
+  &__left-phone--hover-bell {
+    background-image: url("/Files/home_page/android/phone_bell.png");
+  }
+  &__left-phone--hover-call {
+    background-image: url("/Files/home_page/android/phone_call.png");
   }
   &__left-phone--shifted {
     left: -500px;
