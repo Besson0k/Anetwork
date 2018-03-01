@@ -766,13 +766,13 @@ section {
   &__close-menu-elements {
     display: none;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 31px;
+    height: 31px;
     background-image: url("/Files/icons/button_element_menu.png");
     background-repeat: no-repeat;
     background-size: contain;
-    top: 10%;
-    right: -3%;
+    top: 135px;
+    right: -49px;
     cursor: pointer;
   }
   &__close-menu-elements--showed {
@@ -784,11 +784,12 @@ section {
   }
   &__element-page {
     display: none;
-    height: 76vh;
+    position: relative;
+    height: 765px;
     border-radius: 20px;
     border: 1px solid #606866;
-    margin-top: 12vh;
-    width: 100%;
+    margin-top: 135px;
+    width: 1320px;
     overflow: hidden;
     transition: all 0.5s ease;
   }
