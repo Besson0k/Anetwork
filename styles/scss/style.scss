@@ -820,12 +820,13 @@ section {
       z-index: -500;
       height: 100%;
       width: 100%;
-      //background-image: url("/Files/rectangle_3.png");
-      //background-repeat: no-repeat;
-      //background-size: cover;
+      background-image: url("/Files/rectangle_3.png");
+      background-repeat: no-repeat;
+      background-size: 110vw auto;
+      background-position: calc(-52vw + 660px) calc(-135px + 2vh);
       //filter: blur(5px);
-      background-color: white;
-      opacity: 0.05;
+      //background-color: white;
+      //opacity: 0.05;
       transition: all 0.2s ease;
     }
     &:after {
