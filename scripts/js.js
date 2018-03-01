@@ -220,7 +220,7 @@ $(document).ready(function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--shifted-center home-page__center-phone--shifted home-page__elements--hidden home-page__phone-motion--stopped');
     $('.home-page__menu-content').removeClass('home-page__elements--hidden');
     $('.home-page__icons-iphone').removeClass('home-page__elements--hidden home-page__icons-iphone--hidden');
-    $('.home-page__element-page').removeClass('home-page__element-page--showed');
+    $('.menu-elements__box').removeClass('menu-elements__box--showed');
     $('.home-page__close-menu-elements').removeClass('home-page__close-menu-elements--showed');
     $('.home-page__icons-android').removeClass('home-page__elements--hidden home-page__icons-android--showed');
       menuElementOpened = false;
@@ -243,7 +243,7 @@ $(document).ready(function () {
     $('.home-page__menu-content').addClass('home-page__elements--hidden');
     $('.home-page__icons-iphone').addClass('home-page__elements--hidden');
     $('.home-page__icons-android').addClass('home-page__elements--hidden');
-    $('.home-page__element-page').addClass('home-page__element-page--showed');
+    $('.menu-elements__box').addClass('menu-elements__box--showed');
     $('.home-page__close-menu-elements').addClass('home-page__close-menu-elements--showed');
     menuElementOpened = true;
   }
@@ -263,7 +263,7 @@ $(document).ready(function () {
     $('.home-page__menu-content').removeClass('home-page__elements--hidden');
     $('.home-page__icons-iphone').removeClass('home-page__elements--hidden');
     $('.home-page__icons-android').removeClass('home-page__elements--hidden');
-    $('.home-page__element-page').removeClass('home-page__element-page--showed');
+    $('.menu-elements__box').removeClass('menu-elements__box--showed');
     $('.home-page__close-menu-elements').removeClass('home-page__close-menu-elements--showed');
     menuElementOpened = false;
   }
