@@ -405,39 +405,36 @@ section {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 450px;
-    height: 610px;
     transition: all 0.2s linear;
-    top: 0;
+    top: 2px;
     text-align: right;
     z-index: -100;
   }
   &__left-text--shifted {
-    left: -490px;
+    left: -500px;
     z-index: 1000;
   }
   &__left-text-elements {
-    margin-right: 100px;
-    //position: relative;
-    line-height: 1.5;
+    margin-right: 90px;
+
   }
   &__menu-elements {
     display: block;
-    height: 33%;
-    background-color: indianred;
+    height: 220px;
   }
   &__menu-name {
-
+    padding-top: 5px;
     font-size: 38px;
     font-family: HNC-Roman, sans-serif;
-    margin-bottom: 25px;
-    background-color: green;
+    margin-bottom: 30px;
   }
   &__menu-content {
     font-family: HNC-Thin, sans-serif;
     font-size: 20px;
+    line-height: 1.5;
     transition: opacity 0.6s ease;
   }
   &__right-text {
@@ -446,10 +443,9 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     width: 450px;
-    height: 610px;
     text-align: left;
     transition: all 0.2s linear;
-    top: 0;
+    top: 2px;
     z-index: -100;
   }
   &__right-text--shifted {
@@ -460,7 +456,6 @@ section {
   &__right-text-elements {
     margin-left: 90px;
     position: relative;
-    line-height: 1.5;
   }
   &__menu-elements-balance {
     cursor: pointer;
@@ -568,7 +563,7 @@ section {
     background-size: cover;
     position: absolute;
     top: 0;
-    left: 405px;
+    left: 415px;
   }
   &__sup {
     display: block;
@@ -579,7 +574,7 @@ section {
     background-size: cover;
     position: absolute;
     top: 0;
-    left: 405px;
+    left: 415px;
   }
   &__profile {
     display: block;
@@ -590,7 +585,7 @@ section {
     background-size: cover;
     position: absolute;
     top: 0;
-    left: 405px;
+    left: 415px;
   }
   &__info {
     display: block;
