@@ -940,6 +940,21 @@ section {
     width: 287px;
     height: 618px;
   }
+  &__bell-watch {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    z-index: 500;
+    width: 178px;
+    height: 321px;
+    left: 1040px;
+    top: 420px;
+    transition: opacity 0.5s ease;
+    background-image: url("/Files/home_page/iphone/watch_bell.png");
+  }
+  &__bell-watch-iphone {
+    opacity: 1;
+  }
   &__bell-paragraph1 {
     width: 391px;
     top: 175px;
@@ -952,8 +967,6 @@ section {
   }
 
 
-
-  
   &__right-back--moved {
     display: block;
     animation-name: menu-elements_right-back;
@@ -970,15 +983,15 @@ section {
   &__paragraph1--moved {
     display: block;
     animation-name: menu-elements_right-paragraph1;
-    animation-duration: 0.8s;
+    animation-duration: 0.5s;
     animation-delay: 0.2s;
     animation-fill-mode: forwards;
   }
   &__paragraph2--moved {
     display: block;
     animation-name: menu-elements_right-paragraph2;
-    animation-duration: 0.8s;
-    animation-delay: 0.8s;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
   }
 

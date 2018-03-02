@@ -10,9 +10,9 @@ $(document).ready(function () {
   var elementBell = false;
   var elementCall = false;
   var $right_font = undefined;
-  var $right_back=undefined;
-  var $right_paragraph1=undefined;
-  var $right_paragraph2=undefined;
+  var $right_back = undefined;
+  var $right_paragraph1 = undefined;
+  var $right_paragraph2 = undefined;
 
 
   $('#fullpage').fullpage(
@@ -184,14 +184,7 @@ $(document).ready(function () {
       $('.home-page__service-development').addClass('home-page__service-animated')
   });
 
-  // $('.home-page__menu-elements-call').click(function () {
-  //     $.fn.fullpage.moveTo(2);
-  // });
-
   function openIPhoneMenu() {
-    // if (menuOpened) {
-    //   return;
-    // }
     $('.home-page__text').addClass('home-page__text--hidden');
     $('.home-page__menu-elements-balance').addClass('home-page__menu-elements-balance--shifted');
     $('.home-page__menu-elements-support').addClass('home-page__menu-elements-support--shifted');
@@ -206,8 +199,6 @@ $(document).ready(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted-center home-page__phone-motion--stopped');
       menuIphoneOpened = true;
       choiceTypePhone();
-
-    // menuOpened = true;
   }
 
   function openAndroidMenu() {
@@ -230,7 +221,6 @@ $(document).ready(function () {
     $('.home-page__icons-android').addClass('home-page__icons-android--showed');
       menuAndroidOpened = true;
       choiceTypePhone();
-    // menuOpened = true;
   }
 
   function closeMenu() {
@@ -327,6 +317,7 @@ $(document).ready(function () {
       $($right_back).removeClass('menu-elements__right-back--moved');
       $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
       $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
+      // $($watch).removeClass('menu-elements__bell-watch-iphone');
 
     menuElementOpened = false;
     elementBalance = false;
@@ -344,11 +335,13 @@ $(document).ready(function () {
           $('.menu-elements__info-back').addClass('menu-elements__info-back-iphone');
           $('.menu-elements__bell-front').addClass('menu-elements__bell-front-iphone');
           $('.menu-elements__bell-back').addClass('menu-elements__bell-back-iphone');
+          $('.menu-elements__bell-watch').addClass('menu-elements__bell-watch-iphone');
       } else {
           $('.menu-elements__info-front').removeClass('menu-elements__info-front-iphone');
           $('.menu-elements__info-back').removeClass('menu-elements__info-back-iphone');
           $('.menu-elements__bell-front').removeClass('menu-elements__bell-front-iphone');
           $('.menu-elements__bell-back').removeClass('menu-elements__bell-back-iphone');
+          $('.menu-elements__bell-watch').removeClass('menu-elements__bell-watch-iphone');
       }
       if (menuAndroidOpened) {
           $('.menu-elements__info-front').addClass('menu-elements__info-front-android');
