@@ -1077,6 +1077,38 @@ section {
     right: 725px;
   }
 
+  &__support-center {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+  &__support-center-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_support-center.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__support-center-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_support-center.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__support-paragraph1 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px;
+  }
+  &__support-paragraph2 {
+    text-align: right;
+    width: 436px;
+    top: 175px;
+    right: 725px;
+  }
+
 
 
   &__right-back--moved {
@@ -1098,9 +1130,10 @@ section {
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
-  &__left-front--moved {
+
+  &__center--moved {
     display: block;
-    animation-name: menu-elements_left-front;
+    animation-name: menu-elements_center;
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
@@ -1636,7 +1669,7 @@ section {
 }
 
 @keyframes menu-elements-border {
-  0% {transform: scale(0.5);
+  0% {transform: scale(0.7);
       opacity: 0;}
   70% {transform: scale(1.01);
     opacity: 1;}
@@ -1668,10 +1701,10 @@ section {
   100% {top: 55px;
     left: 680px;}
 }
-@keyframes menu-elements_left-back {
+@keyframes menu-elements_center {
   0% {}
-  100% {top: 120px;
-    left: 880px;}
+  100% {top: 110px;
+    left: 780px;}
 }
 
 

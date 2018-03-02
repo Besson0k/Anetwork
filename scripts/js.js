@@ -15,8 +15,9 @@ $(document).ready(function () {
   var $right_paragraph2 = undefined;
   var $right_paragraph3 = undefined;
   var $watch = undefined;
-  var $right_font_left = undefined;
-  var $right_back_left = undefined;
+  var $left_font = undefined;
+  var $left_back = undefined;
+  var $center = undefined;
 
 
   $('#fullpage').fullpage(
@@ -92,18 +93,18 @@ $(document).ready(function () {
   });
 
   $('.home-page__watch-right').hover(function () {
-      $(this).addClass('home-page__watch-right--hovered');
-      $(this).removeClass('home-page__watch-right-motion');
+    $(this).addClass('home-page__watch-right--hovered');
+    $(this).removeClass('home-page__watch-right-motion');
   }, function () {
-      $(this).removeClass('home-page__watch-right--hovered');
-      $(this).addClass('home-page__watch-right-motion');
-      $('.home-page__service-development').removeClass('home-page__service-animated')
+    $(this).removeClass('home-page__watch-right--hovered');
+    $(this).addClass('home-page__watch-right-motion');
+    $('.home-page__service-development').removeClass('home-page__service-animated')
   });
 
-  $('.footer').hover (function () {
-      $('.footer__logo').addClass('footer__logo--opacited');
+  $('.footer').hover(function () {
+    $('.footer__logo').addClass('footer__logo--opacited');
   }, function () {
-      $('.footer__logo').removeClass('footer__logo--opacited');
+    $('.footer__logo').removeClass('footer__logo--opacited');
   });
 
   $('.home-page__menu-elements-balance').hover(function () {
@@ -115,53 +116,52 @@ $(document).ready(function () {
   });
 
   $('.home-page__menu-elements-support').hover(function () {
-      $('.home-page__center-phone').addClass('home-page__center-phone--hover-support')
-      $('.home-page__left-phone').addClass('home-page__left-phone--hover-support')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-support')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-support')
   }, function () {
-      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-support')
-      $('.home-page__left-phone').removeClass('home-page__left-phone--hover-support')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-support')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-support')
   });
 
   $('.home-page__menu-elements-profile').hover(function () {
-      $('.home-page__center-phone').addClass('home-page__center-phone--hover-profile')
-      $('.home-page__left-phone').addClass('home-page__left-phone--hover-profile')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-profile')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-profile')
   }, function () {
-      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-profile')
-      $('.home-page__left-phone').removeClass('home-page__left-phone--hover-profile')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-profile')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-profile')
   });
 
   $('.home-page__menu-elements-info').hover(function () {
-      $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
-      $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
   }, function () {
-      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
-      $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
   });
 
   $('.home-page__menu-elements-info').hover(function () {
-      $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
-      $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
   }, function () {
-      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
-      $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
   });
 
   $('.home-page__menu-elements-bell').hover(function () {
-      $('.home-page__center-phone').addClass('home-page__center-phone--hover-bell')
-      $('.home-page__left-phone').addClass('home-page__left-phone--hover-bell')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-bell')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-bell')
   }, function () {
-      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-bell')
-      $('.home-page__left-phone').removeClass('home-page__left-phone--hover-bell')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-bell')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-bell')
   });
 
   $('.home-page__menu-elements-call').hover(function () {
-      $('.home-page__center-phone').addClass('home-page__center-phone--hover-call')
-      $('.home-page__left-phone').addClass('home-page__left-phone--hover-call')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-call')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-call')
   }, function () {
-      $('.home-page__center-phone').removeClass('home-page__center-phone--hover-call')
-      $('.home-page__left-phone').removeClass('home-page__left-phone--hover-call')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-call')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-call')
   });
-
 
 
   $('.home-page__center-phone').click(openIPhoneMenu);
@@ -170,30 +170,32 @@ $(document).ready(function () {
 
   $('.header__home').click(closeMenu);
 
-    $('.home-page__menu-elements-info').click(function () {
-      elementInfo = true;
-    });
-    $('.home-page__menu-elements-info').click(openMenuElement);
-    $('.home-page__menu-elements-bell').click(function () {
-        elementBell = true;
-    });
-    $('.home-page__menu-elements-bell').click(openMenuElement);
-    $('.home-page__menu-elements-call').click(function () {
-        elementCall = true;
-    });
-    $('.home-page__menu-elements-call').click(openMenuElement);
-    $('.home-page__menu-elements-balance').click(function () {
-        elementBalance = true;
-    });
-    $('.home-page__menu-elements-balance').click(openMenuElement);
-
-
+  $('.home-page__menu-elements-info').click(function () {
+    elementInfo = true;
+  });
+  $('.home-page__menu-elements-info').click(openMenuElement);
+  $('.home-page__menu-elements-bell').click(function () {
+    elementBell = true;
+  });
+  $('.home-page__menu-elements-bell').click(openMenuElement);
+  $('.home-page__menu-elements-call').click(function () {
+    elementCall = true;
+  });
+  $('.home-page__menu-elements-call').click(openMenuElement);
+  $('.home-page__menu-elements-balance').click(function () {
+    elementBalance = true;
+  });
+  $('.home-page__menu-elements-balance').click(openMenuElement);
+  $('.home-page__menu-elements-support').click(function () {
+    elementSupport = true;
+  });
+  $('.home-page__menu-elements-support').click(openMenuElement);
 
 
   $('.home-page__close-menu-elements').click(closeMenuElement);
 
   $('.home-page__watch-right').click(function () {
-      $('.home-page__service-development').addClass('home-page__service-animated')
+    $('.home-page__service-development').addClass('home-page__service-animated')
   });
 
   function openIPhoneMenu() {
@@ -209,8 +211,8 @@ $(document).ready(function () {
     $('.home-page__left-phone').addClass('home-page__left-phone--shifted');
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted-center home-page__phone-motion--stopped');
-      menuIphoneOpened = true;
-      choiceTypePhone();
+    menuIphoneOpened = true;
+    choiceTypePhone();
   }
 
   function openAndroidMenu() {
@@ -231,8 +233,8 @@ $(document).ready(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted');
     $('.home-page__icons-iphone').addClass('home-page__icons-iphone--hidden');
     $('.home-page__icons-android').addClass('home-page__icons-android--showed');
-      menuAndroidOpened = true;
-      choiceTypePhone();
+    menuAndroidOpened = true;
+    choiceTypePhone();
   }
 
   function closeMenu() {
@@ -255,30 +257,31 @@ $(document).ready(function () {
     $('.home-page__icons-android').removeClass('home-page__elements--hidden home-page__icons-android--showed');
     $('.home-page__menu-name-info').removeClass('home-page__menu-info--discovered');
 
-      $($right_font).removeClass('menu-elements__right-front--moved');
-      $($right_back).removeClass('menu-elements__right-back--moved');
-      $($right_font_left).removeClass('menu-elements__left-front--moved');
-      $($right_back_left).removeClass('menu-elements__left-back--moved');
-      $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
-      $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
-      $($watch).removeClass('menu-elements__bell-watch--showed');
-      $($watch).removeClass('menu-elements__bell-watch--showed');
+    $($right_font).removeClass('menu-elements__right-front--moved');
+    $($right_back).removeClass('menu-elements__right-back--moved');
+    $($left_font).removeClass('menu-elements__left-front--moved');
+    $($left_back).removeClass('menu-elements__left-back--moved');
+    $($center).removeClass('menu-elements__center--moved');
+    $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
+    $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
+    $($watch).removeClass('menu-elements__bell-watch--showed');
+    $($watch).removeClass('menu-elements__bell-watch--showed');
 
-      menuElementOpened = false;
-      menuIphoneOpened = false;
-      menuAndroidOpened = false;
-      elementBalance = false;
-      elementSupport = false;
-      elementProfile = false;
-      elementInfo = false;
-      elementBell = false;
-      elementCall = false;
+    menuElementOpened = false;
+    menuIphoneOpened = false;
+    menuAndroidOpened = false;
+    elementBalance = false;
+    elementSupport = false;
+    elementProfile = false;
+    elementInfo = false;
+    elementBell = false;
+    elementCall = false;
   }
 
   function openMenuElement() {
-      if (menuElementOpened) {
-          return;
-      }
+    if (menuElementOpened) {
+      return;
+    }
 
     $('.home-page__left-phone').addClass('home-page__elements--hidden');
     $('.home-page__center-phone').addClass('home-page__elements--hidden');
@@ -291,23 +294,24 @@ $(document).ready(function () {
     menuElementOpened = true;
 
 
-      choiceElementMenu();
+    choiceElementMenu();
 
-      $($right_font).addClass('menu-elements__right-front--moved');
-      $($right_back).addClass('menu-elements__right-back--moved');
-      $($right_font_left).addClass('menu-elements__left-front--moved');
-      $($right_back_left).addClass('menu-elements__left-back--moved');
-      $($right_paragraph1).addClass('menu-elements__paragraph1--moved');
-      $($right_paragraph2).addClass('menu-elements__paragraph2--moved');
-      $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
-      $($watch).addClass('menu-elements__bell-watch--showed');
+    $($right_font).addClass('menu-elements__right-front--moved');
+    $($right_back).addClass('menu-elements__right-back--moved');
+    $($left_font).addClass('menu-elements__left-front--moved');
+    $($left_back).addClass('menu-elements__left-back--moved');
+    $($center).addClass('menu-elements__center--moved');
+    $($right_paragraph1).addClass('menu-elements__paragraph1--moved');
+    $($right_paragraph2).addClass('menu-elements__paragraph2--moved');
+    $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
+    $($watch).addClass('menu-elements__bell-watch--showed');
 
   }
 
   function closeMenuElement() {
-      if (!menuElementOpened) {
-          return;
-      }
+    if (!menuElementOpened) {
+      return;
+    }
     $('.home-page__menu-elements-balance').addClass('home-page__menu-elements-balance--shifted');
     $('.home-page__menu-elements-support').addClass('home-page__menu-elements-support--shifted');
     $('.home-page__menu-elements-profile').addClass('home-page__menu-elements-profile--shifted');
@@ -324,14 +328,15 @@ $(document).ready(function () {
     $('.home-page__close-menu-elements').removeClass('home-page__close-menu-elements--showed');
     $('.home-page__menu-name-info').removeClass('home-page__menu-info--discovered');
 
-      $($right_font).removeClass('menu-elements__right-front--moved');
-      $($right_back).removeClass('menu-elements__right-back--moved');
-      $($right_font_left).removeClass('menu-elements__left-front--moved');
-      $($right_back_left).removeClass('menu-elements__left-back--moved');
-      $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
-      $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
-      $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
-      $($watch).removeClass('menu-elements__bell-watch--showed');
+    $($right_font).removeClass('menu-elements__right-front--moved');
+    $($right_back).removeClass('menu-elements__right-back--moved');
+    $($left_font).removeClass('menu-elements__left-front--moved');
+    $($left_back).removeClass('menu-elements__left-back--moved');
+    $($center).removeClass('menu-elements__center--moved');
+    $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
+    $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
+    $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
+    $($watch).removeClass('menu-elements__bell-watch--showed');
 
     menuElementOpened = false;
     elementBalance = false;
@@ -342,127 +347,149 @@ $(document).ready(function () {
     elementCall = false;
 
   }
-  
+
   function choiceTypePhone() {
-      if (menuIphoneOpened) {
-          $('.menu-elements__info-front').addClass('menu-elements__info-front-iphone');
-          $('.menu-elements__info-back').addClass('menu-elements__info-back-iphone');
-          $('.menu-elements__bell-front').addClass('menu-elements__bell-front-iphone');
-          $('.menu-elements__bell-back').addClass('menu-elements__bell-back-iphone');
-          $('.menu-elements__bell-watch').addClass('menu-elements__bell-watch-iphone');
-          $('.menu-elements__call-front').addClass('menu-elements__call-front-iphone');
-          $('.menu-elements__call-back').addClass('menu-elements__call-back-iphone');
-          $('.menu-elements__balance-front').addClass('menu-elements__balance-front-iphone');
-          $('.menu-elements__balance-back').addClass('menu-elements__balance-back-iphone');
-      } else {
-          $('.menu-elements__info-front').removeClass('menu-elements__info-front-iphone');
-          $('.menu-elements__info-back').removeClass('menu-elements__info-back-iphone');
-          $('.menu-elements__bell-front').removeClass('menu-elements__bell-front-iphone');
-          $('.menu-elements__bell-back').removeClass('menu-elements__bell-back-iphone');
-          $('.menu-elements__bell-watch').removeClass('menu-elements__bell-watch-iphone');
-          $('.menu-elements__call-front').removeClass('menu-elements__call-front-iphone');
-          $('.menu-elements__call-back').removeClass('menu-elements__call-back-iphone');
-          $('.menu-elements__balance-front').removeClass('menu-elements__balance-front-iphone');
-          $('.menu-elements__balance-back').removeClass('menu-elements__balance-back-iphone');
-      }
-      if (menuAndroidOpened) {
-          $('.menu-elements__info-front').addClass('menu-elements__info-front-android');
-          $('.menu-elements__info-back').addClass('menu-elements__info-back-android');
-          $('.menu-elements__bell-front').addClass('menu-elements__bell-front-android');
-          $('.menu-elements__bell-back').addClass('menu-elements__bell-back-android');
-          $('.menu-elements__call-front').addClass('menu-elements__call-front-android');
-          $('.menu-elements__call-back').addClass('menu-elements__call-back-android');
-          $('.menu-elements__balance-front').addClass('menu-elements__balance-front-android');
-          $('.menu-elements__balance-back').addClass('menu-elements__balance-back-android');
-      } else {
-          $('.menu-elements__info-front').removeClass('menu-elements__info-front-android');
-          $('.menu-elements__info-back').removeClass('menu-elements__info-back-android');
-          $('.menu-elements__bell-front').removeClass('menu-elements__bell-front-android');
-          $('.menu-elements__bell-back').removeClass('menu-elements__bell-back-android');
-          $('.menu-elements__call-front').removeClass('menu-elements__call-front-android');
-          $('.menu-elements__call-back').removeClass('menu-elements__call-back-android');
-          $('.menu-elements__balance-front').removeClass('menu-elements__balance-front-android');
-          $('.menu-elements__balance-back').removeClass('menu-elements__balance-back-android');
-      }
+    if (menuIphoneOpened) {
+      $('.menu-elements__info-front').addClass('menu-elements__info-front-iphone');
+      $('.menu-elements__info-back').addClass('menu-elements__info-back-iphone');
+      $('.menu-elements__bell-front').addClass('menu-elements__bell-front-iphone');
+      $('.menu-elements__bell-back').addClass('menu-elements__bell-back-iphone');
+      $('.menu-elements__bell-watch').addClass('menu-elements__bell-watch-iphone');
+      $('.menu-elements__call-front').addClass('menu-elements__call-front-iphone');
+      $('.menu-elements__call-back').addClass('menu-elements__call-back-iphone');
+      $('.menu-elements__balance-front').addClass('menu-elements__balance-front-iphone');
+      $('.menu-elements__balance-back').addClass('menu-elements__balance-back-iphone');
+      $('.menu-elements__support-center').addClass('menu-elements__support-center-iphone');
+    } else {
+      $('.menu-elements__info-front').removeClass('menu-elements__info-front-iphone');
+      $('.menu-elements__info-back').removeClass('menu-elements__info-back-iphone');
+      $('.menu-elements__bell-front').removeClass('menu-elements__bell-front-iphone');
+      $('.menu-elements__bell-back').removeClass('menu-elements__bell-back-iphone');
+      $('.menu-elements__bell-watch').removeClass('menu-elements__bell-watch-iphone');
+      $('.menu-elements__call-front').removeClass('menu-elements__call-front-iphone');
+      $('.menu-elements__call-back').removeClass('menu-elements__call-back-iphone');
+      $('.menu-elements__balance-front').removeClass('menu-elements__balance-front-iphone');
+      $('.menu-elements__balance-back').removeClass('menu-elements__balance-back-iphone');
+      $('.menu-elements__support-center').removeClass('menu-elements__support-center-iphone');
+    }
+    if (menuAndroidOpened) {
+      $('.menu-elements__info-front').addClass('menu-elements__info-front-android');
+      $('.menu-elements__info-back').addClass('menu-elements__info-back-android');
+      $('.menu-elements__bell-front').addClass('menu-elements__bell-front-android');
+      $('.menu-elements__bell-back').addClass('menu-elements__bell-back-android');
+      $('.menu-elements__call-front').addClass('menu-elements__call-front-android');
+      $('.menu-elements__call-back').addClass('menu-elements__call-back-android');
+      $('.menu-elements__balance-front').addClass('menu-elements__balance-front-android');
+      $('.menu-elements__balance-back').addClass('menu-elements__balance-back-android');
+      $('.menu-elements__support-center').addClass('menu-elements__support-center-android');
+    } else {
+      $('.menu-elements__info-front').removeClass('menu-elements__info-front-android');
+      $('.menu-elements__info-back').removeClass('menu-elements__info-back-android');
+      $('.menu-elements__bell-front').removeClass('menu-elements__bell-front-android');
+      $('.menu-elements__bell-back').removeClass('menu-elements__bell-back-android');
+      $('.menu-elements__call-front').removeClass('menu-elements__call-front-android');
+      $('.menu-elements__call-back').removeClass('menu-elements__call-back-android');
+      $('.menu-elements__balance-front').removeClass('menu-elements__balance-front-android');
+      $('.menu-elements__balance-back').removeClass('menu-elements__balance-back-android');
+      $('.menu-elements__support-center').removeClass('menu-elements__support-center-android');
+    }
   }
 
   function choiceElementMenu() {
-      if (elementInfo) {
-          $right_font = '.menu-elements__info-front';
-          $right_back = '.menu-elements__info-back';
-          $right_paragraph1 = '.menu-elements__info-paragraph1';
-          $right_paragraph2 = '.menu-elements__info-paragraph2';
-          $right_paragraph3 = undefined;
+    if (elementInfo) {
+      $right_font = '.menu-elements__info-front';
+      $right_back = '.menu-elements__info-back';
+      $right_paragraph1 = '.menu-elements__info-paragraph1';
+      $right_paragraph2 = '.menu-elements__info-paragraph2';
+      $right_paragraph3 = undefined;
+      $watch = undefined;
+      $left_font = undefined;
+      $left_back = undefined;
+      $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
+      $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
+      $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
+      // $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
+      $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
+      $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
+    } else {
+      if (elementBell) {
+        $right_font = '.menu-elements__bell-front';
+        $right_back = '.menu-elements__bell-back';
+        $right_paragraph1 = '.menu-elements__bell-paragraph1';
+        $right_paragraph2 = '.menu-elements__bell-paragraph2';
+        $watch = '.menu-elements__bell-watch';
+        $right_paragraph3 = undefined;
+        $left_font = undefined;
+        $left_back = undefined;
+        $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
+        $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
+        $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
+        $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
+        // $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
+        $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
+      } else {
+        if (elementCall) {
+          $right_font = '.menu-elements__call-front';
+          $right_back = '.menu-elements__call-back';
+          $right_paragraph1 = '.menu-elements__call-paragraph1';
+          $right_paragraph2 = '.menu-elements__call-paragraph2';
+          $right_paragraph3 = '.menu-elements__call-paragraph3';
           $watch = undefined;
-          $right_font_left = undefined;
-          $right_back_left = undefined;
+          $left_font = undefined;
+          $left_back = undefined;
           $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
           $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
           $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
-          // $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
+          $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
           $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
-          $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
-      } else {
-          if (elementBell) {
-              $right_font = '.menu-elements__bell-front';
-              $right_back = '.menu-elements__bell-back';
-              $right_paragraph1 = '.menu-elements__bell-paragraph1';
-              $right_paragraph2 = '.menu-elements__bell-paragraph2';
-              $watch = '.menu-elements__bell-watch';
+          // $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
+        } else {
+          if (elementBalance) {
+            $left_font = '.menu-elements__balance-front';
+            $left_back = '.menu-elements__balance-back';
+            $right_paragraph1 = '.menu-elements__balance-paragraph1';
+            $right_paragraph2 = '.menu-elements__balance-paragraph2';
+            $right_paragraph3 = '.menu-elements__balance-paragraph3';
+            $watch = undefined;
+            $right_font = undefined;
+            $right_back = undefined;
+            // $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
+            $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
+            $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
+            $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
+            $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
+            $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
+          } else {
+            if (elementSupport) {
+              $center = '.menu-elements__support-center';
+              $right_paragraph1 = '.menu-elements__support-paragraph1';
+              $right_paragraph2 = '.menu-elements__support-paragraph2';
               $right_paragraph3 = undefined;
-              $right_font_left = undefined;
-              $right_back_left = undefined;
+              $left_font = undefined;
+              $left_back = undefined;
+              $watch = undefined;
+              $right_font = undefined;
+              $right_back = undefined;
               $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
-              $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
+              // $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
               $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
               $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
-              // $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
+              $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
               $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
-          } else {
-              if (elementCall) {
-                  $right_font = '.menu-elements__call-front';
-                  $right_back = '.menu-elements__call-back';
-                  $right_paragraph1 = '.menu-elements__call-paragraph1';
-                  $right_paragraph2 = '.menu-elements__call-paragraph2';
-                  $right_paragraph3 = '.menu-elements__call-paragraph3';
-                  $watch = undefined;
-                  $right_font_left = undefined;
-                  $right_back_left = undefined;
-                  $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
-                  $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
-                  $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
-                  $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
-                  $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
-                  // $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
-              } else {
-                  if (elementBalance) {
-                      $right_font_left = '.menu-elements__balance-front';
-                      $right_back_left = '.menu-elements__balance-back';
-                      $right_paragraph1 = '.menu-elements__balance-paragraph1';
-                      $right_paragraph2 = '.menu-elements__balance-paragraph2';
-                      $right_paragraph3 = '.menu-elements__balance-paragraph3';
-                      $watch = undefined;
-                      $right_font = undefined;
-                      $right_back = undefined;
-                      // $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
-                      $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
-                      $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
-                      $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
-                      $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
-                      $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
-                  } else {
-                      $right_font = undefined;
-                      $right_back = undefined;
-                      $right_font_left = undefined;
-                      $right_back_left = undefined;
-                      $right_paragraph1 = undefined;
-                      $right_paragraph2 = undefined;
-                      $right_paragraph3 = undefined;
-                      $watch = undefined;
-                  }
-              }
+            } else {
+              $right_font = undefined;
+              $right_back = undefined;
+              $left_font = undefined;
+              $left_back = undefined;
+              $right_paragraph1 = undefined;
+              $right_paragraph2 = undefined;
+              $right_paragraph3 = undefined;
+              $watch = undefined;
+            }
           }
+        }
       }
+    }
   }
 
 });
