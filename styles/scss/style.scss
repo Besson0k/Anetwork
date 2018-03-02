@@ -941,7 +941,7 @@ section {
     height: 618px;
   }
   &__bell-watch {
-    display: block;
+    display: none;
     position: absolute;
     opacity: 0;
     z-index: 500;
@@ -953,6 +953,9 @@ section {
     background-image: url("/Files/home_page/iphone/watch_bell.png");
   }
   &__bell-watch-iphone {
+    display: block;
+  }
+  &__bell-watch--showed {
     opacity: 1;
   }
   &__bell-paragraph1 {
@@ -965,6 +968,61 @@ section {
     top: 175px;
     left: 735px;
   }
+
+  &__call-front {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+  &__call-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_call-front.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__call-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_call-front.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__call-back {
+    display: none;
+    position: absolute;
+    z-index: 500;
+  }
+  &__call-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_call-back.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__call-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_call-back.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__call-paragraph1 {
+    width: 391px;
+    top: 175px;
+    left: 735px;
+  }
+  &__call-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px;
+  }
+  &__call-paragraph3 {
+    width: 391px;
+    top: 175px;
+    left: 735px;
+  }
+
 
 
   &__right-back--moved {
@@ -992,6 +1050,13 @@ section {
     animation-name: menu-elements_right-paragraph2;
     animation-duration: 0.5s;
     animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  &__paragraph3--moved {
+    display: block;
+    animation-name: menu-elements_right-paragraph3;
+    animation-duration: 0.5s;
+    animation-delay: 0.8s;
     animation-fill-mode: forwards;
   }
 
@@ -1546,4 +1611,12 @@ section {
       opacity: 1}
   100% {top: 385px;
       opacity: 1;}
+}
+
+@keyframes menu-elements_right-paragraph3 {
+  0% {opacity: 0;}
+  70% {top: 550px;
+    opacity: 1}
+  100% {top: 540px;
+    opacity: 1;}
 }
