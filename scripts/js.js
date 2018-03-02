@@ -1,6 +1,8 @@
 $(document).ready(function () {
   var menuOpened = false;
   var menuElementOpened = false;
+  var menuIphoneOpened = false;
+  var menuAndroidOpened = false;
   $('#fullpage').fullpage(
     {
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage', 'tenthPage'],
@@ -152,6 +154,7 @@ $(document).ready(function () {
 
   $('.header__home').click(closeMenu);
 
+  // $('.home-page__menu-elements-info').click(openMenuElement);
   $('.home-page__menu-elements-info').click(openMenuElement);
 
   $('.home-page__close-menu-elements').click(closeMenuElement);
@@ -180,6 +183,14 @@ $(document).ready(function () {
     $('.home-page__left-phone').addClass('home-page__left-phone--shifted');
     $('.home-page__watch-right').addClass('home-page__watch-right--down');
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted-center home-page__phone-motion--stopped');
+      menuIphoneOpened = true;
+      choiceTypePhone();
+
+    $('.menu-elements__info-front').addClass('menu-elements__right-front--moved');
+    $('.menu-elements__info-back').addClass('menu-elements__right-back--moved');
+    $('.menu-elements__info-paragraph1').addClass('menu-elements__info-paragraph1--moved');
+    $('.menu-elements__info-paragraph2').addClass('menu-elements__info-paragraph2--moved');
+
 
     // menuOpened = true;
   }
@@ -202,6 +213,7 @@ $(document).ready(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted');
     $('.home-page__icons-iphone').addClass('home-page__icons-iphone--hidden');
     $('.home-page__icons-android').addClass('home-page__icons-android--showed');
+      choiceTypePhone();
     // menuOpened = true;
   }
 
@@ -225,6 +237,8 @@ $(document).ready(function () {
     $('.home-page__icons-android').removeClass('home-page__elements--hidden home-page__icons-android--showed');
     $('.home-page__menu-name-info').removeClass('home-page__menu-info--discovered');
       menuElementOpened = false;
+      menuIphoneOpened = false;
+
     // $.fn.fullpage.moveTo(1);
     // menuOpened = false;
   }
@@ -269,6 +283,23 @@ $(document).ready(function () {
     $('.home-page__close-menu-elements').removeClass('home-page__close-menu-elements--showed');
     $('.home-page__menu-name-info').removeClass('home-page__menu-info--discovered');
     menuElementOpened = false;
+  }
+  
+  function choiceTypePhone() {
+      if (menuIphoneOpened) {
+          $('.menu-elements__info-front').addClass('menu-elements__info-front-iphone');
+          $('.menu-elements__info-back').addClass('menu-elements__info-back-iphone');
+      } else {
+          $('.menu-elements__info-front').removeClass('menu-elements__info-front-iphone');
+          $('.menu-elements__info-back').removeClass('menu-elements__info-back-iphone');
+      }
+      if (menuAndroidOpened) {
+          $('.menu-elements__info-front').addClass('menu-elements__info-front-android');
+          $('.menu-elements__info-back').addClass('menu-elements__info-back-android');
+      } else {
+          $('.menu-elements__info-front').removeClass('menu-elements__info-front-android');
+          $('.menu-elements__info-back').removeClass('menu-elements__info-back-android');
+      }
   }
 
 });

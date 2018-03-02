@@ -738,7 +738,6 @@ section {
     margin-top: 30px;
     width: 633px;
     font-size: 20px;
-
     font-family: HNC-UltraLight, sans-serif;
   }
   &__shops {
@@ -845,6 +844,83 @@ section {
     animation-name: menu-elements-border;
     animation-duration: 0.7s;
   }
+  &__info-front {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+   }
+  &__info-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_info-front.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__info-front-android {
+    top: 110px;
+    left: 510px;
+    background-image: url("/");
+    width: 303px;
+    height: 606px;
+  }
+  &__info-back {
+    display: none;
+    position: absolute;
+    z-index: 500;
+  }
+  &__info-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_info-back.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__right-front--moved {
+    display: block;
+    animation-name: menu-elements_right-front;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  &__right-back--moved {
+    display: block;
+    animation-name: menu-elements_right-back;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  &__info-text {
+    display: none;
+    position: absolute;
+    font-size: 19px;
+    font-family: HNC-UltraLight, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.43;
+    opacity: 0;
+  }
+  &__info-paragraph1 {
+    width: 391px;
+    top: 175px;
+    left: 735px;
+  }
+  &__info-paragraph1--moved {
+    display: block;
+    animation-name: menu-elements_right-paragraph1;
+    animation-duration: 0.8s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+  }
+  &__info-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px;
+  }
+  &__info-paragraph2--moved {
+    display: block;
+    animation-name: menu-elements_right-paragraph2;
+    animation-duration: 0.8s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards;
+  }
+
 }
 
 
@@ -1355,7 +1431,7 @@ section {
 @keyframes menu-elements-border {
   0% {transform: scale(0.5);
       opacity: 0;}
-  50% {transform: scale(1.03);
+  70% {transform: scale(1.01);
     opacity: 1;}
   100% {transform: scale(1);}
 }
@@ -1367,4 +1443,32 @@ section {
         //top: 313px;
         //left: 730px;
   }
+}
+
+@keyframes menu-elements_right-front {
+   0% {}
+   100% {top: 55px;
+     left: 325px}
+ }
+
+@keyframes menu-elements_right-back {
+  0% {}
+  100% {top: 120px;
+    left: 125px}
+}
+
+@keyframes menu-elements_right-paragraph1 {
+  0% {opacity: 0;}
+  70% {top: 265px;
+      opacity: 1;}
+  100% {top: 255px;
+      opacity: 1;}
+}
+
+@keyframes menu-elements_right-paragraph2 {
+  0% {opacity: 0;}
+  70% {top: 395px;
+      opacity: 1}
+  100% {top: 385px;
+      opacity: 1;}
 }
