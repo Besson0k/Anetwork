@@ -1130,6 +1130,12 @@ section {
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
+  &__left-front--moved {
+    display: block;
+    animation-name: menu-elements_left-front;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
 
   &__center--moved {
     display: block;
@@ -1701,9 +1707,15 @@ section {
   100% {top: 55px;
     left: 680px;}
 }
+@keyframes menu-elements_left-back {
+  0% {}
+  100% {top: 120px;
+    left: 880px;}
+}
+
 @keyframes menu-elements_center {
   0% {}
-  100% {top: 110px;
+  100% {top: 100px;
     left: 780px;}
 }
 

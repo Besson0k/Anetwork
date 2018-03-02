@@ -264,8 +264,9 @@ $(document).ready(function () {
     $($center).removeClass('menu-elements__center--moved');
     $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
     $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
+    $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
     $($watch).removeClass('menu-elements__bell-watch--showed');
-    $($watch).removeClass('menu-elements__bell-watch--showed');
+
 
     menuElementOpened = false;
     menuIphoneOpened = false;
@@ -405,6 +406,7 @@ $(document).ready(function () {
       $watch = undefined;
       $left_font = undefined;
       $left_back = undefined;
+      $center = undefined;
       $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
       $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
       $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
@@ -421,6 +423,7 @@ $(document).ready(function () {
         $right_paragraph3 = undefined;
         $left_font = undefined;
         $left_back = undefined;
+        $center = undefined;
         $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
         $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
         $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
@@ -437,6 +440,7 @@ $(document).ready(function () {
           $watch = undefined;
           $left_font = undefined;
           $left_back = undefined;
+          $center = undefined;
           $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
           $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
           $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
@@ -453,6 +457,7 @@ $(document).ready(function () {
             $watch = undefined;
             $right_font = undefined;
             $right_back = undefined;
+            $center = undefined;
             // $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
             $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
             $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
@@ -481,6 +486,7 @@ $(document).ready(function () {
               $right_back = undefined;
               $left_font = undefined;
               $left_back = undefined;
+              $center = undefined;
               $right_paragraph1 = undefined;
               $right_paragraph2 = undefined;
               $right_paragraph3 = undefined;
