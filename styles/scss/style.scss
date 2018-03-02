@@ -823,9 +823,6 @@ section {
       background-repeat: no-repeat;
       background-size: 104vw auto;
       background-position: calc(-48vw + 660px) calc(-135px - 2vh);
-      //filter: blur(5px);
-      //background-color: white;
-      //opacity: 0.05;
       transition: all 0.2s ease;
     }
     &:after {
@@ -1023,6 +1020,63 @@ section {
     left: 735px;
   }
 
+  &__balance-front {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+  &__balance-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_balance-front.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__balance-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_balance-front.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__balance-back {
+    display: none;
+    position: absolute;
+    z-index: 500;
+  }
+  &__balance-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_balance-back.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__balance-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_balance-back.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__balance-paragraph1 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px;
+  }
+  &__balance-paragraph2 {
+    text-align: right;
+    width: 436px;
+    top: 175px;
+    right: 725px;
+  }
+  &__balance-paragraph3 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px;
+  }
+
 
 
   &__right-back--moved {
@@ -1034,6 +1088,19 @@ section {
   &__right-front--moved {
     display: block;
     animation-name: menu-elements_right-front;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  &__left-back--moved {
+    display: block;
+    animation-name: menu-elements_left-back;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  &__left-front--moved {
+    display: block;
+    animation-name: menu-elements_left-front;
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
@@ -1588,14 +1655,25 @@ section {
 @keyframes menu-elements_right-front {
    0% {}
    100% {top: 55px;
-     left: 325px}
+     left: 325px;}
  }
-
 @keyframes menu-elements_right-back {
   0% {}
   100% {top: 120px;
-    left: 125px}
+    left: 125px;}
 }
+
+@keyframes menu-elements_left-front {
+  0% {}
+  100% {top: 55px;
+    left: 680px;}
+}
+@keyframes menu-elements_left-back {
+  0% {}
+  100% {top: 120px;
+    left: 880px;}
+}
+
 
 @keyframes menu-elements_right-paragraph1 {
   0% {opacity: 0;}

@@ -257,6 +257,8 @@ $(document).ready(function () {
 
       $($right_font).removeClass('menu-elements__right-front--moved');
       $($right_back).removeClass('menu-elements__right-back--moved');
+      $($right_font_left).removeClass('menu-elements__left-front--moved');
+      $($right_back_left).removeClass('menu-elements__left-back--moved');
       $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
       $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
       $($watch).removeClass('menu-elements__bell-watch--showed');
@@ -293,6 +295,8 @@ $(document).ready(function () {
 
       $($right_font).addClass('menu-elements__right-front--moved');
       $($right_back).addClass('menu-elements__right-back--moved');
+      $($right_font_left).addClass('menu-elements__left-front--moved');
+      $($right_back_left).addClass('menu-elements__left-back--moved');
       $($right_paragraph1).addClass('menu-elements__paragraph1--moved');
       $($right_paragraph2).addClass('menu-elements__paragraph2--moved');
       $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
@@ -322,6 +326,8 @@ $(document).ready(function () {
 
       $($right_font).removeClass('menu-elements__right-front--moved');
       $($right_back).removeClass('menu-elements__right-back--moved');
+      $($right_font_left).removeClass('menu-elements__left-front--moved');
+      $($right_back_left).removeClass('menu-elements__left-back--moved');
       $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
       $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
       $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
