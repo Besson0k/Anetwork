@@ -857,11 +857,11 @@ section {
     height: 606px;
   }
   &__info-front-android {
-    top: 110px;
-    left: 510px;
-    background-image: url("/");
-    width: 303px;
-    height: 606px;
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_info-front.png");
+    width: 287px;
+    height: 618px;
   }
   &__info-back {
     display: none;
@@ -874,6 +874,13 @@ section {
     background-image: url("/Files/home_page/iphone/iphone_info-back.png");
     width: 303px;
     height: 606px;
+  }
+  &__info-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_info-back.png");
+    width: 287px;
+    height: 618px;
   }
   &__right-front--moved {
     display: block;
@@ -901,7 +908,7 @@ section {
     top: 175px;
     left: 735px;
   }
-  &__info-paragraph1--moved {
+  &__paragraph1--moved {
     display: block;
     animation-name: menu-elements_right-paragraph1;
     animation-duration: 0.8s;
@@ -913,7 +920,7 @@ section {
     top: 175px;
     left: 735px;
   }
-  &__info-paragraph2--moved {
+  &__paragraph2--moved {
     display: block;
     animation-name: menu-elements_right-paragraph2;
     animation-duration: 0.8s;
