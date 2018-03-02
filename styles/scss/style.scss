@@ -882,19 +882,7 @@ section {
     width: 287px;
     height: 618px;
   }
-  &__right-front--moved {
-    display: block;
-    animation-name: menu-elements_right-front;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-  &__right-back--moved {
-    display: block;
-    animation-name: menu-elements_right-back;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-  &__info-text {
+  &__text {
     display: none;
     position: absolute;
     font-size: 19px;
@@ -908,17 +896,83 @@ section {
     top: 175px;
     left: 735px;
   }
+  &__info-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px;
+  }
+
+  &__bell-front {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+  &__bell-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_bell-front.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__bell-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_bell-front.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__bell-back {
+    display: none;
+    position: absolute;
+    z-index: 500;
+  }
+  &__bell-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_bell-back.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__bell-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_bell-back.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__bell-paragraph1 {
+    width: 391px;
+    top: 175px;
+    left: 735px;
+  }
+  &__bell-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px;
+  }
+
+
+
+  
+  &__right-back--moved {
+    display: block;
+    animation-name: menu-elements_right-back;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  &__right-front--moved {
+    display: block;
+    animation-name: menu-elements_right-front;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
   &__paragraph1--moved {
     display: block;
     animation-name: menu-elements_right-paragraph1;
     animation-duration: 0.8s;
     animation-delay: 0.2s;
     animation-fill-mode: forwards;
-  }
-  &__info-paragraph2 {
-    width: 436px;
-    top: 175px;
-    left: 735px;
   }
   &__paragraph2--moved {
     display: block;
@@ -927,6 +981,7 @@ section {
     animation-delay: 0.8s;
     animation-fill-mode: forwards;
   }
+
 
 }
 
