@@ -733,7 +733,42 @@ section {
 
   &__name-info--shifted {
     cursor: default;
+    animation-name: name-info_shifted;
+    animation-duration: 0.2s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  &__name-bell--shifted {
+    cursor: default;
+    animation-name: name-bell_shifted;
+    animation-duration: 0.2s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  &__name-call--shifted {
+    cursor: default;
+    animation-name: name-call_shifted;
+    animation-duration: 0.2s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  &__name-balance--shifted {
+    cursor: default;
     animation-name: name-balance_shifted;
+    animation-duration: 0.2s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  &__name-support--shifted {
+    cursor: default;
+    animation-name: name-support_shifted;
+    animation-duration: 0.2s;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+  }
+  &__name-profile--shifted {
+    cursor: default;
+    animation-name: name-profile_shifted;
     animation-duration: 0.2s;
     animation-delay: 0.1s;
     animation-fill-mode: forwards;
@@ -1764,11 +1799,51 @@ section {
   100% {transform: scale(1);}
 }
 
-@keyframes name-balance_shifted {
+@keyframes name-info_shifted {
   0% {}
   100% {font-size: 44px;
         top: 50px;
         left: -220px;
+  }
+}
+
+@keyframes name-bell_shifted {
+  0% {}
+  100% {font-size: 44px;
+    top: -170px;
+    left: -220px;
+  }
+}
+
+@keyframes name-call_shifted {
+  0% {}
+  100% {font-size: 44px;
+    top: -390px;
+    left: -220px;
+  }
+}
+
+@keyframes name-balance_shifted {
+  0% {}
+  100% {font-size: 44px;
+    top: 50px;
+    right: -220px;
+  }
+}
+
+@keyframes name-support_shifted {
+  0% {}
+  100% {font-size: 44px;
+    top: -170px;
+    right: -220px;
+  }
+}
+
+@keyframes name-profile_shifted {
+  0% {}
+  100% {font-size: 44px;
+    top: -390px;
+    right: -220px;
   }
 }
 
@@ -1799,7 +1874,6 @@ section {
   100% {top: 100px;
     left: 780px;}
 }
-
 
 @keyframes menu-elements_right-paragraph1 {
   0% {opacity: 0;}
