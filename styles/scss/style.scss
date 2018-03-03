@@ -437,12 +437,14 @@ section {
     z-index: 1000;
   }
   &__left-text-elements {
+    position: relative;
     margin-right: 90px;
 
   }
   &__menu-elements {
     display: block;
-    height: 220px;
+    height: 150px;
+    margin-bottom: 70px;
   }
   &__menu-name {
     position: relative;
