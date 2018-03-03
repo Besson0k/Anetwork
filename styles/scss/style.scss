@@ -1109,6 +1109,56 @@ section {
     right: 725px;
   }
 
+  &__profile-front {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+  &__profile-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_profile-front.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__profile-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_profile-front.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__profile-back {
+    display: none;
+    position: absolute;
+    z-index: 500;
+  }
+  &__profile-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_profile-back.png");
+    width: 303px;
+    height: 606px;
+  }
+  &__profile-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_profile-back.png");
+    width: 287px;
+    height: 618px;
+  }
+  &__profile-paragraph1 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px;
+  }
+  &__profile-paragraph2 {
+    text-align: right;
+    width: 436px;
+    top: 175px;
+    right: 725px;
+  }
 
 
   &__right-back--moved {

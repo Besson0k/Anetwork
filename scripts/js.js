@@ -190,6 +190,10 @@ $(document).ready(function () {
     elementSupport = true;
   });
   $('.home-page__menu-elements-support').click(openMenuElement);
+  $('.home-page__menu-elements-profile').click(function () {
+    elementProfile = true;
+  });
+  $('.home-page__menu-elements-profile').click(openMenuElement);
 
 
   $('.home-page__close-menu-elements').click(closeMenuElement);
@@ -346,7 +350,6 @@ $(document).ready(function () {
     elementInfo = false;
     elementBell = false;
     elementCall = false;
-
   }
 
   function choiceTypePhone() {
@@ -361,6 +364,8 @@ $(document).ready(function () {
       $('.menu-elements__balance-front').addClass('menu-elements__balance-front-iphone');
       $('.menu-elements__balance-back').addClass('menu-elements__balance-back-iphone');
       $('.menu-elements__support-center').addClass('menu-elements__support-center-iphone');
+      $('.menu-elements__profile-front').addClass('menu-elements__profile-front-iphone');
+      $('.menu-elements__profile-back').addClass('menu-elements__profile-back-iphone');
     } else {
       $('.menu-elements__info-front').removeClass('menu-elements__info-front-iphone');
       $('.menu-elements__info-back').removeClass('menu-elements__info-back-iphone');
@@ -372,6 +377,8 @@ $(document).ready(function () {
       $('.menu-elements__balance-front').removeClass('menu-elements__balance-front-iphone');
       $('.menu-elements__balance-back').removeClass('menu-elements__balance-back-iphone');
       $('.menu-elements__support-center').removeClass('menu-elements__support-center-iphone');
+      $('.menu-elements__profile-front').removeClass('menu-elements__profile-front-iphone');
+      $('.menu-elements__profile-back').removeClass('menu-elements__profile-back-iphone');
     }
     if (menuAndroidOpened) {
       $('.menu-elements__info-front').addClass('menu-elements__info-front-android');
@@ -383,6 +390,8 @@ $(document).ready(function () {
       $('.menu-elements__balance-front').addClass('menu-elements__balance-front-android');
       $('.menu-elements__balance-back').addClass('menu-elements__balance-back-android');
       $('.menu-elements__support-center').addClass('menu-elements__support-center-android');
+      $('.menu-elements__profile-front').addClass('menu-elements__profile-front-android');
+      $('.menu-elements__profile-back').addClass('menu-elements__profile-back-android');
     } else {
       $('.menu-elements__info-front').removeClass('menu-elements__info-front-android');
       $('.menu-elements__info-back').removeClass('menu-elements__info-back-android');
@@ -393,6 +402,8 @@ $(document).ready(function () {
       $('.menu-elements__balance-front').removeClass('menu-elements__balance-front-android');
       $('.menu-elements__balance-back').removeClass('menu-elements__balance-back-android');
       $('.menu-elements__support-center').removeClass('menu-elements__support-center-android');
+      $('.menu-elements__profile-front').removeClass('menu-elements__profile-front-android');
+      $('.menu-elements__profile-back').removeClass('menu-elements__profile-back-android');
     }
   }
 
@@ -482,15 +493,33 @@ $(document).ready(function () {
               $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
               $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
             } else {
-              $right_font = undefined;
-              $right_back = undefined;
-              $left_font = undefined;
-              $left_back = undefined;
-              $center = undefined;
-              $right_paragraph1 = undefined;
-              $right_paragraph2 = undefined;
-              $right_paragraph3 = undefined;
-              $watch = undefined;
+              if (elementProfile) {
+                $left_font = '.menu-elements__profile-front';
+                $left_back = '.menu-elements__profile-back';
+                $right_paragraph1 = '.menu-elements__profile-paragraph1';
+                $right_paragraph2 = '.menu-elements__profile-paragraph2';
+                $right_paragraph3 = undefined;
+                $watch = undefined;
+                $right_font = undefined;
+                $right_back = undefined;
+                $center = undefined;
+                $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--shifted');
+                $('.home-page__menu-elements-support').removeClass('home-page__menu-elements-support--shifted');
+                // $('.home-page__menu-elements-profile').removeClass('home-page__menu-elements-profile--shifted');
+                $('.home-page__menu-elements-info').removeClass('home-page__menu-elements-info--shifted');
+                $('.home-page__menu-elements-bell').removeClass('home-page__menu-elements-bell--shifted');
+                $('.home-page__menu-elements-call').removeClass('home-page__menu-elements-call--shifted');
+              } else {
+                $right_font = undefined;
+                $right_back = undefined;
+                $left_font = undefined;
+                $left_back = undefined;
+                $center = undefined;
+                $right_paragraph1 = undefined;
+                $right_paragraph2 = undefined;
+                $right_paragraph3 = undefined;
+                $watch = undefined;
+              }
             }
           }
         }
