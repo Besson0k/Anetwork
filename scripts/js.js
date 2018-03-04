@@ -108,60 +108,68 @@ $(document).ready(function () {
   });
 
   $('.home-page__menu-elements-balance').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-balance')
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-balance')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-balance');
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-balance');
+    $(this).addClass('home-page__menu-elements-balance--hovered')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-balance')
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-balance')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-balance');
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-balance');
+    $(this).removeClass('home-page__menu-elements-balance--hovered')
   });
 
   $('.home-page__menu-elements-support').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-support')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-support');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-support')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-support')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-support');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-support')
   });
 
   $('.home-page__menu-elements-profile').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-profile')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-profile');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-profile')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-profile')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-profile');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-profile')
   });
 
   $('.home-page__menu-elements-info').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
   });
 
   $('.home-page__menu-elements-info').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
   });
 
   $('.home-page__menu-elements-bell').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-bell')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-bell');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-bell')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-bell')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-bell');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-bell')
   });
 
   $('.home-page__menu-elements-call').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-call')
+    $('.home-page__center-phone').addClass('home-page__center-phone--hover-call');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-call')
   }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-call')
+    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-call');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-call')
   });
+  //
+  // $('.home-page__menu-elements-balance--shifted').hover(function () {
+  //   $('home-page__menu-elements-balance--shifted').addClass('home-page__menu-elements-balance--hovered')
+  // }, function () {
+  //   $('home-page__menu-elements-balance--shifted').removeClass('home-page__menu-elements-balance--hovered')
+  // });
 
 
   $('.home-page__center-phone').click(openIPhoneMenu);
@@ -265,7 +273,6 @@ $(document).ready(function () {
     $('.home-page__name-balance').removeClass('home-page__name-balance--shifted');
     $('.home-page__name-profile').removeClass('home-page__name-profile--shifted');
     $('.home-page__name-support').removeClass('home-page__name-support--shifted');
-
     $($right_font).removeClass('menu-elements__right-front--moved');
     $($right_back).removeClass('menu-elements__right-back--moved');
     $($left_font).removeClass('menu-elements__left-front--moved');
@@ -275,7 +282,6 @@ $(document).ready(function () {
     $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
     $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
     $($watch).removeClass('menu-elements__bell-watch--showed');
-
 
     menuElementOpened = false;
     menuIphoneOpened = false;
@@ -292,7 +298,6 @@ $(document).ready(function () {
     if (menuElementOpened) {
       return;
     }
-
     $('.home-page__left-phone').addClass('home-page__elements--hidden');
     $('.home-page__center-phone').addClass('home-page__elements--hidden');
     $('.home-page__menu-content').addClass('home-page__elements--hidden');
@@ -300,11 +305,7 @@ $(document).ready(function () {
     $('.home-page__icons-android').addClass('home-page__elements--hidden');
     $('.menu-elements__box').addClass('menu-elements__box--showed');
     $('.home-page__close-menu-elements').addClass('home-page__close-menu-elements--showed');
-    menuElementOpened = true;
-
-
     choiceElementMenu();
-
     $($right_font).addClass('menu-elements__right-front--moved');
     $($right_back).addClass('menu-elements__right-back--moved');
     $($left_font).addClass('menu-elements__left-front--moved');
@@ -314,7 +315,7 @@ $(document).ready(function () {
     $($right_paragraph2).addClass('menu-elements__paragraph2--moved');
     $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
     $($watch).addClass('menu-elements__bell-watch--showed');
-
+    menuElementOpened = true;
   }
 
   function closeMenuElement() {
@@ -341,7 +342,6 @@ $(document).ready(function () {
     $('.home-page__name-balance').removeClass('home-page__name-balance--shifted');
     $('.home-page__name-profile').removeClass('home-page__name-profile--shifted');
     $('.home-page__name-support').removeClass('home-page__name-support--shifted');
-
     $($right_font).removeClass('menu-elements__right-front--moved');
     $($right_back).removeClass('menu-elements__right-back--moved');
     $($left_font).removeClass('menu-elements__left-front--moved');
@@ -541,5 +541,21 @@ $(document).ready(function () {
       }
     }
   }
+  
+  // function TurnOnHoverElements() {
+  //     $('.home-page__menu-elements-balance').addClass('.home-page__menu-elements-balance--hovered');
+  // }
+  //
+  // function TurnOffHoverElements() {
+  //   $('.home-page__menu-elements-balance').removeClass('.home-page__menu-elements-balance--hovered');
+  // }
+  //
+  // function TurnHoverElements() {
+  //   if (menuElementOpened) {
+  //     $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--hovered');
+  //   } else {
+  //     $('.home-page__menu-elements-balance').addClass('home-page__menu-elements-balance--hovered');
+  //   }
+  // }
 
 });

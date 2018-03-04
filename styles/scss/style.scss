@@ -486,14 +486,23 @@ section {
     transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.4s linear;
     transform: translateX(-2000px);
     opacity: 0;
-    &:hover {
-      color: #FFCC00;
-      .home-page__rub {
-        fill: #FFCC00;
-      }
-      .home-page__android-rub {
-        fill: #FFCC00;
-      }
+    //&:hover {
+    //  color: #FFCC00;
+    //  .home-page__rub {
+    //    fill: #FFCC00;
+    //  }
+    //  .home-page__android-rub {
+    //    fill: #FFCC00;
+    //  }
+    //}
+  }
+  &__menu-elements-balance--hovered {
+    color: #FFCC00;
+    .home-page__rub {
+      fill: #FFCC00;
+    }
+    .home-page__android-rub {
+      fill: #FFCC00;
     }
   }
   &__menu-elements-balance--shifted {
@@ -851,6 +860,8 @@ section {
     top: 135px;
     right: -49px;
     cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.1s linear;
     &:hover {
       opacity: 0.6;
     }
