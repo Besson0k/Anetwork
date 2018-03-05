@@ -329,7 +329,7 @@ $(document).ready(function () {
     $($center).removeClass('menu-elements__center--moved');
     $($right_paragraph1).removeClass('menu-elements__paragraph1--moved');
     $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
-    $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
+    $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
     $($watch).removeClass('menu-elements__bell-watch--showed');
 
     menuElementOpened = false;
