@@ -227,12 +227,12 @@ section {
   position: relative;
   margin: auto;
   width: 1320px;
-  height: 100%;
+  height: 750px;
 
   &__left-phone {
     display: block;
     position: absolute;
-    top: 235px;
+    top: 70px;
     left: 0;
     background-image: url("/Files/home_page/android/phone-general-menu.png");
     background-repeat: no-repeat;
@@ -242,7 +242,6 @@ section {
     z-index: 100;
     cursor: pointer;
     transition: transform 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
-    //transition: all 0.2s linear;
   }
   &__left-phone-motion {
     animation-name: motion-Android;
@@ -279,14 +278,14 @@ section {
     transform: none;
     cursor: default;
     left: 518px;
-    top: 233px;
+    top: 68px;
     z-index: 300;
   }
 
   &__center-phone {
     display: block;
     position: absolute;
-    top: 226px;
+    top: 61px;
     left: 210px;
     background-image: url("/Files/home_page/iphone/iphone-general-menu.png");
     background-repeat: no-repeat;
@@ -337,14 +336,14 @@ section {
     transform: none;
     cursor: default;
     left: 512px;
-    top: 244px;
+    top: 79px;
     z-index: -100;
   }
 
   &__watch-right {
     display: block;
     position: absolute;
-    top: 532px;
+    top: 367px;
     left: 463px;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
@@ -414,7 +413,7 @@ section {
     display: inline-block;
     position: absolute;
     left: 512px;
-    top: 242px;
+    top: 77px;
     width: 303px;
     height: 610px;
     z-index: 300;
@@ -740,21 +739,21 @@ section {
     cursor: default;
     animation-name: name-info_shifted;
     animation-duration: 0.2s;
-    animation-delay: 0.1s;
+    //animation-delay: 0.1s;
     animation-fill-mode: forwards;
   }
   &__name-bell--shifted {
     cursor: default;
     animation-name: name-bell_shifted;
     animation-duration: 0.2s;
-    animation-delay: 0.1s;
+    //animation-delay: 0.1s;
     animation-fill-mode: forwards;
   }
   &__name-call--shifted {
     cursor: default;
     animation-name: name-call_shifted;
     animation-duration: 0.2s;
-    animation-delay: 0.1s;
+    //animation-delay: 0.1s;
     animation-fill-mode: forwards;
   }
   &__name-balance--shifted {
@@ -768,14 +767,14 @@ section {
     cursor: default;
     animation-name: name-support_shifted;
     animation-duration: 0.2s;
-    animation-delay: 0.1s;
+    //animation-delay: 0.1s;
     animation-fill-mode: forwards;
   }
   &__name-profile--shifted {
     cursor: default;
     animation-name: name-profile_shifted;
     animation-duration: 0.2s;
-    animation-delay: 0.1s;
+    //animation-delay: 0.1s;
     animation-fill-mode: forwards;
   }
 
@@ -853,10 +852,11 @@ section {
     background-image: url("/Files/icons/button_element_menu.png");
     background-repeat: no-repeat;
     background-size: contain;
-    top: 135px;
+    top: 0;
     right: -49px;
     cursor: pointer;
     opacity: 1;
+    z-index: 50000;
     transition: opacity 0.1s linear;
     &:hover {
       opacity: 0.6;
@@ -881,7 +881,7 @@ section {
     width: 1320px;
     height: 765px;
     margin: auto;
-    margin-top: 135px;
+    //margin-top: 135px;
     overflow: hidden;
     transition: all 0.5s ease;
     border-radius: 20px;
