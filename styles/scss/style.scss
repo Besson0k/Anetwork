@@ -1809,7 +1809,7 @@ section {
 @keyframes name-info_shifted {
   0% {}
   100% {font-size: 44px;
-        top: 50px;
+        top: 65px;
         left: -220px;
   }
 }
@@ -1817,7 +1817,7 @@ section {
 @keyframes name-bell_shifted {
   0% {}
   100% {font-size: 44px;
-    top: -170px;
+    top: -155px;
     left: -220px;
   }
 }
@@ -1825,7 +1825,7 @@ section {
 @keyframes name-call_shifted {
   0% {}
   100% {font-size: 44px;
-    top: -390px;
+    top: -375px;
     left: -220px;
   }
 }
@@ -1833,7 +1833,7 @@ section {
 @keyframes name-balance_shifted {
   0% {color: white}
   100% {font-size: 44px;
-    top: 50px;
+    top: 65px;
     right: -220px;
   }
 }
@@ -1841,7 +1841,7 @@ section {
 @keyframes name-support_shifted {
   0% {}
   100% {font-size: 44px;
-    top: -170px;
+    top: -155px;
     right: -220px;
   }
 }
@@ -1849,7 +1849,7 @@ section {
 @keyframes name-profile_shifted {
   0% {}
   100% {font-size: 44px;
-    top: -390px;
+    top: -375px;
     right: -220px;
   }
 }
@@ -1878,8 +1878,8 @@ section {
 
 @keyframes menu-elements_center {
   0% {}
-  100% {top: 100px;
-    left: 780px;}
+  100% {top: 55px;
+    left: 795px;}
 }
 
 @keyframes menu-elements_right-paragraph1 {
@@ -1902,6 +1902,6 @@ section {
   0% {opacity: 0;}
   70% {top: 550px;
     opacity: 1}
-  100% {top: 540px;
+  100% {top: 530px;
     opacity: 1;}
 }
