@@ -302,9 +302,9 @@ section {
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
-  &__phone-motion--stopped {
-    animation-play-state: paused;
-  }
+  //&__phone-motion--stopped {
+  //  animation-play-state: paused;
+  //}
   &__center-phone--hover-balance {
     background-image: url("/Files/home_page/iphone/iphone_balance.png");
   }
@@ -408,6 +408,7 @@ section {
     animation-name: service-watch;
     animation-duration: 2s;
   }
+
 
   &__phone-menu {
     display: inline-block;
@@ -1755,10 +1756,110 @@ section {
   }
 }
 
-@media (max-width: 1921px) {
+@media (max-width: 1280px) {
   .body {
-    width: 1920px;
-    height: 1080px;
+    width: 1280px;
+    height: 800px;
+  }
+  .header {
+    height: 70px;
+    &__container {
+      max-width: 950px;
+    }
+    &__home {
+      font-size: 30px;
+      letter-spacing: 0.8px;
+    }
+    &__button {
+      width: 137px;
+      height: 38px;
+      font-size: 13px;
+      padding: 12px 10.5px 12px 10.5px;
+      line-height: 1;
+      letter-spacing: 1px;
+    }
+  }
+  .footer {
+    height: 70px;
+  }
+  .home-page {
+    width: 950px;
+    height: 530px;
+    &__left-phone {
+      width: 207px;
+      height: 445px;
+      top: 43px;
+    }
+    &__left-phone--shifted-center {
+      left: 260px;
+      top: 45px;
+    }
+    &__center-phone {
+      width: 218px;
+      height: 436px;
+      top: 37px;
+      left: 150px;
+    }
+    &__center-phone--shifted-center {
+      left: 257px;
+      top: 45px;
+    }
+    &__watch-right {
+      width: 128px;
+      height: 231px;
+      top: 255px;
+      left: 333px;
+    }
+    &__service-development {
+      width: 96px;
+      height: 32px;
+      &:before {
+        width: 128px;
+        height: 231px;
+      }
+      &:after {
+        width: 96px;
+        height: 32px;
+      }
+    }
+    &__phone-menu {
+      width: 218px;
+      height: 436px;
+      top: 45px;
+    }
+    &__left-text {
+      width: 325px;
+    }
+    &__right-text {
+      width: 325px;
+    }
+    &__text {
+      margin-top: -5px;
+      line-height: 1.3;
+      letter-spacing: 0.5px;
+    }
+    &__head {
+      font-size: 31px;
+      margin-bottom: 10px;
+    }
+    &__paragraph {
+      margin-top: 25px;
+      width: 457px;
+      font-size: 16px;
+    }
+    &__shops {
+      margin-top: 40px;
+    }
+    &__shop-appStore {
+      width: 137px;
+      height: 38px;
+      margin-right: 20px;
+    }
+    &__shop-googlePay {
+      width: 137px;
+      height: 38px;
+      margin-right: 20px;
+    }
   }
 }
 
