@@ -402,6 +402,8 @@ section {
       height: 47px;
       z-index: 1200;
       background-image: url("/Files/icons/service_in_development.png");
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
   &__service-animated {
@@ -1814,9 +1816,13 @@ section {
     &__service-development {
       width: 96px;
       height: 32px;
+      top: 103px;
+      left: 13px;
       &:before {
         width: 128px;
         height: 231px;
+        top: -103px;
+        left: -13px;
       }
       &:after {
         width: 96px;
