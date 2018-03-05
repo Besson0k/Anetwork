@@ -110,66 +110,74 @@ $(document).ready(function () {
   $('.home-page__menu-elements-balance').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-balance');
     $('.home-page__left-phone').addClass('home-page__left-phone--hover-balance');
-    $(this).addClass('home-page__menu-elements-balance--hovered')
+    if (!menuElementOpened) {
+        $(this).addClass('home-page__menu-elements-balance--hovered');
+    }
   }, function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--hover-balance');
     $('.home-page__left-phone').removeClass('home-page__left-phone--hover-balance');
-    $(this).removeClass('home-page__menu-elements-balance--hovered')
+    $(this).removeClass('home-page__menu-elements-balance--hovered');
   });
 
   $('.home-page__menu-elements-support').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-support');
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-support')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-support');
+      if (!menuElementOpened) {
+          $(this).addClass('home-page__menu-elements-support--hovered');
+      }
   }, function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--hover-support');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-support')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-support');
+      $(this).removeClass('home-page__menu-elements-support--hovered');
   });
 
   $('.home-page__menu-elements-profile').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-profile');
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-profile')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-profile');
+      if (!menuElementOpened) {
+          $(this).addClass('home-page__menu-elements-profile--hovered');
+      }
   }, function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--hover-profile');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-profile')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-profile');
+      $(this).removeClass('home-page__menu-elements-profile--hovered');
   });
 
   $('.home-page__menu-elements-info').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-info');
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-info');
+      if (!menuElementOpened) {
+          $(this).addClass('home-page__menu-elements-info--hovered');
+      }
   }, function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
-  });
-
-  $('.home-page__menu-elements-info').hover(function () {
-    $('.home-page__center-phone').addClass('home-page__center-phone--hover-info');
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-info')
-  }, function () {
-    $('.home-page__center-phone').removeClass('home-page__center-phone--hover-info');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-info');
+      $(this).removeClass('home-page__menu-elements-info--hovered');
   });
 
   $('.home-page__menu-elements-bell').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-bell');
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-bell')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-bell');
+      if (!menuElementOpened) {
+          $(this).addClass('home-page__menu-elements-bell--hovered');
+      }
   }, function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--hover-bell');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-bell')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-bell');
+      $(this).removeClass('home-page__menu-elements-bell--hovered');
   });
 
   $('.home-page__menu-elements-call').hover(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--hover-call');
-    $('.home-page__left-phone').addClass('home-page__left-phone--hover-call')
+    $('.home-page__left-phone').addClass('home-page__left-phone--hover-call');
+      if (!menuElementOpened) {
+          $(this).addClass('home-page__menu-elements-call--hovered');
+      }
   }, function () {
     $('.home-page__center-phone').removeClass('home-page__center-phone--hover-call');
-    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-call')
+    $('.home-page__left-phone').removeClass('home-page__left-phone--hover-call');
+      $(this).removeClass('home-page__menu-elements-call--hovered');
   });
-  //
-  // $('.home-page__menu-elements-balance--shifted').hover(function () {
-  //   $('home-page__menu-elements-balance--shifted').addClass('home-page__menu-elements-balance--hovered')
-  // }, function () {
-  //   $('home-page__menu-elements-balance--shifted').removeClass('home-page__menu-elements-balance--hovered')
-  // });
 
 
   $('.home-page__center-phone').click(openIPhoneMenu);
@@ -541,21 +549,6 @@ $(document).ready(function () {
       }
     }
   }
-  
-  // function TurnOnHoverElements() {
-  //     $('.home-page__menu-elements-balance').addClass('.home-page__menu-elements-balance--hovered');
-  // }
-  //
-  // function TurnOffHoverElements() {
-  //   $('.home-page__menu-elements-balance').removeClass('.home-page__menu-elements-balance--hovered');
-  // }
-  //
-  // function TurnHoverElements() {
-  //   if (menuElementOpened) {
-  //     $('.home-page__menu-elements-balance').removeClass('home-page__menu-elements-balance--hovered');
-  //   } else {
-  //     $('.home-page__menu-elements-balance').addClass('home-page__menu-elements-balance--hovered');
-  //   }
-  // }
+
 
 });
