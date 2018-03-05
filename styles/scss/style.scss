@@ -295,16 +295,15 @@ section {
     cursor: pointer;
     transition: transform 0.25s linear, width 0.2s linear, height 0.25s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
     z-index: 500;
-
   }
   &__center-phone-motion {
     animation-name: motion-IPhone;
     animation-duration: 5s;
     animation-iteration-count: infinite;
   }
-  //&__phone-motion--stopped {
-  //  animation-play-state: paused;
-  //}
+  &__phone-motion--stopped {
+    animation-play-state: paused;
+  }
   &__center-phone--hover-balance {
     background-image: url("/Files/home_page/iphone/iphone_balance.png");
   }
@@ -330,6 +329,7 @@ section {
   }
   &__center-phone--shifted {
     left: -500px;
+    z-index: -500;
     opacity: 0;
   }
   &__center-phone--shifted-center {
@@ -439,7 +439,6 @@ section {
   &__left-text-elements {
     position: relative;
     margin-right: 90px;
-
   }
   &__menu-elements {
     display: block;
@@ -882,7 +881,6 @@ section {
     width: 1320px;
     height: 765px;
     margin: auto;
-    //margin-top: 135px;
     overflow: hidden;
     transition: all 0.5s ease;
     border-radius: 20px;
@@ -1756,7 +1754,7 @@ section {
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1290px) {
   .body {
     width: 1280px;
     height: 800px;
@@ -1791,9 +1789,11 @@ section {
       top: 43px;
     }
     &__left-phone--shifted-center {
-      left: 260px;
-      top: 45px;
+      transform: none;
+      left: 371px;
+      top: 50px;
     }
+
     &__center-phone {
       width: 218px;
       height: 436px;
@@ -1801,7 +1801,8 @@ section {
       left: 150px;
     }
     &__center-phone--shifted-center {
-      left: 257px;
+      transform: none;
+      left: 366px;
       top: 45px;
     }
     &__watch-right {
@@ -1830,9 +1831,102 @@ section {
     &__left-text {
       width: 325px;
     }
+    &__left-text--shifted {
+      left: -500px;
+    }
+    &__left-text-elements {
+      margin-right: 70px;
+    }
     &__right-text {
       width: 325px;
     }
+    &__right-text-elements {
+      margin-left: 60px;
+    }
+    &__right-text--shifted {
+      left: 100px;
+      z-index: 1000;
+    }
+    &__menu-elements {
+      height: 110px;
+      margin-bottom: 50px;
+    }
+    &__menu-name {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+    &__menu-content {
+      padding-top: 55px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    &__rub {
+      width: 29px;
+      height: 29px;
+      left: 295px;
+    }
+    &__sup {
+      width: 29px;
+      height: 29px;
+      left: 295px;
+    }
+    &__profile {
+      width: 30px;
+      height: 29px;
+      left: 295px;
+    }
+    &__info {
+      width: 26px;
+      height: 33px;
+      left: 2px;
+      top: 0;
+    }
+    &__bell {
+      width: 26px;
+      height: 29px;
+      left: 1px;
+    }
+    &__call {
+      width: 28.5px;
+      height: 28px;
+      left: 1px;
+    }
+
+    &__android-rub {
+      width: 30px;
+      height: 30px;
+      left: 295px;
+    }
+    &__android-sup {
+      width: 30px;
+      height: 30px;
+      left: 295px;
+    }
+    &__android-profile {
+      width: 25px;
+      height: 25px;
+      left: 298px;
+      top: 5px;
+    }
+    &__android-info {
+      width: 30px;
+      height: 37px;
+      left: 2px;
+    }
+    &__android-bell {
+      width: 23px;
+      height: 29px;
+      left: 4px;
+      top: 5px;
+    }
+    &__android-call {
+      width: 29px;
+      height: 31px;
+      left: 3px;
+      top: 4px;
+    }
+
     &__text {
       margin-top: -5px;
       line-height: 1.3;
