@@ -902,16 +902,16 @@ section {
     //  background-position: calc(-48vw + 660px) calc(-135px - 2vh);
     //  transition: all 0.2s ease;
     //}
-    &:after {
-      display: block;
-      content: " ";
-      width: 1318px;
-      height: 763px;
-      border-radius: 20px;
-      border: 1px solid white;
-      opacity: 0.1;
-      z-index: 0;
-    }
+    //&:after {
+    //  display: block;
+    //  content: " ";
+    //  width: 1318px;
+    //  height: 763px;
+    //  border-radius: 20px;
+    //  border: 1px solid white;
+    //  opacity: 0.1;
+    //  z-index: 0;
+    //}
   }
   &__box--showed {
     display: block;
@@ -2017,18 +2017,33 @@ section {
     &__name-info--shifted {
       animation-name: name-info_shifted-1280;
     }
+    &__name-bell--shifted {
+       animation-name: name-bell_shifted-1280;
+     }
+    &__name-call--shifted {
+      animation-name: name-call_shifted-1280;
+    }
+    &__name-balance--shifted {
+      animation-name: name-balance_shifted-1280;
+    }
+    &__name-support--shifted {
+      animation-name: name-support_shifted-1280;
+    }
+    &__name-profile--shifted {
+      animation-name: name-profile_shifted-1280;
+    }
   }
   .menu-elements {
     &__box {
       width: 950px;
       height: 530px;
-      &:before {
-        background-position: calc(-48vw + 475px) calc(-48vh + 265px);
-      }
-      &:after {
-        width: 948px;
-        height: 528px;
-      }
+      //&:before {
+      //  background-position: calc(-48vw + 475px) calc(-48vh + 265px);
+      //}
+      //&:after {
+      //  width: 948px;
+      //  height: 528px;
+      //}
     }
     &__info-front-iphone {
       top: 45px;
@@ -2057,193 +2072,193 @@ section {
 
     &__text {
       font-size: 16px;
-      letter-spacing: 1px;
+      letter-spacing: 0.4px;
       line-height: 1.43;
     }
     &__info-paragraph1 {
-      width: 391px;
-      top: 175px;
-      left: 735px;
+      width: 289px;
+      top: 53px;
+      left: 522px;
     }
     &__info-paragraph2 {
-      width: 436px;
-      top: 175px;
-      left: 735px;
+      width: 323px;
+      top: 53px;
+      left: 522px;
     }
 
     &__bell-front-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__bell-front-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__bell-back-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__bell-back-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__bell-watch {
       width: 128px;
-      height: 211px;
-      left: 1040px;
-      top: 420px;
+      height: 231px;
+      top: 280px;
+      left: 780px;
     }
     &__bell-paragraph1 {
-      width: 391px;
-      top: 175px;
-      left: 735px;
+      width: 289px;
+      top: 53px;
+      left: 522px;
     }
     &__bell-paragraph2 {
-      width: 436px;
-      top: 175px;
-      left: 735px;
+      width: 323px;
+      top: 53px;
+      left: 522px;
     }
     &__call-front-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__call-front-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__call-back-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__call-back-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__call-paragraph1 {
-      width: 391px;
-      top: 175px;
-      left: 735px;
+      width: 289px;
+      top: 53px;
+      left: 522px;
     }
     &__call-paragraph2 {
-      width: 436px;
-      top: 175px;
-      left: 735px;
+      width: 323px;
+      top: 53px;
+      left: 522px;
     }
     &__call-paragraph3 {
-      width: 391px;
-      top: 175px;
-      left: 735px;
+      width: 289px;
+      top: 53px;
+      left: 522px;
     }
     &__balance-front-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__balance-front-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__balance-back-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__balance-back-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__balance-paragraph1 {
-      width: 391px;
+      width: 289px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
     &__balance-paragraph2 {
-      width: 436px;
+      width: 323px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
     &__balance-paragraph3 {
-      width: 391px;
+      width: 289px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
     &__support-center-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__support-center-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__support-paragraph1 {
-      width: 391px;
+      width: 289px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
     &__support-paragraph2 {
-      width: 436px;
+      width: 323px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
     &__profile-front-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__profile-front-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;
     }
     &__profile-back-iphone {
-      top: 110px;
-      left: 510px;
+      top: 45px;
+      left: 366px;
       width: 218px;
       height: 436px;
     }
     &__profile-back-android {
-      top: 100px;
-      left: 518px;
+      top: 50px;
+      left: 371px;
       width: 207px;
       height: 445px;;
     }
     &__profile-paragraph1 {
-      width: 391px;
+      width: 289px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
     &__profile-paragraph2 {
-      width: 436px;
+      width: 323px;
       top: 175px;
-      right: 725px;
+      right: 533px;
     }
 
 
@@ -2328,9 +2343,9 @@ section {
 
 @keyframes name-info_shifted-1280 {
   0% {}
-  100% {font-size: 34px;
-    top: 65px;
-    left: -220px;
+  100% {font-size: 32px;
+    top: 53px;
+    left: -150px;
   }
 }
 
@@ -2343,9 +2358,9 @@ section {
 }
 @keyframes name-bell_shifted-1280 {
   0% {}
-  100% {font-size: 34px;
-    top: -155px;
-    left: -220px;
+  100% {font-size: 32px;
+    top: -105px;
+    left: -150px;
   }
 }
 
@@ -2358,9 +2373,9 @@ section {
 }
 @keyframes name-call_shifted-1280 {
   0% {}
-  100% {font-size: 34px;
-    top: -375px;
-    left: -220px;
+  100% {font-size: 32px;
+    top: -265px;
+    left: -150px;
   }
 }
 
@@ -2373,9 +2388,9 @@ section {
 }
 @keyframes name-balance_shifted-1280 {
   0% {color: white}
-  100% {font-size: 34px;
-    top: 65px;
-    right: -220px;
+  100% {font-size: 32px;
+    top: 53px;
+    right: -150px;
   }
 }
 
@@ -2388,9 +2403,9 @@ section {
  }
 @keyframes name-support_shifted-1280 {
   0% {}
-  100% {font-size: 34px;
-    top: -155px;
-    right: -220px;
+  100% {font-size: 32px;
+    top: -105px;
+    right: -150px;
   }
 }
 
@@ -2403,9 +2418,9 @@ section {
 }
 @keyframes name-profile_shifted-1280 {
   0% {}
-  100% {font-size: 34px;
-    top: -375px;
-    right: -220px;
+  100% {font-size: 32px;
+    top: -265px;
+    right: -150px;
   }
 }
 
@@ -2416,8 +2431,8 @@ section {
  }
 @keyframes menu-elements_right-front-1280 {
   0% {}
-  100% {top: 55px;
-    left: 325px;}
+  100% {top: 14px;
+    left: 228px;}
 }
 @keyframes menu-elements_right-back {
   0% {}
@@ -2426,8 +2441,8 @@ section {
 }
 @keyframes menu-elements_right-back-1280 {
   0% {}
-  100% {top: 120px;
-    left: 125px;}
+  100% {top: 65px;
+    left: 76px;}
 }
 
 @keyframes menu-elements_left-front {
@@ -2437,8 +2452,8 @@ section {
 }
 @keyframes menu-elements_left-front-1280 {
   0% {}
-  100% {top: 55px;
-    left: 680px;}
+  100% {top: 14px;
+    left: 505px;}
 }
 @keyframes menu-elements_left-back {
   0% {}
@@ -2447,19 +2462,19 @@ section {
 }
 @keyframes menu-elements_left-back-1280 {
   0% {}
-  100% {top: 120px;
-    left: 880px;}
+  100% {top: 65px;
+    left: 655px;}
 }
 
 @keyframes menu-elements_center {
   0% {}
-  100% {top: 55px;
+  100% {top: 14px;
     left: 795px;}
 }
 @keyframes menu-elements_center-1280 {
   0% {}
   100% {top: 55px;
-    left: 795px;}
+    left: 580px;}
 }
 
 @keyframes menu-elements_right-paragraph1 {
@@ -2471,9 +2486,9 @@ section {
 }
 @keyframes menu-elements_right-paragraph1-1280 {
   0% {opacity: 0;}
-  70% {top: 265px;
+  70% {top: 170px;
     opacity: 1;}
-  100% {top: 255px;
+  100% {top: 160px;
     opacity: 1;}
 }
 
@@ -2486,9 +2501,9 @@ section {
 }
 @keyframes menu-elements_right-paragraph2-1280 {
   0% {opacity: 0;}
-  70% {top: 395px;
+  70% {top: 270px;
     opacity: 1}
-  100% {top: 385px;
+  100% {top: 260px;
     opacity: 1;}
 }
 
@@ -2501,8 +2516,8 @@ section {
 }
 @keyframes menu-elements_right-paragraph3-1280 {
   0% {opacity: 0;}
-  70% {top: 550px;
+  70% {top: 380px;
     opacity: 1}
-  100% {top: 530px;
+  100% {top: 370px;
     opacity: 1;}
 }
