@@ -18,7 +18,12 @@ $(document).ready(function () {
   var $left_font = undefined;
   var $left_back = undefined;
   var $center = undefined;
+  var MOBILE_MAX_WIDTH = 768;
 
+  redirectToProperClient();
+  $(window).on('resize', debounce(redirectToProperClient, 200));
+
+  
 
   $('#fullpage').fullpage(
     {
@@ -589,6 +594,46 @@ $(document).ready(function () {
         }
       }
     }
+  }
+
+  function redirectToMobile() {
+    window.location = '/mobile.html';
+  }
+
+  function redirectToDesktop() {
+    window.location = '/';
+  }
+  
+  function isMobileBrowser() {
+    return window.innerWidth <= MOBILE_MAX_WIDTH;
+  }
+
+  function isMobileSite() {
+    return window.location.pathname === '/mobile.html';
+  }
+
+  function redirectToProperClient() {
+    if (!isMobileSite() && isMobileBrowser()) {
+      return redirectToMobile();
+    }
+    if (isMobileSite() && !isMobileBrowser()) {
+      return redirectToDesktop();
+    }
+  }
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
   }
 
 
