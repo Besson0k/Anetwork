@@ -1443,6 +1443,13 @@ section {
     line-height: 1.5;
     opacity: 0.6;
     outline:none;
+    &::-webkit-input-placeholder {
+      color: white;
+      //font-family: HNC-UltraLight, sans-serif;
+    }
+    &::-moz-placeholder {color: white;}
+    &:-moz-placeholder {color: white;}
+    &:-ms-input-placeholder {color: indianred;}
     &:hover {
       opacity: 1;
     }
