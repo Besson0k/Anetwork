@@ -1778,30 +1778,61 @@ section {
   &__name {
     display: block;
     font-size: 44px;
+    font-family: HNC-Roman, sans-serif;
   }
   &__content {
     display: block;
     font-size: 20px;
     line-height: 1.5;
-    margin-top: 15px;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: HNC-UltraLight, sans-serif;
   }
   &__logo {
     display: block;
     background-image: url("/Files/logo_anetwork.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 256px;
     width: 256px;
-    margin-top: 60px;
+    margin-top: 118px;
   }
+
   &__shops {
-    margin-top: 60px;
+    display: flex;
+    margin-top: 118px;
+    flex-direction: row
   }
-  &__shop {
-    margin-right: 10px;
-    margin-left: 10px;
+  &__shop-appStore {
+    display: block;
     text-decoration: none;
+    margin-right: 25px;
+    background-image: url("/Files/home_page/app_store.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.2s linear;
+    &:hover {
+      opacity: 0.6;
+    }
   }
+  &__shop-googlePay {
+    display: block;
+    text-decoration: none;
+    margin-right: 25px;
+    background-image: url("/Files/home_page/google_play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.1s linear;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
 }
 
 @media (max-width: 1290px) {
