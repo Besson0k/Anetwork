@@ -100,6 +100,138 @@ section {
   }
 }
 
+.partner-data {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  z-index: 10000;
+  background-image: url("/Files/rectangle_3.png");
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: " ";
+    background-color: black;
+    opacity: 0.4;
+  }
+  &__box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    width: 375px;
+    height: 667px;
+    margin: auto;
+  }
+  &__box-name {
+    display: block;
+    width: 244px;
+    text-align: left;
+    font-size: 20px;
+    font-family: HNC-Thin, sans-serif;
+    letter-spacing: 1px;
+  }
+  &__box-content {
+    display: block;
+    font-size: 15px;
+    font-family: HNC-UltraLight, sans-serif;
+    margin-top: 36px;
+    letter-spacing: 1.1px;
+    line-height: 1.4;
+  }
+  &__form {
+    z-index: 1000;
+    margin-top: 50px;
+    width: 340px;
+    height: auto;
+  }
+  &__form-box {
+    display: block;
+    width: 340px;
+    height: 40px;
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: transparent;
+    background-clip: padding-box;
+    color: white;
+    font-size: 15px;
+    font-family: HNC-UltraLight, sans-serif;
+    padding-left: 25px;
+    margin-bottom: 27px;
+    letter-spacing: 0.5px;
+    //line-height: 1.5;
+    opacity: 0.6;
+    outline:none;
+
+    &::-webkit-input-placeholder {
+      color: white;
+    }
+    &::-moz-placeholder {color: white;}
+    &:-moz-placeholder {color: white;}
+    &:-ms-input-placeholder {color: indianred;}
+    &:hover {
+      opacity: 1;
+    }
+    &:focus {
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+  }
+  &__form-button {
+    display: block;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 19px;
+    font-family: HNC-Thin, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    width: 177px;
+    height: 41px;
+    margin: auto;
+    padding: auto;
+    outline:none;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      background-color: white;
+      opacity: 1;
+      color: #3C250F;
+    }
+  }
+  &__close {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    width: 23px;
+    height: 23px;
+    background-image: url("/Files/icons/button_element_menu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+  &__block--showed {
+    display: flex;
+  }
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -690,6 +822,7 @@ section {
   &__button {
     display: block;
     position: absolute;
+    cursor: pointer;
     left: 100px;
     top: 469px;
     width: 176px;
@@ -700,7 +833,9 @@ section {
     font-size: 14px;
     font-family: HNC-Thin, sans-serif;
     padding: 12px 23px;
-
+    &:hover {
+      opacity: 0.6;
+    }
   }
   &__logo-anetwork {
     display: block;

@@ -2,6 +2,14 @@ $(document).ready(function () {
     var isIphone = false;
     var isAndroid = false;
 
+    $('.proposal__button').click(function () {
+        $('.partner-data').addClass('partner-data__block--showed');
+    });
+
+    $('.partner-data__close').click(function () {
+        $('.partner-data').removeClass('partner-data__block--showed');
+    });
+
     choosePhone();
 
     function choosePhone() {
