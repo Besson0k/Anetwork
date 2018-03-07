@@ -603,7 +603,7 @@ section {
   }
 }
 
-.final-page {
+.proposal {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -611,17 +611,19 @@ section {
   width: 375px;
   height: 667px;
   margin: auto;
-  background-color: indianred;
   &__button {
     display: block;
     position: absolute;
     left: 100px;
     top: 469px;
+    width: 176px;
+    height: 37.5px;
     border-radius: 5.6px;
     border: 1px solid white;
-    font-size: 15px;
-    font-family: HNC-Medium, sans-serif;
-    padding: 10px 20px;
+    letter-spacing: 1.2px;
+    font-size: 14px;
+    font-family: HNC-Thin, sans-serif;
+    padding: 12px 23px;
 
   }
   &__logo-anetwork {
