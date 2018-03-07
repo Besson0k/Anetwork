@@ -409,7 +409,7 @@ section {
   }
 }
 
-.information {
+.info {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -417,7 +417,6 @@ section {
   width: 375px;
   height: 667px;
   margin: auto;
-  background-color: indianred;
   &__text {
     display: block;
     position: absolute;
@@ -429,38 +428,45 @@ section {
     width: 127px;
     height: 18px;
     font-size: 20px;
-    font-family: HNC-Medium, sans-serif;
+    letter-spacing: 0.4px;
+    font-family: HNC-Thin, sans-serif;
   }
   &__text-content {
     display: block;
     width: 338px;
     height: 30px;
-    font-size: 15px;
-    font-family: HNC-Light, sans-serif;
+    letter-spacing: 0.9px;
+    font-family: HNC-UltraLight, sans-serif;
+    line-height: 1.2;
+    font-size: 14px;
     text-align: left;
     margin-top: 10px;
   }
-  &__phone-back {
+  &__back {
     display: block;
     position: absolute;
-    left: 29px;
-    top: 125px;
-    background-image: url("/Files/phones/center-phone_Info-back.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 178px;
-    height: 358px;
   }
-  &__phone-front {
+  &__iphone-back {
+    left: 33px;
+    top: 141px;
+    background-image: url("/Files/home_page/iphone/iphone_info-back.png");
+    width: 182px;
+    height: 364px;
+  }
+  &__front {
     display: block;
     position: absolute;
-    left: 147px;
-    top: 71px;
-    background-image: url("/Files/phones/center-phone_Info-front.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 218px;
-    height: 419px;
+  }
+  &__iphone-front {
+    left: 152px;
+    top: 101px;
+    background-image: url("/Files/home_page/iphone/iphone_info-front.png");
+    width: 182px;
+    height: 364px;
   }
 }
 
