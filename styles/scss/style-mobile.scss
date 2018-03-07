@@ -1,0 +1,579 @@
+@import "./reset.scss";
+
+@font-face {
+  font-family: HNC-Medium;
+  src: local(HNC-Medium), url("/Font/HelveticaNeueCyr-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HNC-Roman;
+  src: local(HNC-Roman), url("/Font/HelveticaNeueCyr-Roman.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HNC-Light;
+  src: local(HNC-Light), url("/Font/HelveticaNeueCyr-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HNC-Thin;
+  src: local(HNC-Thin), url("/Font/HelveticaNeueCyr-Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HNC-UltraLight;
+  src: local(HNC-UltraLight), url("/Font/HelveticaNeueCyr-UltraLight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$bold: bold;
+
+body {
+  font-family: sans-serif;
+}
+
+section {
+  color: white;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("/Files/rectangle_3.png");
+  background-color: #606866;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1000;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 83px;
+  z-index: 100;
+  &:after {
+    display: block;
+    content: " ";
+    line-height: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #626262;
+    opacity: .5;
+  }
+  &__container {
+    display: flex;
+    margin: auto;
+    max-width: 375px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  &__home {
+    display: block;
+    color: white;
+    font-size: 34px;
+    margin: auto;
+    font-family: HNC-Roman, sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: transform 0.1s linear;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 83px;
+  z-index: 100;
+  &:before {
+    display: block;
+    content: " ";
+    line-height: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #616161;
+    opacity: .35;
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    content: " ";
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.15;
+    z-index: 500;
+  }
+  &:hover:after {
+    opacity: 0.09;
+  }
+  &__container {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+  }
+  &__logo {
+    width: 107px;
+    height: 24px;
+    background-image: url("/Files/logo.png");
+    text-decoration: none;
+    margin-right: 31px;
+    z-index: 10000;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__logo--opacited {
+    opacity: 0.8;
+  }
+}
+
+.general-mobile {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 541px;
+    width: 349px;
+    height: 32px;
+    font-family: HNC-Light, sans-serif;
+    font-size: 13px;
+
+  }
+  &__left-phone {
+    display: block;
+    position: absolute;
+    left: 39px;
+    top: 120px;
+    background-image: url("/Files/home_page/phone_left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 161px;
+    height: 346px;
+  }
+  &__center-phone {
+    display: block;
+    position: absolute;
+    left: 161px;
+    top: 113px;
+    background-image: url("/Files/home_page/phone_center.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 166px;
+    height: 335px;
+  }
+  &__right-watch {
+    display: block;
+    position: absolute;
+    left: 247px;
+    top: 320px;
+    background-image: url("/Files/home_page/watch_right.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 180px;
+  }
+}
+
+.balance {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 71px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 155px;
+    top: 127px;
+    background-image: url("/Files/phones/center-phone_Balance-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 388px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 32px;
+    top: 86px;
+    background-image: url("/Files/phones/center-phone_Balance-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 389px;
+  }
+}
+
+.support {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 112px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone {
+    display: block;
+    position: absolute;
+    left: 93px;
+    top: 108px;
+    background-image: url("/Files/phones/center-phone_Support.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 388px;
+  }
+}
+
+.profile {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 89px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 149px;
+    top: 126px;
+    background-image: url("/Files/phones/center-phone_Profile-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 388px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 29px;
+    top: 86px;
+    background-image: url("/Files/phones/center-phone-Profile-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 208px;
+    height: 409px;
+  }
+}
+
+.information {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 127px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 29px;
+    top: 125px;
+    background-image: url("/Files/phones/center-phone_Info-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 178px;
+    height: 358px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 147px;
+    top: 71px;
+    background-image: url("/Files/phones/center-phone_Info-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 218px;
+    height: 419px;
+  }
+}
+
+.notification {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 130px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 125px;
+    background-image: url("/Files/phones/notification-phone-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 195px;
+    height: 380px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 133px;
+    top: 76px;
+    background-image: url("/Files/phones/notification-phone-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 228px;
+    height: 428px;
+  }
+  &__watch {
+    display: block;
+    position: absolute;
+    left: 230px;
+    top: 325px;
+    background-image: url("/Files/phones/notification-watch.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 107px;
+    height: 193px;
+  }
+}
+
+.ip-telephony {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__text {
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: 525px;
+  }
+  &__text-name {
+    display: block;
+    width: 133px;
+    height: 18px;
+    font-size: 20px;
+    font-family: HNC-Medium, sans-serif;
+  }
+  &__text-content {
+    display: block;
+    width: 338px;
+    height: 30px;
+    font-size: 15px;
+    font-family: HNC-Light, sans-serif;
+    text-align: left;
+    margin-top: 10px;
+  }
+  &__phone-back {
+    display: block;
+    position: absolute;
+    left: 27px;
+    top: 126px;
+    background-image: url("/Files/phones/center-phone_Info-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 389px;
+  }
+  &__phone-front {
+    display: block;
+    position: absolute;
+    left: 150px;
+    top: 86px;
+    background-image: url("/Files/phones/center-phone_IpCall-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 198px;
+    height: 388px;
+  }
+}
+
+.final-page {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 375px;
+  height: 667px;
+  margin: auto;
+  background-color: indianred;
+  &__button {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 469px;
+    border-radius: 5.6px;
+    border: 1px solid white;
+    font-size: 15px;
+    font-family: HNC-Medium, sans-serif;
+    padding: 10px 20px;
+
+  }
+  &__logo-anetwork {
+    display: block;
+    position: absolute;
+    left: 124px;
+    top: 249px;
+    background-image: url("/Files/logo_anetwork.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 128px;
+    height: 128px;
+  }
+}
