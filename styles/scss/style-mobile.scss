@@ -356,7 +356,6 @@ section {
   width: 375px;
   height: 667px;
   margin: auto;
-  background-color: indianred;
   &__text {
     display: block;
     position: absolute;
@@ -375,32 +374,36 @@ section {
     display: block;
     width: 338px;
     height: 30px;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.9px;
     font-family: HNC-UltraLight, sans-serif;
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
     margin-top: 10px;
   }
-  &__phone-back {
+  &__back {
     display: block;
     position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__iphone-back {
     left: 157px;
     top: 137px;
     background-image: url("/Files/home_page/iphone/iphone_profile-back.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 182px;
     height: 364px;
   }
-  &__phone-front {
+  &__front {
     display: block;
     position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__iphone-front {
     left: 36px;
     top: 97px;
     background-image: url("/Files/home_page/iphone/iphone_profile-front.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 182px;
     height: 364px;
   }
