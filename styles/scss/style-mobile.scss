@@ -470,7 +470,7 @@ section {
   }
 }
 
-.notification {
+.note {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -478,7 +478,6 @@ section {
   width: 375px;
   height: 667px;
   margin: auto;
-  background-color: indianred;
   &__text {
     display: block;
     position: absolute;
@@ -490,45 +489,52 @@ section {
     width: 130px;
     height: 18px;
     font-size: 20px;
-    font-family: HNC-Medium, sans-serif;
+    letter-spacing: 0.4px;
+    font-family: HNC-Thin, sans-serif;
   }
   &__text-content {
     display: block;
     width: 338px;
     height: 30px;
-    font-size: 15px;
-    font-family: HNC-Light, sans-serif;
+    letter-spacing: 0.9px;
+    font-family: HNC-UltraLight, sans-serif;
+    line-height: 1.2;
+    font-size: 14px;
     text-align: left;
     margin-top: 10px;
   }
-  &__phone-back {
+  &__back {
     display: block;
     position: absolute;
-    left: 30px;
-    top: 125px;
-    background-image: url("/Files/phones/notification-phone-back.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 195px;
-    height: 380px;
   }
-  &__phone-front {
+  &__iphone-back {
+    left: 37px;
+    top: 128px;
+    background-image: url("/Files/home_page/iphone/iphone_bell-back.png");
+    width: 182px;
+    height: 364px;
+  }
+  &__front {
     display: block;
     position: absolute;
-    left: 133px;
-    top: 76px;
-    background-image: url("/Files/phones/notification-phone-front.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 228px;
-    height: 428px;
   }
-  &__watch {
+  &__iphone-front {
+    left: 156px;
+    top: 88px;
+    background-image: url("/Files/home_page/iphone/iphone_bell-front.png");
+    width: 182px;
+    height: 364px;
+  }
+  &__iphone-watch {
     display: block;
     position: absolute;
-    left: 230px;
-    top: 325px;
-    background-image: url("/Files/phones/notification-watch.png");
+    left: 225px;
+    top: 310px;
+    background-image: url("/Files/home_page/iphone/watch_bell.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 107px;
