@@ -550,7 +550,6 @@ section {
   width: 375px;
   height: 667px;
   margin: auto;
-  background-color: indianred;
   &__text {
     display: block;
     position: absolute;
@@ -562,38 +561,45 @@ section {
     width: 133px;
     height: 18px;
     font-size: 20px;
-    font-family: HNC-Medium, sans-serif;
+    letter-spacing: 0.6px;
+    font-family: HNC-Thin, sans-serif;
   }
   &__text-content {
     display: block;
-    width: 338px;
+    width: 310px;
     height: 30px;
-    font-size: 15px;
-    font-family: HNC-Light, sans-serif;
+    letter-spacing: 0.9px;
+    font-family: HNC-UltraLight, sans-serif;
+    line-height: 1.2;
+    font-size: 14px;
     text-align: left;
     margin-top: 10px;
   }
-  &__phone-back {
+  &__back {
     display: block;
     position: absolute;
-    left: 27px;
-    top: 126px;
-    background-image: url("/Files/phones/center-phone_Info-back.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 198px;
-    height: 389px;
   }
-  &__phone-front {
+  &__iphone-back {
+    left: 37px;
+    top: 142px;
+    background-image: url("/Files/home_page/iphone/iphone_call-back.png");
+    width: 182px;
+    height: 364px;
+  }
+  &__front {
     display: block;
     position: absolute;
-    left: 150px;
-    top: 86px;
-    background-image: url("/Files/phones/center-phone_IpCall-front.png");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 198px;
-    height: 388px;
+  }
+  &__iphone-front {
+    left: 156px;
+    top: 102px;
+    background-image: url("/Files/home_page/iphone/iphone_call-front.png");
+    width: 182px;
+    height: 364px;
   }
 }
 
