@@ -66,7 +66,7 @@ section {
   left: 0;
   display: block;
   width: 100%;
-  height: 83px;
+  height: 71px;
   z-index: 100;
   &:after {
     display: block;
@@ -106,7 +106,7 @@ section {
   left: 0;
   display: block;
   width: 100%;
-  height: 83px;
+  height: 56px;
   z-index: 100;
   &:before {
     display: block;
@@ -164,9 +164,6 @@ section {
     height: 34px;
     transition: all 0.2s linear;
     z-index: 10000;
-    &:active {
-      opacity: 0.6;
-    }
   }
   &__shop-googlePay {
     display: none;
@@ -179,9 +176,6 @@ section {
     height: 34px;
     transition: all 0.1s linear;
     z-index: 10000;
-    &:hover {
-      opacity: 0.6;
-    }
   }
 }
 
@@ -193,24 +187,28 @@ section {
   width: 375px;
   height: 667px;
   margin: auto;
-  background-color: indianred;
   &__text {
     display: block;
     position: absolute;
+    margin-bottom: 55px;
+    text-align: center;
     left: 13px;
-    top: 541px;
+    top: 528px;
     width: 349px;
-    height: 32px;
-    font-family: HNC-Light, sans-serif;
+    letter-spacing: 0.4px;
+    font-family: HNC-UltraLight, sans-serif;
+    line-height: 1.3;
     font-size: 13px;
-
+  }
+  &__text-c2 {
+    display: none;
   }
   &__left-phone {
     display: block;
     position: absolute;
     left: 39px;
-    top: 120px;
-    background-image: url("/Files/home_page/phone_left.png");
+    top: 115px;
+    background-image: url("/Files/home_page/android/phone-general-menu.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 161px;
@@ -220,8 +218,8 @@ section {
     display: block;
     position: absolute;
     left: 161px;
-    top: 113px;
-    background-image: url("/Files/home_page/phone_center.png");
+    top: 110px;
+    background-image: url("/Files/home_page/iphone/iphone-general-menu.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 166px;
@@ -231,7 +229,7 @@ section {
     display: block;
     position: absolute;
     left: 247px;
-    top: 320px;
+    top: 315px;
     background-image: url("/Files/home_page/watch_right.png");
     background-repeat: no-repeat;
     background-size: cover;
