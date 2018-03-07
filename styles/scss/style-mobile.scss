@@ -284,7 +284,13 @@ section {
     width: 182px;
     height: 364px;
   }
-
+  &__android-back {
+    left: 162px;
+    top: 125px;
+    background-image: url("/Files/home_page/android/phone_balance-back.png");
+    width: 172px;
+    height: 371px;
+  }
   &__front {
     display: block;
     position: absolute;
@@ -297,6 +303,13 @@ section {
     background-image: url("/Files/home_page/iphone/iphone_balance-front.png");
     width: 182px;
     height: 364px;
+  }
+  &__android-front {
+    left: 41px;
+    top: 91px;
+    background-image: url("/Files/home_page/android/phone_balance-front.png");
+    width: 172px;
+    height: 371px;
   }
 }
 
@@ -346,6 +359,13 @@ section {
     width: 182px;
     height: 364px;
   }
+  &__android-center {
+    left: 102px;
+    top: 105px;
+    background-image: url("/Files/home_page/android/phone_support-center.png");
+    width: 172px;
+    height: 371px;
+  }
 }
 
 .profile {
@@ -394,6 +414,13 @@ section {
     width: 182px;
     height: 364px;
   }
+  &__android-back {
+    left: 162px;
+    top: 129px;
+    background-image: url("/Files/home_page/android/phone_profile-back.png");
+    width: 172px;
+    height: 371px;
+  }
   &__front {
     display: block;
     position: absolute;
@@ -406,6 +433,13 @@ section {
     background-image: url("/Files/home_page/iphone/iphone_profile-front.png");
     width: 182px;
     height: 364px;
+  }
+  &__android-front {
+    left: 41px;
+    top: 95px;
+    background-image: url("/Files/home_page/android/phone_profile-front.png");
+    width: 172px;
+    height: 371px;
   }
 }
 
@@ -455,6 +489,13 @@ section {
     width: 182px;
     height: 364px;
   }
+  &__android-back {
+    left: 43px;
+    top: 129px;
+    background-image: url("/Files/home_page/android/phone_info-back.png");
+    width: 172px;
+    height: 371px;
+  }
   &__front {
     display: block;
     position: absolute;
@@ -467,6 +508,13 @@ section {
     background-image: url("/Files/home_page/iphone/iphone_info-front.png");
     width: 182px;
     height: 364px;
+  }
+  &__android-front {
+    left: 160px;
+    top: 95px;
+    background-image: url("/Files/home_page/android/phone_info-front.png");
+    width: 172px;
+    height: 371px;
   }
 }
 
@@ -516,6 +564,13 @@ section {
     width: 182px;
     height: 364px;
   }
+  &__android-back {
+    left: 43px;
+    top: 130px;
+    background-image: url("/Files/home_page/android/phone_bell-back.png");
+    width: 172px;
+    height: 371px;
+  }
   &__front {
     display: block;
     position: absolute;
@@ -528,6 +583,13 @@ section {
     background-image: url("/Files/home_page/iphone/iphone_bell-front.png");
     width: 182px;
     height: 364px;
+  }
+  &__android-front {
+    left: 160px;
+    top: 96px;
+    background-image: url("/Files/home_page/android/phone_bell-front.png");
+    width: 172px;
+    height: 371px;
   }
   &__iphone-watch {
     display: block;
@@ -588,6 +650,13 @@ section {
     width: 182px;
     height: 364px;
   }
+  &__android-back {
+    left: 43px;
+    top: 125px;
+    background-image: url("/Files/home_page/android/phone_call-back.png");
+    width: 172px;
+    height: 371px;
+  }
   &__front {
     display: block;
     position: absolute;
@@ -600,6 +669,13 @@ section {
     background-image: url("/Files/home_page/iphone/iphone_call-front.png");
     width: 182px;
     height: 364px;
+  }
+  &__android-front {
+    left: 160px;
+    top: 91px;
+    background-image: url("/Files/home_page/android/phone_call-front.png");
+    width: 172px;
+    height: 371px;
   }
 }
 
