@@ -1,49 +1,88 @@
-@import "./reset.scss";
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
 
 @font-face {
   font-family: HNC-Medium;
   src: local(HNC-Medium), url("/Font/HelveticaNeueCyr-Medium.ttf");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: HNC-Roman;
   src: local(HNC-Roman), url("/Font/HelveticaNeueCyr-Roman.ttf");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: HNC-Light;
   src: local(HNC-Light), url("/Font/HelveticaNeueCyr-Light.ttf");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: HNC-Thin;
   src: local(HNC-Thin), url("/Font/HelveticaNeueCyr-Thin.ttf");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 
 @font-face {
   font-family: HNC-UltraLight;
   src: local(HNC-UltraLight), url("/Font/HelveticaNeueCyr-UltraLight.ttf");
   font-weight: normal;
-  font-style: normal;
-}
-
-$bold: bold;
+  font-style: normal; }
 
 body {
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
 
 section {
-  color: white;
-}
+  color: white; }
 
 .background {
   position: fixed;
@@ -57,8 +96,7 @@ section {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1000;
-}
+  z-index: -1000; }
 
 .header {
   position: fixed;
@@ -67,25 +105,23 @@ section {
   display: block;
   width: 100%;
   height: 71px;
-  z-index: 100;
-  &:after {
+  z-index: 100; }
+  .header:after {
     display: block;
     content: " ";
     line-height: 0;
     width: 100%;
     height: 1px;
     background-color: #626262;
-    opacity: .5;
-  }
-  &__container {
+    opacity: .5; }
+  .header__container {
     display: flex;
     margin: auto;
     max-width: 375px;
     height: 100%;
     justify-content: center;
-    align-items: center;
-  }
-  &__home {
+    align-items: center; }
+  .header__home {
     display: block;
     color: white;
     font-size: 20px;
@@ -93,12 +129,9 @@ section {
     font-family: HNC-Roman, sans-serif;
     cursor: pointer;
     letter-spacing: 0.3px;
-    transition: transform 0.1s linear;
-    &:hover {
-      transform: scale(1.03);
-    }
-  }
-}
+    transition: transform 0.1s linear; }
+    .header__home:hover {
+      transform: scale(1.03); }
 
 .partner-data {
   display: none;
@@ -109,8 +142,8 @@ section {
   left: 0;
   color: white;
   z-index: 10000;
-  background-image: url("/Files/rectangle_3.png");
-  &:before {
+  background-image: url("/Files/rectangle_3.png"); }
+  .partner-data:before {
     display: block;
     position: absolute;
     top: 0;
@@ -119,9 +152,8 @@ section {
     height: 100%;
     content: " ";
     background-color: black;
-    opacity: 0.4;
-  }
-  &__box {
+    opacity: 0.4; }
+  .partner-data__box {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -129,31 +161,27 @@ section {
     padding: 15px;
     width: 375px;
     height: 667px;
-    margin: auto;
-  }
-  &__box-name {
+    margin: auto; }
+  .partner-data__box-name {
     display: block;
     width: 244px;
     text-align: left;
     font-size: 20px;
     font-family: HNC-Thin, sans-serif;
-    letter-spacing: 1px;
-  }
-  &__box-content {
+    letter-spacing: 1px; }
+  .partner-data__box-content {
     display: block;
     font-size: 15px;
     font-family: HNC-UltraLight, sans-serif;
     margin-top: 36px;
     letter-spacing: 1.1px;
-    line-height: 1.4;
-  }
-  &__form {
+    line-height: 1.4; }
+  .partner-data__form {
     z-index: 1000;
     margin-top: 50px;
     width: 340px;
-    height: auto;
-  }
-  &__form-box {
+    height: auto; }
+  .partner-data__form-box {
     display: block;
     width: 340px;
     height: 40px;
@@ -167,26 +195,23 @@ section {
     padding-left: 25px;
     margin-bottom: 27px;
     letter-spacing: 0.5px;
-    //line-height: 1.5;
     opacity: 0.6;
-    outline:none;
-
-    &::-webkit-input-placeholder {
-      color: white;
-    }
-    &::-moz-placeholder {color: white;}
-    &:-moz-placeholder {color: white;}
-    &:-ms-input-placeholder {color: indianred;}
-    &:hover {
-      opacity: 1;
-    }
-    &:focus {
+    outline: none; }
+    .partner-data__form-box::-webkit-input-placeholder {
+      color: white; }
+    .partner-data__form-box::-moz-placeholder {
+      color: white; }
+    .partner-data__form-box:-moz-placeholder {
+      color: white; }
+    .partner-data__form-box:-ms-input-placeholder {
+      color: indianred; }
+    .partner-data__form-box:hover {
+      opacity: 1; }
+    .partner-data__form-box:focus {
       opacity: 1;
       background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-    }
-  }
-  &__form-button {
+      color: white; }
+  .partner-data__form-button {
     display: block;
     z-index: 1000;
     cursor: pointer;
@@ -202,17 +227,14 @@ section {
     height: 41px;
     margin: auto;
     padding: auto;
-    outline:none;
-    &:hover {
-      opacity: 0.6;
-    }
-    &:active {
+    outline: none; }
+    .partner-data__form-button:hover {
+      opacity: 0.6; }
+    .partner-data__form-button:active {
       background-color: white;
       opacity: 1;
-      color: #3C250F;
-    }
-  }
-  &__close {
+      color: #3C250F; }
+  .partner-data__close {
     display: block;
     position: absolute;
     cursor: pointer;
@@ -222,15 +244,11 @@ section {
     height: 23px;
     background-image: url("/Files/icons/button_element_menu.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-  &__block--showed {
-    display: flex;
-  }
-}
+    background-size: contain; }
+    .partner-data__close:hover {
+      opacity: 0.6; }
+  .partner-data__block--showed {
+    display: flex; }
 
 .footer {
   position: fixed;
@@ -239,17 +257,16 @@ section {
   display: block;
   width: 100%;
   height: 56px;
-  z-index: 100;
-  &:before {
+  z-index: 100; }
+  .footer:before {
     display: block;
     content: " ";
     line-height: 0;
     width: 100%;
     height: 1px;
     background-color: #616161;
-    opacity: .35;
-  }
-  &:after {
+    opacity: .35; }
+  .footer:after {
     display: block;
     position: absolute;
     top: 1px;
@@ -260,12 +277,10 @@ section {
     height: 100%;
     background-color: black;
     opacity: 0.15;
-    z-index: 500;
-  }
-  &:hover:after {
-    opacity: 0.09;
-  }
-  &__container {
+    z-index: 500; }
+  .footer:hover:after {
+    opacity: 0.09; }
+  .footer__container {
     display: flex;
     margin: auto;
     width: 100%;
@@ -273,9 +288,8 @@ section {
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-size: 16px;
-  }
-  &__logo {
+    font-size: 16px; }
+  .footer__logo {
     width: 96px;
     height: 22px;
     background-image: url("/Files/logo.png");
@@ -283,9 +297,8 @@ section {
     background-size: contain;
     text-decoration: none;
     margin-right: 31px;
-    z-index: 10000;
-  }
-  &__shop-appStore {
+    z-index: 10000; }
+  .footer__shop-appStore {
     display: none;
     margin-left: 25px;
     text-decoration: none;
@@ -295,9 +308,8 @@ section {
     width: 124px;
     height: 34px;
     transition: all 0.2s linear;
-    z-index: 10000;
-  }
-  &__shop-googlePay {
+    z-index: 10000; }
+  .footer__shop-googlePay {
     display: none;
     margin-left: 25px;
     text-decoration: none;
@@ -307,12 +319,9 @@ section {
     width: 124px;
     height: 34px;
     transition: all 0.1s linear;
-    z-index: 10000;
-  }
-  &__shop--showed {
-    display: block;
-  }
-}
+    z-index: 10000; }
+  .footer__shop--showed {
+    display: block; }
 
 .general-mobile {
   display: flex;
@@ -321,8 +330,8 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .general-mobile__text {
     display: block;
     position: absolute;
     margin-bottom: 55px;
@@ -333,12 +342,10 @@ section {
     letter-spacing: 0.4px;
     font-family: HNC-UltraLight, sans-serif;
     line-height: 1.3;
-    font-size: 13px;
-  }
-  &__text-c2 {
-    display: none;
-  }
-  &__left-phone {
+    font-size: 13px; }
+  .general-mobile__text-c2 {
+    display: none; }
+  .general-mobile__left-phone {
     display: block;
     position: absolute;
     left: 39px;
@@ -347,9 +354,8 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     width: 161px;
-    height: 346px;
-  }
-  &__center-phone {
+    height: 346px; }
+  .general-mobile__center-phone {
     display: block;
     position: absolute;
     left: 161px;
@@ -358,9 +364,8 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     width: 166px;
-    height: 335px;
-  }
-  &__right-watch {
+    height: 335px; }
+  .general-mobile__right-watch {
     display: block;
     position: absolute;
     left: 247px;
@@ -369,9 +374,7 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100px;
-    height: 180px;
-  }
-}
+    height: 180px; }
 
 .balance {
   display: flex;
@@ -380,22 +383,20 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .balance__text {
     display: block;
     position: absolute;
     left: 15px;
-    top: 525px;
-  }
-  &__text-name {
+    top: 525px; }
+  .balance__text-name {
     display: block;
     width: 71px;
     height: 18px;
     font-size: 20px;
     letter-spacing: 0.4px;
-    font-family: HNC-Thin, sans-serif;
-  }
-  &__text-content {
+    font-family: HNC-Thin, sans-serif; }
+  .balance__text-content {
     display: block;
     width: 338px;
     height: 30px;
@@ -404,49 +405,41 @@ section {
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
-    margin-top: 10px;
-  }
-  &__back {
+    margin-top: 10px; }
+  .balance__back {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-back {
+    background-size: contain; }
+  .balance__iphone-back {
     left: 157px;
     top: 142px;
     background-image: url("/Files/home_page/iphone/iphone_balance-back.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-back {
+    height: 364px; }
+  .balance__android-back {
     left: 162px;
     top: 125px;
     background-image: url("/Files/home_page/android/phone_balance-back.png");
     width: 172px;
-    height: 371px;
-  }
-  &__front {
+    height: 371px; }
+  .balance__front {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-front {
+    background-size: contain; }
+  .balance__iphone-front {
     left: 36px;
     top: 102px;
     background-image: url("/Files/home_page/iphone/iphone_balance-front.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-front {
+    height: 364px; }
+  .balance__android-front {
     left: 41px;
     top: 91px;
     background-image: url("/Files/home_page/android/phone_balance-front.png");
     width: 172px;
-    height: 371px;
-  }
-}
+    height: 371px; }
 
 .support {
   display: flex;
@@ -455,22 +448,20 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .support__text {
     display: block;
     position: absolute;
     left: 15px;
-    top: 525px;
-  }
-  &__text-name {
+    top: 525px; }
+  .support__text-name {
     display: block;
     width: 112px;
     height: 18px;
     font-size: 20px;
     letter-spacing: 0.4px;
-    font-family: HNC-Thin, sans-serif;
-  }
-  &__text-content {
+    font-family: HNC-Thin, sans-serif; }
+  .support__text-content {
     display: block;
     width: 338px;
     height: 30px;
@@ -479,29 +470,24 @@ section {
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
-    margin-top: 10px;
-  }
-  &__center {
+    margin-top: 10px; }
+  .support__center {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-center {
+    background-size: contain; }
+  .support__iphone-center {
     left: 97px;
     top: 110px;
     background-image: url("/Files/home_page/iphone/iphone_support.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-center {
+    height: 364px; }
+  .support__android-center {
     left: 102px;
     top: 105px;
     background-image: url("/Files/home_page/android/phone_support-center.png");
     width: 172px;
-    height: 371px;
-  }
-}
+    height: 371px; }
 
 .profile {
   display: flex;
@@ -510,22 +496,20 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .profile__text {
     display: block;
     position: absolute;
     left: 15px;
-    top: 525px;
-  }
-  &__text-name {
+    top: 525px; }
+  .profile__text-name {
     display: block;
     width: 89px;
     height: 18px;
     font-size: 20px;
     letter-spacing: 0.4px;
-    font-family: HNC-Thin, sans-serif;
-  }
-  &__text-content {
+    font-family: HNC-Thin, sans-serif; }
+  .profile__text-content {
     display: block;
     width: 338px;
     height: 30px;
@@ -534,49 +518,41 @@ section {
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
-    margin-top: 10px;
-  }
-  &__back {
+    margin-top: 10px; }
+  .profile__back {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-back {
+    background-size: contain; }
+  .profile__iphone-back {
     left: 157px;
     top: 137px;
     background-image: url("/Files/home_page/iphone/iphone_profile-back.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-back {
+    height: 364px; }
+  .profile__android-back {
     left: 162px;
     top: 129px;
     background-image: url("/Files/home_page/android/phone_profile-back.png");
     width: 172px;
-    height: 371px;
-  }
-  &__front {
+    height: 371px; }
+  .profile__front {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-front {
+    background-size: contain; }
+  .profile__iphone-front {
     left: 36px;
     top: 97px;
     background-image: url("/Files/home_page/iphone/iphone_profile-front.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-front {
+    height: 364px; }
+  .profile__android-front {
     left: 41px;
     top: 95px;
     background-image: url("/Files/home_page/android/phone_profile-front.png");
     width: 172px;
-    height: 371px;
-  }
-}
+    height: 371px; }
 
 .info {
   display: flex;
@@ -585,22 +561,20 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .info__text {
     display: block;
     position: absolute;
     left: 15px;
-    top: 525px;
-  }
-  &__text-name {
+    top: 525px; }
+  .info__text-name {
     display: block;
     width: 127px;
     height: 18px;
     font-size: 20px;
     letter-spacing: 0.4px;
-    font-family: HNC-Thin, sans-serif;
-  }
-  &__text-content {
+    font-family: HNC-Thin, sans-serif; }
+  .info__text-content {
     display: block;
     width: 338px;
     height: 30px;
@@ -609,49 +583,41 @@ section {
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
-    margin-top: 10px;
-  }
-  &__back {
+    margin-top: 10px; }
+  .info__back {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-back {
+    background-size: contain; }
+  .info__iphone-back {
     left: 33px;
     top: 141px;
     background-image: url("/Files/home_page/iphone/iphone_info-back.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-back {
+    height: 364px; }
+  .info__android-back {
     left: 43px;
     top: 129px;
     background-image: url("/Files/home_page/android/phone_info-back.png");
     width: 172px;
-    height: 371px;
-  }
-  &__front {
+    height: 371px; }
+  .info__front {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-front {
+    background-size: contain; }
+  .info__iphone-front {
     left: 152px;
     top: 101px;
     background-image: url("/Files/home_page/iphone/iphone_info-front.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-front {
+    height: 364px; }
+  .info__android-front {
     left: 160px;
     top: 95px;
     background-image: url("/Files/home_page/android/phone_info-front.png");
     width: 172px;
-    height: 371px;
-  }
-}
+    height: 371px; }
 
 .note {
   display: flex;
@@ -660,22 +626,20 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .note__text {
     display: block;
     position: absolute;
     left: 15px;
-    top: 525px;
-  }
-  &__text-name {
+    top: 525px; }
+  .note__text-name {
     display: block;
     width: 130px;
     height: 18px;
     font-size: 20px;
     letter-spacing: 0.4px;
-    font-family: HNC-Thin, sans-serif;
-  }
-  &__text-content {
+    font-family: HNC-Thin, sans-serif; }
+  .note__text-content {
     display: block;
     width: 338px;
     height: 30px;
@@ -684,49 +648,42 @@ section {
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
-    margin-top: 10px;
-  }
-  &__back {
+    margin-top: 10px; }
+  .note__back {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-back {
+    background-size: contain; }
+  .note__iphone-back {
     left: 37px;
     top: 128px;
     background-image: url("/Files/home_page/iphone/iphone_bell-back.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-back {
+    height: 364px; }
+  .note__android-back {
     left: 43px;
     top: 130px;
     background-image: url("/Files/home_page/android/phone_bell-back.png");
     width: 172px;
-    height: 371px;
-  }
-  &__front {
+    height: 371px; }
+  .note__front {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-front {
+    background-size: contain; }
+  .note__iphone-front {
     left: 156px;
     top: 88px;
     background-image: url("/Files/home_page/iphone/iphone_bell-front.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-front {
+    height: 364px; }
+  .note__android-front {
     left: 160px;
     top: 96px;
     background-image: url("/Files/home_page/android/phone_bell-front.png");
     width: 172px;
-    height: 371px;
-  }
-  &__iphone-watch {
+    height: 371px; }
+  .note__iphone-watch {
     display: block;
     position: absolute;
     left: 225px;
@@ -735,9 +692,7 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     width: 107px;
-    height: 193px;
-  }
-}
+    height: 193px; }
 
 .ip-telephony {
   display: flex;
@@ -746,22 +701,20 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__text {
+  margin: auto; }
+  .ip-telephony__text {
     display: block;
     position: absolute;
     left: 15px;
-    top: 525px;
-  }
-  &__text-name {
+    top: 525px; }
+  .ip-telephony__text-name {
     display: block;
     width: 133px;
     height: 18px;
     font-size: 20px;
     letter-spacing: 0.6px;
-    font-family: HNC-Thin, sans-serif;
-  }
-  &__text-content {
+    font-family: HNC-Thin, sans-serif; }
+  .ip-telephony__text-content {
     display: block;
     width: 310px;
     height: 30px;
@@ -770,49 +723,41 @@ section {
     line-height: 1.2;
     font-size: 14px;
     text-align: left;
-    margin-top: 10px;
-  }
-  &__back {
+    margin-top: 10px; }
+  .ip-telephony__back {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-back {
+    background-size: contain; }
+  .ip-telephony__iphone-back {
     left: 37px;
     top: 142px;
     background-image: url("/Files/home_page/iphone/iphone_call-back.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-back {
+    height: 364px; }
+  .ip-telephony__android-back {
     left: 43px;
     top: 125px;
     background-image: url("/Files/home_page/android/phone_call-back.png");
     width: 172px;
-    height: 371px;
-  }
-  &__front {
+    height: 371px; }
+  .ip-telephony__front {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &__iphone-front {
+    background-size: contain; }
+  .ip-telephony__iphone-front {
     left: 156px;
     top: 102px;
     background-image: url("/Files/home_page/iphone/iphone_call-front.png");
     width: 182px;
-    height: 364px;
-  }
-  &__android-front {
+    height: 364px; }
+  .ip-telephony__android-front {
     left: 160px;
     top: 91px;
     background-image: url("/Files/home_page/android/phone_call-front.png");
     width: 172px;
-    height: 371px;
-  }
-}
+    height: 371px; }
 
 .proposal {
   display: flex;
@@ -821,8 +766,8 @@ section {
   justify-content: center;
   width: 375px;
   height: 667px;
-  margin: auto;
-  &__button {
+  margin: auto; }
+  .proposal__button {
     display: block;
     position: absolute;
     cursor: pointer;
@@ -835,12 +780,10 @@ section {
     letter-spacing: 1.2px;
     font-size: 14px;
     font-family: HNC-Thin, sans-serif;
-    padding: 12px 23px;
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-  &__logo-anetwork {
+    padding: 12px 23px; }
+    .proposal__button:hover {
+      opacity: 0.6; }
+  .proposal__logo-anetwork {
     display: block;
     position: absolute;
     left: 124px;
@@ -849,6 +792,4 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     width: 128px;
-    height: 128px;
-  }
-}
+    height: 128px; }

@@ -1,0 +1,1983 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: HNC-Medium;
+  src: local(HNC-Medium), url("/Font/HelveticaNeueCyr-Medium.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: HNC-Roman;
+  src: local(HNC-Roman), url("/Font/HelveticaNeueCyr-Roman.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: HNC-Light;
+  src: local(HNC-Light), url("/Font/HelveticaNeueCyr-Light.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: HNC-Thin;
+  src: local(HNC-Thin), url("/Font/HelveticaNeueCyr-Thin.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: HNC-UltraLight;
+  src: local(HNC-UltraLight), url("/Font/HelveticaNeueCyr-UltraLight.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: sans-serif; }
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("/Files/rectangle_3.png");
+  background-color: #606866;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1000; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 83px;
+  z-index: 100; }
+  .header:after {
+    display: block;
+    content: " ";
+    line-height: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #626262;
+    opacity: .5; }
+  .header__container {
+    display: flex;
+    margin: auto;
+    max-width: 1320px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center; }
+  .header__home {
+    display: block;
+    color: white;
+    font-size: 34px;
+    font-family: HNC-Roman, sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: transform 0.1s linear; }
+    .header__home:hover {
+      transform: scale(1.03); }
+  .header__button {
+    display: block;
+    color: white;
+    cursor: pointer;
+    width: 173px;
+    height: 47px;
+    border: 1px solid white;
+    border-radius: 7px;
+    font-size: 17px;
+    font-family: HNC-Thin, sans-serif;
+    padding: 14px 13px 14px 13px;
+    line-height: 1;
+    letter-spacing: 1px;
+    transition: all 0.1s linear; }
+    .header__button:hover {
+      opacity: 0.6; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 83px;
+  z-index: 100; }
+  .footer:before {
+    display: block;
+    content: " ";
+    line-height: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #616161;
+    opacity: .35; }
+  .footer:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    content: " ";
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.15;
+    z-index: 500; }
+  .footer:hover:after {
+    opacity: 0.09; }
+  .footer__container {
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 16px; }
+  .footer__logo {
+    width: 107px;
+    height: 24px;
+    background-image: url("/Files/logo.png");
+    text-decoration: none;
+    margin-right: 31px;
+    z-index: 10000; }
+    .footer__logo:hover {
+      opacity: 0.8; }
+  .footer__logo--opacited {
+    opacity: 0.8; }
+
+section {
+  color: white; }
+
+.home-page {
+  display: flex;
+  position: relative;
+  margin: auto;
+  width: 1320px;
+  height: 750px; }
+  .home-page__left-phone {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-image: url("/Files/home_page/android/phone-general-menu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 618px;
+    width: 287px;
+    z-index: 100;
+    cursor: pointer;
+    transition: transform 0.2s linear, width 0.2s linear, height 0.2s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear; }
+  .home-page__left-phone-motion {
+    animation-name: motion-Android;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; }
+  .home-page__left-phone--hovered {
+    transform: scale(1.02);
+    z-index: 500; }
+  .home-page__left-phone--hover-balance {
+    background-image: url("/Files/home_page/android/phone_balance.png"); }
+  .home-page__left-phone--hover-support {
+    background-image: url("/Files/home_page/android/phone_support.png"); }
+  .home-page__left-phone--hover-profile {
+    background-image: url("/Files/home_page/android/phone_profile.png"); }
+  .home-page__left-phone--hover-info {
+    background-image: url("/Files/home_page/android/phone_info.png"); }
+  .home-page__left-phone--hover-bell {
+    background-image: url("/Files/home_page/android/phone_bell.png"); }
+  .home-page__left-phone--hover-call {
+    background-image: url("/Files/home_page/android/phone_call.png"); }
+  .home-page__left-phone--shifted {
+    left: -500px;
+    opacity: 0; }
+  .home-page__left-phone--shifted-center {
+    transform: none;
+    cursor: default;
+    left: 518px;
+    top: 65px;
+    z-index: -100; }
+  .home-page__center-phone {
+    display: block;
+    position: absolute;
+    top: 61px;
+    left: 210px;
+    background-image: url("/Files/home_page/iphone/iphone-general-menu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px;
+    cursor: pointer;
+    transition: transform 0.25s linear, width 0.2s linear, height 0.25s linear, opacity 0.2s linear, left 0.2s linear, top 0.2s linear;
+    z-index: 500; }
+  .home-page__center-phone-motion {
+    animation-name: motion-IPhone;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; }
+  .home-page__phone-motion--stopped {
+    animation-play-state: paused; }
+  .home-page__center-phone--hover-balance {
+    background-image: url("/Files/home_page/iphone/iphone_balance.png"); }
+  .home-page__center-phone--hover-support {
+    background-image: url("/Files/home_page/iphone/iphone_support.png"); }
+  .home-page__center-phone--hover-profile {
+    background-image: url("/Files/home_page/iphone/iphone_profile.png"); }
+  .home-page__center-phone--hover-info {
+    background-image: url("/Files/home_page/iphone/iphone_info.png"); }
+  .home-page__center-phone--hover-bell {
+    background-image: url("/Files/home_page/iphone/iphone_bell.png"); }
+  .home-page__center-phone--hover-call {
+    background-image: url("/Files/home_page/iphone/iphone_call.png"); }
+  .home-page__center-phone--hovered {
+    transform: scale(1.02);
+    z-index: 500; }
+  .home-page__center-phone--shifted {
+    left: -500px;
+    z-index: -500;
+    opacity: 0; }
+  .home-page__center-phone--shifted-center {
+    transform: none;
+    cursor: default;
+    left: 512px;
+    top: 79px;
+    z-index: -100; }
+  .home-page__watch-right {
+    display: block;
+    position: absolute;
+    top: 367px;
+    left: 463px;
+    background-image: url("/Files/home_page/watch_right.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 178px;
+    height: 321px;
+    z-index: 900;
+    cursor: pointer;
+    transition: all 0.15s linear; }
+  .home-page__watch-right--hovered {
+    transform: scale(1.02); }
+  .home-page__watch-right-motion {
+    animation-name: motion-watch;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; }
+  .home-page__watch-right--down {
+    top: 520px;
+    opacity: 0;
+    z-index: -100; }
+  .home-page__service-development {
+    display: block;
+    position: absolute;
+    top: 150px;
+    left: 16px;
+    width: 140px;
+    height: 47px;
+    transform: scaleX(1);
+    z-index: -20000;
+    transition: all 0.2s linear;
+    border-radius: 5.45px;
+    overflow: hidden;
+    opacity: 0; }
+    .home-page__service-development:before {
+      display: block;
+      position: absolute;
+      top: -150px;
+      left: -16px;
+      content: " ";
+      z-index: 700;
+      background-image: url("/Files/home_page/watch_right.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 187px;
+      height: 337px;
+      filter: blur(5px); }
+    .home-page__service-development:after {
+      display: block;
+      position: absolute;
+      content: " ";
+      width: 140px;
+      height: 47px;
+      z-index: 1200;
+      background-image: url("/Files/icons/service_in_development.png");
+      background-repeat: no-repeat;
+      background-size: contain; }
+  .home-page__service-animated {
+    animation-name: service-watch;
+    animation-duration: 2s; }
+  .home-page__phone-menu {
+    display: inline-block;
+    position: absolute;
+    left: 512px;
+    top: 77px;
+    width: 303px;
+    height: 610px;
+    z-index: 300;
+    transition: all 0.2s linear; }
+  .home-page__left-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 450px;
+    transition: all 0.2s linear;
+    top: 2px;
+    text-align: right;
+    z-index: -100; }
+  .home-page__left-text--shifted {
+    left: -500px;
+    z-index: 1000; }
+  .home-page__left-text-elements {
+    position: relative;
+    margin-right: 90px; }
+  .home-page__menu-elements {
+    display: block;
+    height: 150px;
+    margin-bottom: 70px; }
+  .home-page__menu-name {
+    padding-top: 5px;
+    font-size: 38px;
+    font-family: HNC-Roman, sans-serif;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px; }
+  .home-page__menu-content {
+    padding-top: 70px;
+    font-family: HNC-Thin, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    transition: opacity 0.6s ease; }
+  .home-page__right-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 450px;
+    text-align: left;
+    transition: all 0.2s linear;
+    top: 2px;
+    z-index: -100; }
+  .home-page__right-text--shifted {
+    opacity: 1;
+    left: 350px;
+    z-index: 1000; }
+  .home-page__right-text-elements {
+    margin-left: 90px;
+    position: relative; }
+  .home-page__menu-elements-balance {
+    cursor: default;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.4s linear;
+    transform: translateX(-2000px);
+    opacity: 0; }
+  .home-page__menu-elements-balance--hovered {
+    color: #FFCC00; }
+    .home-page__menu-elements-balance--hovered .home-page__rub {
+      fill: #FFCC00; }
+    .home-page__menu-elements-balance--hovered .home-page__android-rub {
+      fill: #FFCC00; }
+  .home-page__menu-elements-balance--shifted {
+    cursor: pointer;
+    transform: translateX(0px);
+    opacity: 1; }
+  .home-page__menu-elements-support {
+    cursor: pointer;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.6s linear;
+    transform: translateX(-2000px);
+    opacity: 0; }
+  .home-page__menu-elements-support--hovered {
+    color: #FF4160; }
+    .home-page__menu-elements-support--hovered .home-page__sup {
+      fill: #FF4160; }
+    .home-page__menu-elements-support--hovered .home-page__android-sup {
+      fill: #FF4160; }
+  .home-page__menu-elements-support--shifted {
+    transform: translateX(0px);
+    opacity: 1; }
+  .home-page__menu-elements-profile {
+    position: relative;
+    cursor: pointer;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.8s linear;
+    transform: translateX(-2000px);
+    opacity: 0; }
+  .home-page__menu-elements-profile--hovered {
+    color: #5D5DF1; }
+    .home-page__menu-elements-profile--hovered .home-page__profile {
+      fill: #5D5DF1; }
+    .home-page__menu-elements-profile--hovered .home-page__android-profile {
+      fill: #5D5DF1; }
+  .home-page__menu-elements-profile--shifted {
+    transform: translateX(0px);
+    opacity: 1; }
+  .home-page__menu-elements-info {
+    cursor: pointer;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.4s linear;
+    transform: translateX(2000px);
+    opacity: 0; }
+  .home-page__menu-elements-info--hovered {
+    color: #FE00BE; }
+    .home-page__menu-elements-info--hovered .home-page__info {
+      stroke: #FE00BE; }
+    .home-page__menu-elements-info--hovered .home-page__android-info {
+      fill: #FE00BE; }
+  .home-page__menu-elements-info--shifted {
+    transform: translateX(0px);
+    opacity: 1; }
+  .home-page__menu-elements-bell {
+    cursor: pointer;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.6s linear;
+    transform: translateX(2000px);
+    opacity: 0; }
+  .home-page__menu-elements-bell--hovered {
+    color: #0069EA; }
+    .home-page__menu-elements-bell--hovered .home-page__bell {
+      fill: #0069EA; }
+    .home-page__menu-elements-bell--hovered .home-page__android-bell {
+      fill: #0069EA; }
+  .home-page__menu-elements-bell--shifted {
+    transform: translateX(0px);
+    opacity: 1; }
+  .home-page__menu-elements-call {
+    cursor: pointer;
+    transition: opacity 0.3s linear, color 0.2s linear, fill 0.2s linear, transform 0.8s linear;
+    transform: translateX(2000px);
+    opacity: 0; }
+  .home-page__menu-elements-call--hovered {
+    color: #86CA00; }
+    .home-page__menu-elements-call--hovered .home-page__call {
+      fill: #86CA00; }
+    .home-page__menu-elements-call--hovered .home-page__android-call {
+      fill: #86CA00; }
+  .home-page__menu-elements-call--shifted {
+    transform: translateX(0px);
+    opacity: 1; }
+  .home-page__icons-iphone {
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transition: opacity 0.3s linear; }
+  .home-page__icons-iphone--hidden {
+    display: none; }
+  .home-page__rub {
+    fill: white;
+    width: 33px;
+    height: 33px;
+    left: 415px;
+    top: 1px; }
+  .home-page__sup {
+    fill: white;
+    width: 33px;
+    height: 33px;
+    left: 415px;
+    top: 4px; }
+  .home-page__profile {
+    fill: white;
+    width: 34px;
+    height: 33px;
+    left: 413px;
+    top: 5px; }
+  .home-page__info {
+    width: 30px;
+    height: 40px;
+    stroke: white;
+    left: 5px;
+    top: -2px; }
+  .home-page__bell {
+    width: 30px;
+    height: 33px;
+    fill: white;
+    left: 3px;
+    top: 5px; }
+  .home-page__call {
+    fill: white;
+    width: 33.5px;
+    height: 33px;
+    left: 2px;
+    top: 4px; }
+  .home-page__icons-android {
+    display: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; }
+  .home-page__icons-android--showed {
+    display: block; }
+  .home-page__android-rub {
+    fill: white;
+    width: 34px;
+    height: 34px;
+    left: 415px;
+    top: 1px; }
+  .home-page__android-sup {
+    fill: white;
+    width: 34px;
+    height: 34px;
+    left: 415px;
+    top: 4px; }
+  .home-page__android-profile {
+    fill: white;
+    width: 27px;
+    height: 27px;
+    left: 416px;
+    top: 5px; }
+  .home-page__android-info {
+    width: 34px;
+    height: 44px;
+    fill: white;
+    left: 3px;
+    top: -3px; }
+  .home-page__android-bell {
+    width: 25px;
+    height: 31px;
+    fill: white;
+    left: 5px;
+    top: 5px; }
+  .home-page__android-call {
+    fill: white;
+    width: 32px;
+    height: 35px;
+    left: 5px;
+    top: 4px; }
+  .home-page__name-balance {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .home-page__name-support {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .home-page__name-profile {
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .home-page__name-info {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .home-page__name-bell {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .home-page__name-call {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .home-page__menu-elements--no-hover {
+    cursor: default; }
+  .home-page__name-info--shifted {
+    cursor: default;
+    animation-name: name-info_shifted;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
+  .home-page__name-bell--shifted {
+    cursor: default;
+    animation-name: name-bell_shifted;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
+  .home-page__name-call--shifted {
+    cursor: default;
+    animation-name: name-call_shifted;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
+  .home-page__name-balance--shifted {
+    cursor: default;
+    animation-name: name-balance_shifted;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
+  .home-page__name-support--shifted {
+    cursor: default;
+    animation-name: name-support_shifted;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
+  .home-page__name-profile--shifted {
+    cursor: default;
+    animation-name: name-profile_shifted;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards; }
+  .home-page__text {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    top: 15px;
+    left: 50%;
+    text-align: left;
+    color: white;
+    padding-left: 20px;
+    line-height: 1.43;
+    letter-spacing: 0.7px;
+    transition: all 0.15s linear;
+    z-index: 900; }
+  .home-page__text--hidden {
+    opacity: 0;
+    z-index: -100; }
+  .home-page__head {
+    font-size: 44px;
+    margin-bottom: 20px;
+    font-family: HNC-Roman, sans-serif; }
+  .home-page__paragraph {
+    margin-top: 30px;
+    width: 633px;
+    font-size: 20px;
+    font-family: HNC-UltraLight, sans-serif; }
+  .home-page__shops {
+    display: flex;
+    margin-top: 63px;
+    flex-direction: row; }
+  .home-page__shop-appStore {
+    display: block;
+    margin-right: 25px;
+    text-decoration: none;
+    background-image: url("/Files/home_page/app_store.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.2s linear; }
+    .home-page__shop-appStore:hover {
+      opacity: 0.6; }
+  .home-page__shop-googlePay {
+    display: block;
+    margin-right: 25px;
+    text-decoration: none;
+    background-image: url("/Files/home_page/google_play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.1s linear; }
+    .home-page__shop-googlePay:hover {
+      opacity: 0.6; }
+  .home-page__close-menu-elements {
+    display: none;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    background-image: url("/Files/icons/button_element_menu.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    right: -49px;
+    cursor: pointer;
+    opacity: 1;
+    z-index: 50000;
+    transition: opacity 0.1s linear; }
+    .home-page__close-menu-elements:hover {
+      opacity: 0.6; }
+  .home-page__close-menu-elements--showed {
+    display: block; }
+  .home-page__elements--hidden {
+    opacity: 0;
+    z-index: -100; }
+
+.menu-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+  .menu-elements__box {
+    display: none;
+    position: relative;
+    width: 1320px;
+    height: 765px;
+    margin: auto;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
+    .menu-elements__box:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -500;
+      height: 100%;
+      width: 100%;
+      background-color: white;
+      opacity: 0.05;
+      background-size: 104vw auto;
+      background-position: calc(-48vw + 660px) calc(-135px - 2vh);
+      transition: all 0.2s ease; }
+    .menu-elements__box:after {
+      display: block;
+      content: " ";
+      width: 1318px;
+      height: 763px;
+      border-radius: 20px;
+      border: 1px solid white;
+      opacity: 0.1;
+      z-index: 0; }
+  .menu-elements__box--showed {
+    display: block;
+    animation-name: menu-elements-border;
+    animation-duration: 0.7s; }
+  .menu-elements__info-front {
+    display: none;
+    position: absolute;
+    z-index: 1000; }
+  .menu-elements__info-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_info-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__info-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_info-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__info-back {
+    display: none;
+    position: absolute;
+    z-index: 500; }
+  .menu-elements__info-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_info-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__info-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_info-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__text {
+    display: none;
+    position: absolute;
+    font-size: 19px;
+    font-family: HNC-UltraLight, sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.43;
+    opacity: 0; }
+  .menu-elements__info-paragraph1 {
+    width: 391px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__info-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__bell-front {
+    display: none;
+    position: absolute;
+    z-index: 1000; }
+  .menu-elements__bell-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_bell-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__bell-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_bell-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__bell-back {
+    display: none;
+    position: absolute;
+    z-index: 500; }
+  .menu-elements__bell-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_bell-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__bell-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_bell-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__bell-watch {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 500;
+    width: 178px;
+    height: 321px;
+    left: 1040px;
+    top: 420px;
+    transition: opacity 0.5s ease;
+    background-image: url("/Files/home_page/iphone/watch_bell.png");
+    background-repeat: no-repeat;
+    background-size: contain; }
+  .menu-elements__bell-watch-iphone {
+    display: block; }
+  .menu-elements__bell-watch--showed {
+    opacity: 1; }
+  .menu-elements__bell-paragraph1 {
+    width: 391px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__bell-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__call-front {
+    display: none;
+    position: absolute;
+    z-index: 1000; }
+  .menu-elements__call-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_call-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__call-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_call-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__call-back {
+    display: none;
+    position: absolute;
+    z-index: 500; }
+  .menu-elements__call-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_call-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__call-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_call-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__call-paragraph1 {
+    width: 391px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__call-paragraph2 {
+    width: 436px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__call-paragraph3 {
+    width: 391px;
+    top: 175px;
+    left: 735px; }
+  .menu-elements__balance-front {
+    display: none;
+    position: absolute;
+    z-index: 1000; }
+  .menu-elements__balance-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_balance-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__balance-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_balance-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__balance-back {
+    display: none;
+    position: absolute;
+    z-index: 500; }
+  .menu-elements__balance-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_balance-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__balance-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_balance-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__balance-paragraph1 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__balance-paragraph2 {
+    text-align: right;
+    width: 436px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__balance-paragraph3 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__support-center {
+    display: none;
+    position: absolute;
+    z-index: 1000; }
+  .menu-elements__support-center-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_support-center.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__support-center-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_support-center.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__support-paragraph1 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__support-paragraph2 {
+    text-align: right;
+    width: 436px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__profile-front {
+    display: none;
+    position: absolute;
+    z-index: 1000; }
+  .menu-elements__profile-front-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_profile-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__profile-front-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_profile-front.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__profile-back {
+    display: none;
+    position: absolute;
+    z-index: 500; }
+  .menu-elements__profile-back-iphone {
+    top: 110px;
+    left: 510px;
+    background-image: url("/Files/home_page/iphone/iphone_profile-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 303px;
+    height: 606px; }
+  .menu-elements__profile-back-android {
+    top: 100px;
+    left: 518px;
+    background-image: url("/Files/home_page/android/phone_profile-back.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 287px;
+    height: 618px; }
+  .menu-elements__profile-paragraph1 {
+    text-align: right;
+    width: 391px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__profile-paragraph2 {
+    text-align: right;
+    width: 436px;
+    top: 175px;
+    right: 725px; }
+  .menu-elements__right-back--moved {
+    display: block;
+    animation-name: menu-elements_right-back;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .menu-elements__right-front--moved {
+    display: block;
+    animation-name: menu-elements_right-front;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .menu-elements__left-back--moved {
+    display: block;
+    animation-name: menu-elements_left-back;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .menu-elements__left-front--moved {
+    display: block;
+    animation-name: menu-elements_left-front;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .menu-elements__center--moved {
+    display: block;
+    animation-name: menu-elements_center;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; }
+  .menu-elements__paragraph1--moved {
+    display: block;
+    animation-name: menu-elements_right-paragraph1;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards; }
+  .menu-elements__paragraph2--moved {
+    display: block;
+    animation-name: menu-elements_right-paragraph2;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards; }
+  .menu-elements__paragraph3--moved {
+    display: block;
+    animation-name: menu-elements_right-paragraph3;
+    animation-duration: 0.5s;
+    animation-delay: 0.8s;
+    animation-fill-mode: forwards; }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  z-index: 10000;
+  margin: auto; }
+  .modal__box {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1326px;
+    height: 765px;
+    margin: auto;
+    margin-top: 15vh;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+    z-index: 1000; }
+    .modal__box:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -500;
+      height: 100%;
+      width: 100%;
+      min-width: 1326px;
+      background-image: url("/Files/rectangle_3.png");
+      background-repeat: no-repeat;
+      opacity: 1;
+      background-size: cover;
+      background-size: 110vw auto;
+      background-position: calc(-50vw + 663px), calc(-50vh + 385px);
+      transition: all 0.2s ease; }
+    .modal__box:after {
+      display: block;
+      position: absolute;
+      content: " ";
+      width: 1324px;
+      height: 763px;
+      border-radius: 20px;
+      border: 1px solid white;
+      opacity: 0.1;
+      z-index: 0; }
+  .modal__closes {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 15vh;
+    left: calc(50% + 678px);
+    width: 31px;
+    height: 31px;
+    background-image: url("/Files/icons/button_element_menu.png");
+    background-repeat: no-repeat;
+    background-size: contain; }
+    .modal__closes:hover {
+      opacity: 0.6; }
+  .modal__box--showed {
+    display: block;
+    animation-name: menu-elements-border;
+    animation-duration: 0.7s; }
+  .modal__box-name {
+    display: block;
+    text-align: left;
+    width: 700px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 31px;
+    font-family: HNC-Roman, sans-serif;
+    letter-spacing: 1px; }
+  .modal__box-content {
+    display: block;
+    width: 831px;
+    font-size: 20px;
+    font-family: HNC-UltraLight, sans-serif;
+    margin-top: 30px;
+    letter-spacing: 0.6px;
+    line-height: 1.4; }
+  .modal__form {
+    z-index: 1000;
+    margin-top: 80px;
+    width: 469px;
+    height: auto; }
+  .modal__form-box {
+    width: 469px;
+    height: 45px;
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: transparent;
+    background-clip: padding-box;
+    color: white;
+    font-size: 18px;
+    font-family: HNC-UltraLight, sans-serif;
+    padding-left: 25px;
+    margin-bottom: 27px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    opacity: 0.6;
+    outline: none; }
+    .modal__form-box::-webkit-input-placeholder {
+      color: white; }
+    .modal__form-box::-moz-placeholder {
+      color: white; }
+    .modal__form-box:-moz-placeholder {
+      color: white; }
+    .modal__form-box:-ms-input-placeholder {
+      color: indianred; }
+    .modal__form-box:hover {
+      opacity: 1; }
+    .modal__form-box:focus {
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white; }
+  .modal__form-button {
+    display: block;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 19px;
+    font-family: HNC-Thin, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    border-radius: 7px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    width: 173px;
+    height: 47px;
+    padding: auto;
+    outline: none; }
+    .modal__form-button:hover {
+      opacity: 0.6; }
+    .modal__form-button:active {
+      background-color: white;
+      opacity: 1;
+      color: #3C250F; }
+
+.get-ap {
+  display: flex;
+  margin: auto;
+  max-width: 533px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 620px; }
+  .get-ap__name {
+    display: block;
+    font-size: 44px;
+    font-family: HNC-Roman, sans-serif; }
+  .get-ap__content {
+    display: block;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: HNC-UltraLight, sans-serif; }
+  .get-ap__logo {
+    display: block;
+    background-image: url("/Files/logo_anetwork.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 256px;
+    width: 256px;
+    margin-top: 118px; }
+  .get-ap__shops {
+    display: flex;
+    margin-top: 118px;
+    flex-direction: row; }
+  .get-ap__shop-appStore {
+    display: block;
+    text-decoration: none;
+    margin-right: 25px;
+    background-image: url("/Files/home_page/app_store.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.2s linear; }
+    .get-ap__shop-appStore:hover {
+      opacity: 0.6; }
+  .get-ap__shop-googlePay {
+    display: block;
+    text-decoration: none;
+    margin-right: 25px;
+    background-image: url("/Files/home_page/google_play.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 173px;
+    height: 47px;
+    transition: all 0.1s linear; }
+    .get-ap__shop-googlePay:hover {
+      opacity: 0.6; }
+
+@media (max-width: 1290px) {
+  .body {
+    width: 1280px;
+    height: 800px; }
+  .header {
+    height: 70px; }
+    .header__container {
+      max-width: 950px; }
+    .header__home {
+      font-size: 30px;
+      letter-spacing: 0.8px; }
+    .header__button {
+      width: 137px;
+      height: 38px;
+      font-size: 13px;
+      padding: 12px 10.5px 12px 10.5px;
+      line-height: 1;
+      letter-spacing: 1px; }
+  .footer {
+    height: 70px; }
+  .home-page {
+    width: 950px;
+    height: 530px; }
+    .home-page__left-phone {
+      width: 207px;
+      height: 445px;
+      top: 43px; }
+    .home-page__left-phone--shifted-center {
+      transform: none;
+      left: 371px;
+      top: 50px; }
+    .home-page__center-phone {
+      width: 218px;
+      height: 436px;
+      top: 37px;
+      left: 150px; }
+    .home-page__center-phone--shifted-center {
+      transform: none;
+      left: 366px;
+      top: 45px; }
+    .home-page__watch-right {
+      width: 128px;
+      height: 231px;
+      top: 255px;
+      left: 333px; }
+    .home-page__service-development {
+      width: 96px;
+      height: 32px;
+      top: 103px;
+      left: 13px; }
+      .home-page__service-development:before {
+        width: 128px;
+        height: 231px;
+        top: -103px;
+        left: -13px; }
+      .home-page__service-development:after {
+        width: 96px;
+        height: 32px; }
+    .home-page__phone-menu {
+      width: 218px;
+      height: 436px;
+      top: 45px; }
+    .home-page__left-text {
+      width: 325px; }
+    .home-page__left-text--shifted {
+      left: -500px; }
+    .home-page__left-text-elements {
+      margin-right: 70px; }
+    .home-page__right-text {
+      width: 325px; }
+    .home-page__right-text-elements {
+      margin-left: 60px; }
+    .home-page__right-text--shifted {
+      left: 100px;
+      z-index: 1000; }
+    .home-page__menu-elements {
+      height: 110px;
+      margin-bottom: 50px; }
+    .home-page__menu-name {
+      font-size: 30px;
+      margin-bottom: 18px; }
+    .home-page__menu-content {
+      padding-top: 55px;
+      font-size: 18px;
+      line-height: 1.4; }
+    .home-page__rub {
+      width: 29px;
+      height: 29px;
+      left: 295px; }
+    .home-page__sup {
+      width: 29px;
+      height: 29px;
+      left: 295px; }
+    .home-page__profile {
+      width: 30px;
+      height: 29px;
+      left: 295px; }
+    .home-page__info {
+      width: 26px;
+      height: 33px;
+      left: 2px;
+      top: 0; }
+    .home-page__bell {
+      width: 26px;
+      height: 29px;
+      left: 1px; }
+    .home-page__call {
+      width: 28.5px;
+      height: 28px;
+      left: 1px; }
+    .home-page__android-rub {
+      width: 30px;
+      height: 30px;
+      left: 295px; }
+    .home-page__android-sup {
+      width: 30px;
+      height: 30px;
+      left: 295px; }
+    .home-page__android-profile {
+      width: 25px;
+      height: 25px;
+      left: 298px;
+      top: 5px; }
+    .home-page__android-info {
+      width: 30px;
+      height: 37px;
+      left: 2px; }
+    .home-page__android-bell {
+      width: 23px;
+      height: 29px;
+      left: 4px;
+      top: 5px; }
+    .home-page__android-call {
+      width: 29px;
+      height: 31px;
+      left: 3px;
+      top: 4px; }
+    .home-page__text {
+      margin-top: -5px;
+      line-height: 1.3;
+      letter-spacing: 0.5px; }
+    .home-page__head {
+      font-size: 31px;
+      margin-bottom: 10px; }
+    .home-page__paragraph {
+      margin-top: 25px;
+      width: 457px;
+      font-size: 16px; }
+    .home-page__shops {
+      margin-top: 40px; }
+    .home-page__shop-appStore {
+      width: 137px;
+      height: 38px;
+      margin-right: 20px; }
+    .home-page__shop-googlePay {
+      width: 137px;
+      height: 38px;
+      margin-right: 20px; }
+    .home-page__close-menu-elements {
+      width: 25px;
+      height: 25px;
+      right: -35px; }
+    .home-page__name-info--shifted {
+      animation-name: name-info_shifted-1280; }
+    .home-page__name-bell--shifted {
+      animation-name: name-bell_shifted-1280; }
+    .home-page__name-call--shifted {
+      animation-name: name-call_shifted-1280; }
+    .home-page__name-balance--shifted {
+      animation-name: name-balance_shifted-1280; }
+    .home-page__name-support--shifted {
+      animation-name: name-support_shifted-1280; }
+    .home-page__name-profile--shifted {
+      animation-name: name-profile_shifted-1280; }
+  .menu-elements__box {
+    width: 950px;
+    height: 530px; }
+  .menu-elements__info-front-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__info-front-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__info-back-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__info-back-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__text {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 1.43; }
+  .menu-elements__info-paragraph1 {
+    width: 289px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__info-paragraph2 {
+    width: 323px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__bell-front-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__bell-front-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__bell-back-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__bell-back-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__bell-watch {
+    width: 128px;
+    height: 231px;
+    top: 280px;
+    left: 780px; }
+  .menu-elements__bell-paragraph1 {
+    width: 289px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__bell-paragraph2 {
+    width: 323px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__call-front-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__call-front-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__call-back-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__call-back-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__call-paragraph1 {
+    width: 289px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__call-paragraph2 {
+    width: 323px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__call-paragraph3 {
+    width: 289px;
+    top: 53px;
+    left: 522px; }
+  .menu-elements__balance-front-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__balance-front-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__balance-back-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__balance-back-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__balance-paragraph1 {
+    width: 289px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__balance-paragraph2 {
+    width: 323px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__balance-paragraph3 {
+    width: 289px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__support-center-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__support-center-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__support-paragraph1 {
+    width: 289px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__support-paragraph2 {
+    width: 323px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__profile-front-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__profile-front-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__profile-back-iphone {
+    top: 45px;
+    left: 366px;
+    width: 218px;
+    height: 436px; }
+  .menu-elements__profile-back-android {
+    top: 50px;
+    left: 371px;
+    width: 207px;
+    height: 445px; }
+  .menu-elements__profile-paragraph1 {
+    width: 289px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__profile-paragraph2 {
+    width: 323px;
+    top: 175px;
+    right: 533px; }
+  .menu-elements__right-back--moved {
+    animation-name: menu-elements_right-back-1280; }
+  .menu-elements__right-front--moved {
+    animation-name: menu-elements_right-front-1280; }
+  .menu-elements__left-back--moved {
+    animation-name: menu-elements_left-back-1280; }
+  .menu-elements__left-front--moved {
+    animation-name: menu-elements_left-front-1280; }
+  .menu-elements__center--moved {
+    animation-name: menu-elements_center-1280; }
+  .menu-elements__paragraph1--moved {
+    animation-name: menu-elements_right-paragraph1-1280; }
+  .menu-elements__paragraph2--moved {
+    animation-name: menu-elements_right-paragraph2-1280; }
+  .menu-elements__paragraph3--moved {
+    animation-name: menu-elements_right-paragraph3-1280; }
+  .modal__box {
+    width: 950px;
+    height: 560px;
+    border-radius: 15px; }
+    .modal__box:before {
+      background-position: calc(-50vw + 475px), calc(-50vh + 280px); }
+    .modal__box:after {
+      width: 948px;
+      height: 558px;
+      border-radius: 15px; }
+  .modal__closes {
+    top: 15vh;
+    left: calc(50% + 495px);
+    width: 23px;
+    height: 23px; }
+  .modal__box-name {
+    width: 500px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 23px; }
+  .modal__box-content {
+    width: 615px;
+    font-size: 15px;
+    margin-top: 23px; }
+  .modal__form {
+    margin-top: 60px;
+    width: 350px; }
+  .modal__form-box {
+    width: 350px;
+    height: 33px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 25px;
+    margin-bottom: 18px; }
+  .modal__form-button {
+    font-size: 14px;
+    border-radius: 5px;
+    width: 146px;
+    height: 34px; } }
+
+@keyframes motion-IPhone {
+  0% {
+    transform: translateY(-3px); }
+  25% {
+    transform: translateY(-6px); }
+  75% {
+    transform: translateY(0px); }
+  100% {
+    transform: translateY(-3px); } }
+
+@keyframes motion-Android {
+  0% {
+    transform: translateY(-4px); }
+  25% {
+    transform: translateY(0); }
+  75% {
+    transform: translateY(-8px); }
+  100% {
+    transform: translateY(-4px); } }
+
+@keyframes motion-watch {
+  0% {
+    transform: translateY(3px); }
+  20% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-3px); }
+  100% {
+    transform: translateY(3px); } }
+
+@keyframes service-watch {
+  0% { }
+  1% {
+    opacity: 0.5;
+    z-index: 1000; }
+  10% {
+    transform: scaleX(1.1);
+    opacity: 1; }
+  30% {
+    transform: scaleX(1);
+    opacity: 1; }
+  95% {
+    transform: scaleX(1);
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    z-index: -1000; } }
+
+@keyframes menu-elements-border {
+  0% {
+    transform: scale(0.7);
+    opacity: 0; }
+  70% {
+    transform: scale(1.01);
+    opacity: 1; }
+  100% {
+    transform: scale(1); } }
+
+@keyframes name-info_shifted {
+  0% { }
+  100% {
+    font-size: 44px;
+    top: 65px;
+    left: -220px; } }
+
+@keyframes name-info_shifted-1280 {
+  0% { }
+  100% {
+    font-size: 32px;
+    top: 53px;
+    left: -150px; } }
+
+@keyframes name-bell_shifted {
+  0% { }
+  100% {
+    font-size: 44px;
+    top: -155px;
+    left: -220px; } }
+
+@keyframes name-bell_shifted-1280 {
+  0% { }
+  100% {
+    font-size: 32px;
+    top: -105px;
+    left: -150px; } }
+
+@keyframes name-call_shifted {
+  0% { }
+  100% {
+    font-size: 44px;
+    top: -375px;
+    left: -220px; } }
+
+@keyframes name-call_shifted-1280 {
+  0% { }
+  100% {
+    font-size: 32px;
+    top: -265px;
+    left: -150px; } }
+
+@keyframes name-balance_shifted {
+  0% {
+    color: white; }
+  100% {
+    font-size: 44px;
+    top: 65px;
+    right: -220px; } }
+
+@keyframes name-balance_shifted-1280 {
+  0% {
+    color: white; }
+  100% {
+    font-size: 32px;
+    top: 53px;
+    right: -150px; } }
+
+@keyframes name-support_shifted {
+  0% { }
+  100% {
+    font-size: 44px;
+    top: -155px;
+    right: -220px; } }
+
+@keyframes name-support_shifted-1280 {
+  0% { }
+  100% {
+    font-size: 32px;
+    top: -105px;
+    right: -150px; } }
+
+@keyframes name-profile_shifted {
+  0% { }
+  100% {
+    font-size: 44px;
+    top: -375px;
+    right: -220px; } }
+
+@keyframes name-profile_shifted-1280 {
+  0% { }
+  100% {
+    font-size: 32px;
+    top: -265px;
+    right: -150px; } }
+
+@keyframes menu-elements_right-front {
+  0% { }
+  100% {
+    top: 55px;
+    left: 325px; } }
+
+@keyframes menu-elements_right-front-1280 {
+  0% { }
+  100% {
+    top: 14px;
+    left: 228px; } }
+
+@keyframes menu-elements_right-back {
+  0% { }
+  100% {
+    top: 120px;
+    left: 125px; } }
+
+@keyframes menu-elements_right-back-1280 {
+  0% { }
+  100% {
+    top: 65px;
+    left: 76px; } }
+
+@keyframes menu-elements_left-front {
+  0% { }
+  100% {
+    top: 55px;
+    left: 680px; } }
+
+@keyframes menu-elements_left-front-1280 {
+  0% { }
+  100% {
+    top: 14px;
+    left: 505px; } }
+
+@keyframes menu-elements_left-back {
+  0% { }
+  100% {
+    top: 120px;
+    left: 880px; } }
+
+@keyframes menu-elements_left-back-1280 {
+  0% { }
+  100% {
+    top: 65px;
+    left: 655px; } }
+
+@keyframes menu-elements_center {
+  0% { }
+  100% {
+    top: 14px;
+    left: 795px; } }
+
+@keyframes menu-elements_center-1280 {
+  0% { }
+  100% {
+    top: 55px;
+    left: 580px; } }
+
+@keyframes menu-elements_right-paragraph1 {
+  0% {
+    opacity: 0; }
+  70% {
+    top: 265px;
+    opacity: 1; }
+  100% {
+    top: 255px;
+    opacity: 1; } }
+
+@keyframes menu-elements_right-paragraph1-1280 {
+  0% {
+    opacity: 0; }
+  70% {
+    top: 170px;
+    opacity: 1; }
+  100% {
+    top: 160px;
+    opacity: 1; } }
+
+@keyframes menu-elements_right-paragraph2 {
+  0% {
+    opacity: 0; }
+  70% {
+    top: 395px;
+    opacity: 1; }
+  100% {
+    top: 385px;
+    opacity: 1; } }
+
+@keyframes menu-elements_right-paragraph2-1280 {
+  0% {
+    opacity: 0; }
+  70% {
+    top: 270px;
+    opacity: 1; }
+  100% {
+    top: 260px;
+    opacity: 1; } }
+
+@keyframes menu-elements_right-paragraph3 {
+  0% {
+    opacity: 0; }
+  70% {
+    top: 550px;
+    opacity: 1; }
+  100% {
+    top: 530px;
+    opacity: 1; } }
+
+@keyframes menu-elements_right-paragraph3-1280 {
+  0% {
+    opacity: 0; }
+  70% {
+    top: 380px;
+    opacity: 1; }
+  100% {
+    top: 370px;
+    opacity: 1; } }
