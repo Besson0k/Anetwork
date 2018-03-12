@@ -27,8 +27,7 @@ $(document).ready(function () {
 
   $('#fullpage').fullpage(
     {
-      anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage', 'tenthPage', 'elevenPage'],
-      menu: '#scrollMenu'
+      anchors: ['GeneralPage', 'FinelPage']
 
     }
   );
