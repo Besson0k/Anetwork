@@ -29,55 +29,7 @@ $(document).ready(function () {
     {
       anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eighthPage', 'ninthPage', 'tenthPage', 'elevenPage'],
       menu: '#scrollMenu'
-      // onLeave: function (index, nextIndex) {
-      //     var scrollMenuElement = $('.scroll-menu');
-      //     if (nextIndex !== 1) {
-      //         scrollMenuElement.addClass('vision')
-      //     } else {
-      //         scrollMenuElement.removeClass('vision')
-      //     }
-      //     if (nextIndex === 2) {
-      //         $('.ip-telephony__phone-front').addClass('ip-telephony__phone-front--shifted');
-      //     } else {
-      //         $('.ip-telephony__phone-front').removeClass('ip-telephony__phone-front--shifted');
-      //     }
-      //
-      //     if (nextIndex === 3) {
-      //         $('.balance__phone-front').addClass('balance__phone-front--shifted');
-      //     } else {
-      //         $('.balance__phone-front').removeClass('balance__phone-front--shifted');
-      //     }
-      //
-      //     if (nextIndex === 4) {
-      //         $('.notification__phone-front').addClass('notification__phone-front--shifted');
-      //     } else {
-      //         $('.notification__phone-front').removeClass('notification__phone-front--shifted');
-      //     }
-      //
-      //     if (nextIndex === 5) {
-      //         $('.profile__phone-front').addClass('profile__phone-front--shifted');
-      //     } else {
-      //         $('.profile__phone-front').removeClass('profile__phone-front--shifted');
-      //     }
-      //
-      //     if (nextIndex === 6) {
-      //         $('.personal-account__phone-front').addClass('personal-account__phone-front--shifted');
-      //     } else {
-      //         $('.personal-account__phone-front').removeClass('personal-account__phone-front--shifted');
-      //     }
-      //
-      //     if (nextIndex === 7) {
-      //         $('.information__phone-front').addClass('information__phone-front--shifted');
-      //     } else {
-      //         $('.information__phone-front').removeClass('information__phone-front--shifted');
-      //     }
-      //
-      //     if (index === 1 && !menuOpened) {
-      //         openAndroidMenu();
-      //         scrollMenuElement.removeClass('vision');
-      //         return false;
-      //     }
-      // }
+
     }
   );
 
@@ -350,6 +302,7 @@ $(document).ready(function () {
     $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
     $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
     $($watch).removeClass('menu-elements__bell-watch--showed');
+    $.fn.fullpage.moveTo(1);
 
     menuElementOpened = false;
     menuIphoneOpened = false;
