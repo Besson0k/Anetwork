@@ -286,7 +286,7 @@ section {
     z-index: 10000;
   }
   &__shop-appStore {
-    display: block;
+    display: none;
     margin-left: 25px;
     text-decoration: none;
     background-image: url("/Files/home_page/app_store.png");
@@ -308,6 +308,9 @@ section {
     height: 34px;
     transition: all 0.1s linear;
     z-index: 10000;
+  }
+  &__shop--showed {
+    display: block;
   }
 }
 

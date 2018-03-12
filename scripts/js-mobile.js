@@ -26,6 +26,7 @@ $(document).ready(function () {
             $('.note__iphone-watch').removeClass('note__iphone-watch');
             $('.ip-telephony__front').removeClass('ip-telephony__iphone-front');
             $('.ip-telephony__back').removeClass('ip-telephony__iphone-back');
+            $('.footer__shop-appStore').removeClass('footer__shop--showed');
 
             $('.balance__front').addClass('balance__android-front');
             $('.balance__back').addClass('balance__android-back');
@@ -38,6 +39,7 @@ $(document).ready(function () {
             $('.note__back').addClass('note__android-back');
             $('.ip-telephony__front').addClass('ip-telephony__android-front');
             $('.ip-telephony__back').addClass('ip-telephony__android-back');
+            $('.footer__shop-googlePay').addClass('footer__shop--showed');
         }
     }
 
