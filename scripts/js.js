@@ -264,6 +264,12 @@ $(document).ready(function () {
     $('.home-page__service-development').addClass('home-page__service-animated')
   });
 
+  // $('.home-page__watch-right').click(
+  //     setTimeout(function () {
+  //         $('.home-page__service-development').removeClass('home-page__service-animated')
+  //     }, 1000)
+  // );
+
   $('.header__button').click(function () {
      $('.modal').addClass('modal__box--showed')
   });

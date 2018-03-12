@@ -1335,12 +1335,12 @@ section {
       min-width: 1326px;
       background-image: url("/Files/rectangle_3.png");
       background-repeat: no-repeat;
-      //background-color: white;
-      //opacity: 0.1;
-      //background-size: cover;
+      //background-color: black;
+      opacity: 1;
+      background-size: cover;
       background-size: 110vw auto;
       //background-position: 50, 0;
-      filter: glow(5px);
+      //filter: glow(5px);
       background-position: calc(-50vw + 663px), calc(-50vh + 385px);
       transition: all 0.2s ease;
     }
@@ -2018,6 +2018,58 @@ section {
     }
     &__paragraph3--moved {
       animation-name: menu-elements_right-paragraph3-1280;
+    }
+  }
+
+  .modal {
+    &__box {
+      width: 950px;
+      height: 560px;
+      border-radius: 15px;
+      &:before {
+        background-position: calc(-50vw + 475px), calc(-50vh + 280px);
+      }
+      &:after {
+        width: 948px;
+        height: 558px;
+        border-radius: 15px;
+      }
+    }
+    &__closes {
+      top: 15vh;
+      left: calc(50% + 495px);
+      width: 23px;
+      height: 23px;
+    }
+
+    &__box-name {
+      width: 500px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 23px;
+    }
+    &__box-content {
+      width: 615px;
+      font-size: 15px;
+      margin-top: 23px;
+    }
+    &__form {
+      margin-top: 60px;
+      width: 350px;
+    }
+    &__form-box {
+      width: 350px;
+      height: 33px;
+      border-radius: 5px;
+      font-size: 14px;
+      padding-left: 25px;
+      margin-bottom: 18px;
+    }
+    &__form-button {
+      font-size: 14px;
+      border-radius: 5px;
+      width: 146px;
+      height: 34px;
     }
   }
 }
