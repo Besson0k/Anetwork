@@ -876,15 +876,9 @@ section {
     &__text {
       width: 250px;
       margin-bottom: 25px;
-
       text-align: left;
       left: 360px;
       top: 94px;
-      letter-spacing: 0.4px;
-      font-family: HNC-UltraLight, sans-serif;
-      line-height: 1.3;
-      font-size: 13px;
-
     }
     &__text-c2 {
       display: block;
@@ -909,12 +903,270 @@ section {
     }
   }
 
+  .balance {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 192px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 197px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 113px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 118px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
 
+  .support {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-center {
+      left: 180px;
+      top: 70px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-center {
+      left: 180px;
+      top: 70px;
+      width: 112px;
+      height: 242px;
+    }
+  }
 
+  .profile {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 192px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 197px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 113px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 118px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
 
+  .info {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 113px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 118px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 192px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 197px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .note {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 114px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 118px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 191px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 197px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-watch {
+      left: 236px;
+      top: 204px;
+      width: 70px;
+      height: 126px;
+    }
+  }
+
+  .ip-telephony {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 113px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 118px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 192px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 197px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .proposal {
+    width: 667px;
+    height: 375px;
+    &__button {
+      left: 246px;
+      top: 235px;
+      width: 176px;
+      height: 37.5px;
+    }
+    &__logo-anetwork {
+      display: block;
+      left: 293px;
+      top: 100px;
+      width: 84px;
+      height: 84px;
+    }
+  }
 
   .partner-data {
 
+    &__box {
+      width: 667px;
+      height: 337px;
+    }
+    &__box-name {
+      width: 500px;
+    }
+    &__box-content {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    &__form {
+      margin-top: 10px;
+
+      width: 340px;
+    }
+    &__form-box {
+      width: 500px;
+      height: 30px;
+      color: white;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    &__form-button {
+      width: 177px;
+      height: 41px;
+    }
+    &__close {
+      top: 15px;
+      right: 15px;
+      width: 23px;
+      height: 23px;
+    }
   }
 
 }
