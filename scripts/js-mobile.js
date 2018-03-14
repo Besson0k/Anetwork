@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var isIphone = false;
     var isAndroid = false;
-    var MOBILE_MAX_WIDTH = 770;
+    var MOBILE_MAX_WIDTH = 940;
 
     redirectToProperClient();
     $(window).on('resize', debounce(redirectToProperClient, 200));

@@ -775,10 +775,8 @@ section {
   &__shop-appStore {
     display: block;
     margin-right: 25px;
-    text-decoration: none;
-    background-image: url("/Files/home_page/app_store.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    cursor: pointer;
+    font-family: HNC-Thin, sans-serif;
     width: 173px;
     height: 47px;
     transition: all 0.2s linear;
@@ -789,12 +787,10 @@ section {
   &__shop-googlePay {
     display: block;
     margin-right: 25px;
-    text-decoration: none;
-    background-image: url("/Files/home_page/google_play.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    cursor: pointer;
     width: 173px;
     height: 47px;
+
     transition: all 0.1s linear;
     &:hover {
       opacity: 0.6;
@@ -1464,8 +1460,6 @@ section {
 
 
 
-
-
 //----------------------------------------------------------------------------------------------------------
 
 
@@ -1498,21 +1492,18 @@ section {
     background-size: contain;
     height: 256px;
     width: 256px;
-    margin-top: 118px;
+    margin-top: 98px;
   }
 
   &__shops {
     display: flex;
-    margin-top: 118px;
+    margin-top: 98px;
     flex-direction: row
   }
   &__shop-appStore {
     display: block;
-    text-decoration: none;
+    cursor: pointer;
     margin-right: 25px;
-    background-image: url("/Files/home_page/app_store.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 173px;
     height: 47px;
     transition: all 0.2s linear;
@@ -1522,11 +1513,8 @@ section {
   }
   &__shop-googlePay {
     display: block;
-    text-decoration: none;
     margin-right: 25px;
-    background-image: url("/Files/home_page/google_play.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    cursor: pointer;
     width: 173px;
     height: 47px;
     transition: all 0.1s linear;
