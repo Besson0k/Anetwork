@@ -1770,13 +1770,13 @@ section {
     &__box {
       width: 950px;
       height: 530px;
-      //&:before {
-      //  background-position: calc(-48vw + 475px) calc(-48vh + 265px);
-      //}
-      //&:after {
-      //  width: 948px;
-      //  height: 528px;
-      //}
+      &:before {
+        background-position: calc(-48vw + 475px) calc(-48vh + 265px);
+      }
+      &:after {
+        width: 948px;
+        height: 528px;
+      }
     }
     &__info-front-iphone {
       top: 45px;

@@ -282,12 +282,12 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     text-decoration: none;
-    margin-right: 31px;
+    margin-right: 20px;
     z-index: 10000;
   }
   &__shop-appStore {
     display: none;
-    margin-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
     background-image: url("/Files/home_page/app_store.png");
     background-repeat: no-repeat;
@@ -299,7 +299,7 @@ section {
   }
   &__shop-googlePay {
     display: none;
-    margin-left: 25px;
+    margin-left: 20px;
     text-decoration: none;
     background-image: url("/Files/home_page/google_play.png");
     background-repeat: no-repeat;
@@ -327,9 +327,9 @@ section {
     position: absolute;
     margin-bottom: 55px;
     text-align: center;
-    left: 12px;
+    left: 20px;
     top: 345px;
-    width: 297px;
+    width: 280px;
     letter-spacing: 0.4px;
     font-family: HNC-UltraLight, sans-serif;
     line-height: 1.3;
@@ -342,6 +342,9 @@ section {
   &__text-c2 {
     display: none;
     margin-top: 25px;
+  }
+  &__pictures {
+
   }
   &__left-phone {
     display: block;
@@ -389,7 +392,7 @@ section {
   &__text {
     display: block;
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 330px;
   }
   &__text-name {
@@ -464,7 +467,7 @@ section {
   &__text {
     display: block;
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 330px;
   }
   &__text-name {
@@ -519,7 +522,7 @@ section {
   &__text {
     display: block;
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 330px;
   }
   &__text-name {
@@ -595,7 +598,7 @@ section {
   &__text {
     display: block;
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 330px;
   }
   &__text-name {
@@ -670,7 +673,7 @@ section {
   &__text {
     display: block;
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 330px;
   }
   &__text-name {
@@ -756,7 +759,7 @@ section {
   &__text {
     display: block;
     position: absolute;
-    left: 15px;
+    left: 20px;
     top: 330px;
   }
   &__text-name {
@@ -859,7 +862,7 @@ section {
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 374px) {
   .header {
     &__container {
       max-width: 375px;
@@ -869,7 +872,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 13px;
+      left: 20px;
       top: 445px;
       width: 349px;
     }
@@ -897,7 +900,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 15px;
+      left: 20px;
       top: 415px;
     }
     &__text-content {
@@ -933,7 +936,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 15px;
+      left: 20px;
       top: 415px;
     }
     &__text-content {
@@ -957,7 +960,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 15px;
+      left: 20px;
       top: 415px;
     }
     &__text-content {
@@ -993,7 +996,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 15px;
+      left: 20px;
       top: 415px;
     }
     &__text-content {
@@ -1029,7 +1032,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 15px;
+      left: 20px;
       top: 415px;
     }
     &__text-content {
@@ -1071,7 +1074,7 @@ section {
     width: 375px;
     height: 554px;
     &__text {
-      left: 15px;
+      left: 20px;
       top: 415px;
     }
     &__text-content {
@@ -1122,8 +1125,46 @@ section {
   }
 }
 
+@media (min-width: 540px) {
+  .header {
+    &__container {
+      max-width: 540px;
+    }
+  }
+  .general-mobile {
+    width: 540px;
+    height: 605px;
+    &__text {
+      left: 20px;
+      top: 445px;
+      width: 500px;
+    }
+    &__text-c1 {
+      display: block;
+      margin-top: 5px;
+    }
+    &__left-phone {
+      left: 117px;
+      top: 95px;
+      width: 151px;
+      height: 324px;
+    }
+    &__center-phone {
+      left: 226px;
+      top: 90px;
+      width: 161px;
+      height: 318px;
+    }
+    &__right-watch {
+      left: 330px;
+      top: 252px;
+      width: 94px;
+      height: 169px;
+    }
+  }
+}
 
-@media (min-width: 667px) and (min-height: 375px) {
+@media (min-width: 667px) and (orientation: landscape) {
   .header {
    height: 50px;
     &__container {
@@ -1149,7 +1190,12 @@ section {
       left: 360px;
       top: 94px;
     }
+    &__text-c1 {
+      display: block;
+      margin-top: 10px;
+    }
     &__text-c2 {
+      margin-top: 10px;
       display: block;
     }
     &__left-phone {
@@ -1440,52 +1486,323 @@ section {
 
 }
 
-//@media (max-width: 541px) {
-//  .header {
-//    height: 55px;
-//    &__container {
-//      max-width: 500px;
-//    }
-//    &__home {
-//      font-size: 20px;
-//    }
-//  }
-//  .footer {
-//    height: 55px;
-//  }
-//
-//  .general-mobile {
-//    flex-direction: column;
-//    justify-content: center;
-//    width: 540px;
-//    height: 720px;
-//    &__text {
-//      width: 250px;
-//      margin-bottom: 25px;
-//      text-align: left;
-//      left: 360px;
-//      top: 94px;
-//    }
-//    &__text-c2 {
-//      display: none;
-//    }
-//    &__left-phone {
-//      left: 100px;
-//      top: 80px;
-//      width: 104px;
-//      height: 224px;
-//    }
-//    &__center-phone {
-//      left: 176px;
-//      top: 78px;
-//      width: 110px;
-//      height: 220px;
-//    }
-//    &__right-watch {
-//      left: 248px;
-//      top: 189px;
-//      width: 65px;
-//      height: 117px;
-//    }
-//  }
-//}
+@media (min-width: 720px) and (orientation: landscape){
+  .header {
+    height: 55px;
+    &__container {
+      max-width: 720px;
+    }
+    &__home {
+      font-size: 20px;
+    }
+  }
+  .footer {
+    height: 55px;
+  }
+
+  .general-mobile {
+    flex-direction: column;
+    justify-content: center;
+    width: 667px;
+    height: 375px;
+    &__text {
+      width: 250px;
+      margin-bottom: 25px;
+      text-align: left;
+      left: 360px;
+      top: 94px;
+    }
+    &__text-c1 {
+      display: block;
+      margin-top: 10px;
+    }
+    &__text-c2 {
+      margin-top: 10px;
+      display: block;
+    }
+    &__left-phone {
+      left: 100px;
+      top: 80px;
+      width: 104px;
+      height: 224px;
+    }
+    &__center-phone {
+      left: 176px;
+      top: 78px;
+      width: 110px;
+      height: 220px;
+    }
+    &__right-watch {
+      left: 248px;
+      top: 189px;
+      width: 65px;
+      height: 117px;
+    }
+  }
+
+  .balance {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 192px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 197px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 113px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 118px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .support {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-center {
+      left: 180px;
+      top: 70px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-center {
+      left: 180px;
+      top: 70px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .profile {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 192px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 197px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 113px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 118px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .info {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 113px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 118px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 192px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 197px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .note {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 114px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 118px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 191px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 197px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-watch {
+      left: 236px;
+      top: 204px;
+      width: 70px;
+      height: 126px;
+    }
+  }
+
+  .ip-telephony {
+    width: 667px;
+    height: 375px;
+    &__text {
+      left: 360px;
+      top: 100px;
+    }
+    &__text-content {
+      width: 200px;
+    }
+    &__iphone-back {
+      left: 113px;
+      top: 85px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-back {
+      left: 118px;
+      top: 81px;
+      width: 112px;
+      height: 242px;
+    }
+    &__iphone-front {
+      left: 192px;
+      top: 59px;
+      width: 118px;
+      height: 237px;
+    }
+    &__android-front {
+      left: 197px;
+      top: 59px;
+      width: 112px;
+      height: 242px;
+    }
+  }
+
+  .proposal {
+    width: 667px;
+    height: 375px;
+    &__button {
+      left: 246px;
+      top: 235px;
+      width: 176px;
+      height: 37.5px;
+    }
+    &__logo-anetwork {
+      display: block;
+      left: 293px;
+      top: 100px;
+      width: 84px;
+      height: 84px;
+    }
+  }
+
+  .partner-data {
+    &__box {
+      width: 667px;
+      height: 337px;
+    }
+    &__box-name {
+      width: 500px;
+    }
+    &__box-content {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+    &__form {
+      margin-top: 10px;
+
+      width: 340px;
+    }
+    &__form-box {
+      width: 500px;
+      height: 30px;
+      color: white;
+      padding-left: 25px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    &__form-button {
+      width: 177px;
+      height: 41px;
+    }
+    &__close {
+      top: 15px;
+      right: 15px;
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+}
