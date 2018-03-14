@@ -22,6 +22,7 @@ $(document).ready(function () {
 
   redirectToProperClient();
   $(window).on('resize', debounce(redirectToProperClient, 200));
+    $(window).bind('hashchange', closeMenu);
 
   
 
