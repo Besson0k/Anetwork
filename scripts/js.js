@@ -22,8 +22,10 @@ $(document).ready(function () {
 
   redirectToProperClient();
   $(window).on('resize', debounce(redirectToProperClient, 200));
-    $(window).bind('hashchange', closeMenu);
-
+    // $(window).bind('hashchange', closeMenu);
+    // $(window).on('hashchange', function(e) {
+    //     console.log('hashchange', e)
+    // });
   
 
   $('#fullpage').fullpage(
@@ -55,7 +57,6 @@ $(document).ready(function () {
   }, function () {
     $(this).removeClass('home-page__watch-right--hovered');
     $(this).addClass('home-page__watch-right-motion');
-    $('.home-page__service-development').removeClass('home-page__service-animated')
   });
 
   $('.footer').hover(function () {
@@ -216,11 +217,12 @@ $(document).ready(function () {
     $('.home-page__service-development').addClass('home-page__service-animated')
   });
 
-  // $('.home-page__watch-right').click(
-  //     setTimeout(function () {
-  //         $('.home-page__service-development').removeClass('home-page__service-animated')
-  //     }, 1000)
-  // );
+    $('.home-page__watch-right').click(function () {
+        setTimeout(function () {
+            $('.home-page__service-development').removeClass('home-page__service-animated')
+        }, 2000)
+        }
+    );
 
   $('.header__button').click(function () {
      $('.modal').addClass('modal__box--showed')
