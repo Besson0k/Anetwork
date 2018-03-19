@@ -1,11 +1,8 @@
 $(document).ready(function () {
-    var isIphone = false;
-    var isAndroid = false;
-    var MOBILE_MAX_WIDTH = 940;
+    var MOBILE_MAX_WIDTH = 770;
 
     redirectToProperClient();
     $(window).on('resize', debounce(redirectToProperClient, 200));
-
 
     $('#fullpage').fullpage(
         {
@@ -28,7 +25,7 @@ $(document).ready(function () {
 
 
     function choosePhone() {
-        if (isAndroid) {
+        if (isAndroid()) {
             $('.balance__front').removeClass('balance__iphone-front');
             $('.balance__back').removeClass('balance__iphone-back');
             $('.support__center').removeClass('support__iphone-center');
@@ -100,6 +97,12 @@ $(document).ready(function () {
             timeout = setTimeout(later, wait);
             if (callNow) func.apply(context, args);
         };
+    }
+
+    function isAndroid() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        return (/android/i.test(userAgent));
     }
 
 

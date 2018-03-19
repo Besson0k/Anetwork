@@ -18,7 +18,7 @@ $(document).ready(function () {
   var $left_font = undefined;
   var $left_back = undefined;
   var $center = undefined;
-  var MOBILE_MAX_WIDTH = 940;
+  var MOBILE_MAX_WIDTH = 770;
 
   redirectToProperClient();
   $(window).on('resize', debounce(redirectToProperClient, 200));
