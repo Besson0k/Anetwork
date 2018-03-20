@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var MOBILE_MAX_WIDTH = 770;
+    var modalOpen = false;
 
     redirectToProperClient();
     $(window).on('resize', debounce(redirectToProperClient, 200));
@@ -7,21 +8,27 @@ $(document).ready(function () {
     $('#fullpage').fullpage(
         {
             anchors: ['GeneralPage', 'BalancePage', 'SupportPage', 'ProfilePage', 'InfoPage', 'BellPage', 'CallPage', 'ProposalPage'],
-
+            // autoScrolling: false
+            responsiveHeight: 450  //correct??
         }
     );
 
+    choosePhone();
+    unblokingScroll();
+
     $('.proposal__button').click(function () {
         $('.partner-data').addClass('partner-data__block--showed');
+        modalOpen = true;
+        console.log("modalOpen: ", modalOpen);
     });
 
     $('.partner-data__close').click(function () {
         $('.partner-data').removeClass('partner-data__block--showed');
+        modalOpen = false;
+        console.log("modalOpen: ", modalOpen);
     });
 
     $('.header__home').click(closeMenu);
-
-    choosePhone();
 
 
     function choosePhone() {
@@ -57,6 +64,9 @@ $(document).ready(function () {
 
     function closeMenu() {
         $.fn.fullpage.moveTo(1);
+        modalOpen = false;
+        console.log("modalOpen: ", modalOpen);
+
     }
 
     function redirectToMobile() {
@@ -103,6 +113,13 @@ $(document).ready(function () {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
         return (/android/i.test(userAgent));
+    }
+
+    function unblokingScroll() {
+        if (modalOpen) {
+            $.fn.fullpage.setResponsive(true);
+            console.log("modalOpen: ", modalOpen);
+        }
     }
 
 
