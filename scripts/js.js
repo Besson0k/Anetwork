@@ -22,7 +22,9 @@ $(document).ready(function () {
 
   redirectToProperClient();
   $(window).on('resize', debounce(redirectToProperClient, 200));
+
     // $(window).bind('hashchange', closeMenu);
+
     // $(window).on('hashchange', function(e) {
     //     console.log('hashchange', e)
     // });
@@ -30,7 +32,7 @@ $(document).ready(function () {
 
   $('#fullpage').fullpage(
     {
-      anchors: ['GeneralPage', 'FinelPage']
+      anchors: ['About', 'getApp']
 
     }
   );

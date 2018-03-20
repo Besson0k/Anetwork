@@ -288,10 +288,7 @@ section {
   &__shop-appStore {
     display: none;
     margin-left: 20px;
-    text-decoration: none;
-    background-image: url("/Files/home_page/app_store.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    cursor: pointer;
     width: 124px;
     height: 34px;
     transition: all 0.2s linear;
@@ -300,10 +297,7 @@ section {
   &__shop-googlePay {
     display: none;
     margin-left: 20px;
-    text-decoration: none;
-    background-image: url("/Files/home_page/google_play.png");
-    background-repeat: no-repeat;
-    background-size: contain;
+    cursor: pointer;
     width: 124px;
     height: 34px;
     transition: all 0.1s linear;
