@@ -20,6 +20,7 @@ $(document).ready(function () {
   var $center = undefined;
   var MOBILE_MAX_WIDTH = 770;
   var rememberOpenMenu = false;
+  var rememberOpenElement = false;
   var last = undefined;
   var hash = undefined;
 
@@ -32,6 +33,9 @@ $(document).ready(function () {
       if (window.location.hash === '#openMenu') {
           rememberOpenMenu = true;
       }
+      if (window.location.hash === '#openElement') {
+          rememberOpenElement = true;
+      }
       last = hash;
       hash = window.location.hash;
 
@@ -41,6 +45,14 @@ $(document).ready(function () {
 
       if (last === '#openMenu' && rememberOpenMenu && !(hash === '#getApp')) {
           closeMenu()
+      }
+
+      if (hash === '#openElement' && rememberOpenElement && last === '#getApp') {
+          $.fn.fullpage.moveTo(1);
+      }
+
+      if (last === '#openElement' && rememberOpenElement && !(hash === '#getApp')) {
+          closeMenuElement()
       }
 
 
@@ -363,6 +375,9 @@ $(document).ready(function () {
     $($right_paragraph3).addClass('menu-elements__paragraph3--moved');
     $($watch).addClass('menu-elements__bell-watch--showed');
     menuElementOpened = true;
+    rememberOpenMenu = false;
+
+    window.location.hash = '#openElement';
   }
 
   function closeMenuElement() {
@@ -398,7 +413,9 @@ $(document).ready(function () {
     $($right_paragraph2).removeClass('menu-elements__paragraph2--moved');
     $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
     $($watch).removeClass('menu-elements__bell-watch--showed');
+    window.location.hash = '#openMenu';
 
+    rememberOpenElement = false;
     menuElementOpened = false;
     elementBalance = false;
     elementSupport = false;
