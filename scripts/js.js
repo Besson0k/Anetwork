@@ -19,18 +19,36 @@ $(document).ready(function () {
   var $left_back = undefined;
   var $center = undefined;
   var MOBILE_MAX_WIDTH = 770;
+  var rememberOpenMenu = false;
+  var last = undefined;
+  var hash = undefined;
 
   redirectToProperClient();
   $(window).on('resize', debounce(redirectToProperClient, 200));
 
-    // $(window).bind('hashchange', closeMenu);
 
-    // $(window).on('hashchange', function(e) {
-    //     console.log('hashchange', e)
-    // });
-  
+    $(window).bind('hashchange', function() {
 
-  $('#fullpage').fullpage(
+      if (window.location.hash === '#openMenu') {
+          rememberOpenMenu = true;
+      }
+      last = hash;
+      hash = window.location.hash;
+
+      if (hash === '#openMenu' && rememberOpenMenu && last === '#getApp') {
+          $.fn.fullpage.moveTo(1);
+      }
+
+      if (last === '#openMenu' && rememberOpenMenu && !(hash === '#getApp')) {
+          closeMenu()
+      }
+
+
+
+    });
+
+
+    $('#fullpage').fullpage(
     {
       anchors: ['About', 'getApp']
 
@@ -249,6 +267,7 @@ $(document).ready(function () {
     $('.home-page__center-phone').addClass('home-page__center-phone--shifted-center home-page__phone-motion--stopped');
     menuIphoneOpened = true;
     choiceTypePhone();
+    window.location.hash = '#openMenu';
   }
 
   function openAndroidMenu() {
@@ -271,6 +290,7 @@ $(document).ready(function () {
     $('.home-page__icons-android').addClass('home-page__icons-android--showed');
     menuAndroidOpened = true;
     choiceTypePhone();
+    window.location.hash = '#openMenu';
   }
 
   function closeMenu() {
@@ -307,7 +327,9 @@ $(document).ready(function () {
     $($right_paragraph3).removeClass('menu-elements__paragraph3--moved');
     $($watch).removeClass('menu-elements__bell-watch--showed');
     $.fn.fullpage.moveTo(1);
+    window.location.hash = '#About';
 
+    rememberOpenMenu = false;
     menuElementOpened = false;
     menuIphoneOpened = false;
     menuAndroidOpened = false;
