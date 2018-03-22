@@ -2130,6 +2130,32 @@ section {
       height: 34px;
     }
   }
+
+  .final {
+    &__box {
+      width: 500px;
+      height: 315px;
+      border-radius: 17px;
+      &:before {
+        width: 500px;
+        height: 315px;
+        border-radius: 17px;
+        background-position: 57% 40%;
+      }
+    }
+    &__box-text {
+      width: 340px;
+      margin: 100px auto 55px;
+      font-size: 17px;
+    }
+    &__box-button {
+      width: 163px;
+      height: 38px;
+      padding: 11px 70px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  }
 }
 
 
