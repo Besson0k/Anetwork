@@ -110,6 +110,11 @@ body {
     &:hover {
       opacity: 0.6;
     }
+    &:active {
+      background-color: white;
+      opacity: 1;
+      color: #3C250F;
+    }
   }
 }
 
@@ -1299,6 +1304,7 @@ section {
 .modal {
   display: none;
   position: fixed;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -1315,7 +1321,6 @@ section {
     width: 1326px;
     height: 765px;
     margin: auto;
-    margin-top: 15vh;
     overflow: hidden;
     transition: all 0.5s ease;
     border-radius: 20px;
@@ -1368,7 +1373,7 @@ section {
     }
   }
   &__box--showed {
-    display: block;
+    display: flex;
     animation-name: menu-elements-border;
     animation-duration: 0.7s;
   }
@@ -1399,7 +1404,6 @@ section {
     height: auto;
   }
   &__form-box {
-    //display: block;
     width: 469px;
     height: 45px;
     border-radius: 7px;
@@ -1417,7 +1421,6 @@ section {
     outline:none;
     &::-webkit-input-placeholder {
       color: white;
-      //font-family: HNC-UltraLight, sans-serif;
     }
     &::-moz-placeholder {color: white;}
     &:-moz-placeholder {color: white;}
@@ -1455,6 +1458,73 @@ section {
       opacity: 1;
       color: #3C250F;
     }
+  }
+}
+
+.final {
+  display: none;
+  position: fixed;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000;
+  color: white;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 602px;
+    height: 379px;
+    margin: auto;
+    border-radius: 20px;
+    &:before {
+      position: absolute;
+      content: " ";
+      width: 602px;
+      height: 379px;
+      margin: auto;
+      background-image: url("/Files/rectangle_3.png");
+      background-position: 60% 45%;
+      background-repeat: no-repeat;
+      opacity: .98;
+      border-radius: 20px;
+      z-index: -1000;
+    }
+  }
+  &__box-text {
+    display: block;
+    text-align: center;
+    width: 395px;
+    margin: 135px auto 70px;
+    font-size: 20px;
+    font-family: HNC-UltraLight, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+  &__box-button {
+    display: block;
+    cursor: pointer;
+    border: 1px white solid;
+    width: 196px;
+    height: 45px;
+    margin: 0 auto;
+    padding: 13px 85px;
+    border-radius: 5px;
+    font-size: 19px;
+    font-family: HNC-Thin, sans-serif;
+    letter-spacing: 1px;
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      background-color: white;
+      opacity: 1;
+      color: #3C250F;
+    }
+  }
+  &__box--showed {
+    display: flex;
+    animation-name: menu-elements-border;
+    animation-duration: 0.7s;
   }
 }
 

@@ -264,6 +264,15 @@ $(document).ready(function () {
       $('.modal').removeClass('modal__box--showed')
   });
 
+  $('.modal__form-button').click(function () {
+      $('.modal').removeClass('modal__box--showed');
+      $('.final').addClass('final__box--showed');
+  });
+
+  $('.final__box-button').click(function () {
+      $('.final').removeClass('final__box--showed');
+  });
+
   function openIPhoneMenu() {
     $('.home-page__text').addClass('home-page__text--hidden');
     $('.home-page__menu-elements-balance').addClass('home-page__menu-elements-balance--shifted');
