@@ -14,7 +14,6 @@ $(document).ready(function () {
     );
 
     choosePhone();
-    unblokingScroll();
 
     $('.proposal__button').click(function () {
         $('.partner-data').addClass('partner-data__block--showed');
@@ -113,13 +112,6 @@ $(document).ready(function () {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
         return (/android/i.test(userAgent));
-    }
-
-    function unblokingScroll() {
-        if (modalOpen) {
-            $.fn.fullpage.setResponsive(true);
-            console.log("modalOpen: ", modalOpen);
-        }
     }
 
 
