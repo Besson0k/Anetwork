@@ -9,7 +9,7 @@ $(document).ready(function () {
         {
             anchors: ['GeneralPage', 'BalancePage', 'SupportPage', 'ProfilePage', 'InfoPage', 'BellPage', 'CallPage', 'ProposalPage'],
             // autoScrolling: false
-            responsiveHeight: 450  //correct??
+            responsiveHeight: 350  //correct??
         }
     );
 
