@@ -1528,11 +1528,6 @@ section {
   }
 }
 
-
-
-//----------------------------------------------------------------------------------------------------------
-
-
 .get-ap {
   display: flex;
   margin: auto;
@@ -1551,7 +1546,7 @@ section {
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
-    margin-top: 20px;
+    margin-top: 1.vh; //
     text-align: center;
     font-family: HNC-UltraLight, sans-serif;
   }
@@ -1562,12 +1557,12 @@ section {
     background-size: contain;
     height: 256px;
     width: 256px;
-    margin-top: 98px;
+    margin-top: 5.2vh; //
   }
 
   &__shops {
     display: flex;
-    margin-top: 98px;
+    margin-top: 5.2vh; //
     flex-direction: row
   }
   &__shop-appStore {
