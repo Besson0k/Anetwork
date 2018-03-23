@@ -826,6 +826,9 @@ section {
     opacity: 0;
     z-index: -100;
   }
+  &__box--hiddened {
+    display: none;
+  }
 }
 
 .menu-elements {
@@ -1295,7 +1298,9 @@ section {
     animation-fill-mode: forwards;
   }
 
-
+  &__box--hiddened {
+    display: none;
+  }
 }
 
 
@@ -1475,7 +1480,7 @@ section {
     width: 602px;
     height: 379px;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 10px;
     &:before {
       position: absolute;
       content: " ";
@@ -1485,6 +1490,7 @@ section {
       background-image: url("/Files/rectangle_3.png");
       background-position: 60% 45%;
       background-repeat: no-repeat;
+      //filter: url('/Files/filter.svg#blur');
       opacity: .98;
       border-radius: 20px;
       z-index: -1000;
@@ -1546,7 +1552,7 @@ section {
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: 0.5px;
-    margin-top: 1.vh; //
+    margin-top: 1vh;
     text-align: center;
     font-family: HNC-UltraLight, sans-serif;
   }
@@ -1557,12 +1563,12 @@ section {
     background-size: contain;
     height: 256px;
     width: 256px;
-    margin-top: 5.2vh; //
+    margin-top: 5.2vh;
   }
 
   &__shops {
     display: flex;
-    margin-top: 5.2vh; //
+    margin-top: 5.2vh;
     flex-direction: row
   }
   &__shop-appStore {
@@ -1586,6 +1592,9 @@ section {
     &:hover {
       opacity: 0.6;
     }
+  }
+  &__box--hiddened {
+    display: none;
   }
 
 }

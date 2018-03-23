@@ -257,20 +257,32 @@ $(document).ready(function () {
     );
 
   $('.header__button').click(function () {
-     $('.modal').addClass('modal__box--showed')
+     $('.modal').addClass('modal__box--showed');
+      $('.home-page').addClass('home-page__box--hiddened');
+      $('.menu-elements').addClass('menu-elements__box--hiddened');
+      $('.get-ap').addClass('get-ap__box--hiddened');
   });
 
   $('.modal__closes').click(function () {
-      $('.modal').removeClass('modal__box--showed')
+      $('.modal').removeClass('modal__box--showed');
+      $('.home-page').removeClass('home-page__box--hiddened');
+      $('.menu-elements').removeClass('menu-elements__box--hiddened');
+      $('.get-ap').removeClass('get-ap__box--hiddened');
   });
 
   $('.modal__form-button').click(function () {
       $('.modal').removeClass('modal__box--showed');
       $('.final').addClass('final__box--showed');
+      $('.home-page').addClass('home-page__box--hiddened');
+      $('.menu-elements').addClass('menu-elements__box--hiddened');
+      $('.get-ap').addClass('get-ap__box--hiddened');
   });
 
   $('.final__box-button').click(function () {
       $('.final').removeClass('final__box--showed');
+      $('.home-page').removeClass('home-page__box--hiddened');
+      $('.menu-elements').removeClass('menu-elements__box--hiddened');
+      $('.get-ap').removeClass('get-ap__box--hiddened');
   });
 
   function openIPhoneMenu() {
