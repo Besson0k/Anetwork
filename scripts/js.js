@@ -291,9 +291,9 @@ $(document).ready(function () {
 
     $(document).on( 'click', function() {
         console.log("oooooooo");
-        var i =1;
+        var i = 1;
         console.log("modalOpened: ", modalOpened);
-        if (modalOpened &&  $(event.target).closest('.modal__box')) {
+        if (modalOpened &&  $(event.target).closest('modal__box')) {
             $(document).on( 'click', function() {
                 if (i===1) {
                     console.log("blalalal");
@@ -303,7 +303,7 @@ $(document).ready(function () {
                     $('.get-ap').removeClass('get-ap__box--hiddened');
                     modalOpened = false;
                     console.log("modalOpened: ", modalOpened);
-                    i += 1;
+                    i = 5;
                     console.log("i: ", i);
                 }
             })

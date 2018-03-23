@@ -865,6 +865,9 @@ section {
   }
 
   .partner-data{
+    &:before {
+      height: 760px;
+    }
     &__box {
       width: 375px;
       padding: 15px;
@@ -1177,7 +1180,7 @@ section {
   }
   .partner-data {
     &:before {
-      height: 100%;
+      height: 760px;
     }
   }
 }
@@ -1464,41 +1467,23 @@ section {
     }
   }
 
-  .partner-data {
-
-    &__box {
-      width: 667px;
-      height: 337px;
+  .partner-data{
+    &:before {
+      height: 760px;
     }
-    &__box-name {
-      width: 500px;
+    &__box {
+      width: 375px;
+      padding: 15px;
     }
     &__box-content {
-      margin-top: 5px;
-      font-size: 12px;
+      margin-top: 36px;
     }
     &__form {
-      margin-top: 10px;
-
+      margin-top: 50px;
       width: 340px;
     }
     &__form-box {
-      width: 500px;
-      height: 30px;
-      color: white;
-      padding-left: 25px;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-    }
-    &__form-button {
-      width: 177px;
-      height: 41px;
-    }
-    &__close {
-      top: 15px;
-      right: 15px;
-      width: 23px;
-      height: 23px;
+      width: 340px;
     }
   }
 
@@ -1786,40 +1771,23 @@ section {
     }
   }
 
-  .partner-data {
-    &__box {
-      width: 667px;
-      height: 337px;
+  .partner-data{
+    &:before {
+      height: 760px;
     }
-    &__box-name {
-      width: 500px;
+    &__box {
+      width: 375px;
+      padding: 15px;
     }
     &__box-content {
-      margin-top: 5px;
-      font-size: 12px;
+      margin-top: 36px;
     }
     &__form {
-      margin-top: 10px;
-
+      margin-top: 50px;
       width: 340px;
     }
     &__form-box {
-      width: 500px;
-      height: 30px;
-      color: white;
-      padding-left: 25px;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-    }
-    &__form-button {
-      width: 177px;
-      height: 41px;
-    }
-    &__close {
-      top: 15px;
-      right: 15px;
-      width: 23px;
-      height: 23px;
+      width: 340px;
     }
   }
 
