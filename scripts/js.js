@@ -23,6 +23,7 @@ $(document).ready(function () {
   var rememberOpenElement = false;
   var last = undefined;
   var hash = undefined;
+  var modalOpened = false;
 
   redirectToProperClient();
   $(window).on('resize', debounce(redirectToProperClient, 200));
@@ -276,6 +277,7 @@ $(document).ready(function () {
       $('.home-page').addClass('home-page__box--hiddened');
       $('.menu-elements').addClass('menu-elements__box--hiddened');
       $('.get-ap').addClass('get-ap__box--hiddened');
+      modalOpened = true;
   });
 
   $('.final__box-button').click(function () {
@@ -283,7 +285,34 @@ $(document).ready(function () {
       $('.home-page').removeClass('home-page__box--hiddened');
       $('.menu-elements').removeClass('menu-elements__box--hiddened');
       $('.get-ap').removeClass('get-ap__box--hiddened');
+      modalOpened = false;
   });
+
+
+    $(document).on( 'click', function() {
+        console.log("oooooooo");
+        var i =1;
+        console.log("modalOpened: ", modalOpened);
+        if (modalOpened &&  $(event.target).closest('.modal__box')) {
+            $(document).on( 'click', function() {
+                if (i===1) {
+                    console.log("blalalal");
+                    $('.final').removeClass('final__box--showed');
+                    $('.home-page').removeClass('home-page__box--hiddened');
+                    $('.menu-elements').removeClass('menu-elements__box--hiddened');
+                    $('.get-ap').removeClass('get-ap__box--hiddened');
+                    modalOpened = false;
+                    console.log("modalOpened: ", modalOpened);
+                    i += 1;
+                    console.log("i: ", i);
+                }
+            })
+        } else {
+            return;
+        }
+        console.log("yyyyyyyyy");
+        console.log("modalOpened: ", modalOpened);
+    });
 
   function openIPhoneMenu() {
     $('.home-page__text').addClass('home-page__text--hidden');

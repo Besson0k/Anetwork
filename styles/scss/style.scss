@@ -1309,6 +1309,7 @@ section {
 .modal {
   display: none;
   position: fixed;
+  flex-direction: column;
   align-items: center;
   top: 0;
   left: 0;
@@ -1326,6 +1327,7 @@ section {
     width: 1326px;
     height: 765px;
     margin: auto;
+    margin-top: 0;
     overflow: hidden;
     transition: all 0.5s ease;
     border-radius: 20px;
@@ -1341,12 +1343,9 @@ section {
       min-width: 1326px;
       background-image: url("/Files/rectangle_3.png");
       background-repeat: no-repeat;
-      //background-color: black;
       opacity: 1;
       background-size: cover;
       background-size: 110vw auto;
-      //background-position: 50, 0;
-      //filter: glow(5px);
       background-position: calc(-50vw + 663px), calc(-50vh + 385px);
       transition: all 0.2s ease;
     }
@@ -1362,11 +1361,19 @@ section {
       z-index: 0;
     }
   }
+  &__box-closes {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 1326px;
+    height: 1px;
+  }
   &__closes {
     display: block;
     position: absolute;
     cursor: pointer;
-    top: 15vh;
+    top: 0;
+    //top: 15vh;
     left: calc(50% + 678px);
     width: 31px;
     height: 31px;
@@ -1487,11 +1494,13 @@ section {
       width: 602px;
       height: 379px;
       margin: auto;
-      background-image: url("/Files/rectangle_3.png");
-      background-position: 60% 45%;
-      background-repeat: no-repeat;
+      background-color: black;
+      //background-image: url("/Files/rectangle_3.png");
+      //background-position: 60% 45%;
+      //background-repeat: no-repeat;
       //filter: url('/Files/filter.svg#blur');
-      opacity: .98;
+      //opacity: .98;
+      opacity: .2;
       border-radius: 20px;
       z-index: -1000;
     }
@@ -2084,6 +2093,9 @@ section {
   }
 
   .modal {
+    &__box-closes {
+      width: 950px;
+    }
     &__box {
       width: 950px;
       height: 560px;
@@ -2098,7 +2110,7 @@ section {
       }
     }
     &__closes {
-      top: 15vh;
+      top: 0;
       left: calc(50% + 495px);
       width: 23px;
       height: 23px;
