@@ -1409,7 +1409,6 @@ section {
     line-height: 1.4;
   }
   &__form {
-    //display: block;
     z-index: 1000;
     margin-top: 80px;
     width: 469px;
@@ -1495,11 +1494,6 @@ section {
       height: 379px;
       margin: auto;
       background-color: black;
-      //background-image: url("/Files/rectangle_3.png");
-      //background-position: 60% 45%;
-      //background-repeat: no-repeat;
-      //filter: url('/Files/filter.svg#blur');
-      //opacity: .98;
       opacity: .2;
       border-radius: 20px;
       z-index: -1000;

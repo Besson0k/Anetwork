@@ -18,13 +18,37 @@ $(document).ready(function () {
     $('.proposal__button').click(function () {
         $('.partner-data').addClass('partner-data__block--showed');
         modalOpen = true;
-        console.log("modalOpen: ", modalOpen);
     });
 
     $('.partner-data__close').click(function () {
         $('.partner-data').removeClass('partner-data__block--showed');
         modalOpen = false;
-        console.log("modalOpen: ", modalOpen);
+    });
+
+    $('.partner-data__form-button').click(function () {
+        $('.final').addClass('final__box--showed');
+        $('.general-mobile').addClass('general-mobile__box--hiddened');
+        $('.balance').addClass('balance__box--hiddened');
+        $('.support').addClass('support__box--hiddened');
+        $('.profile').addClass('profile__box--hiddened');
+        $('.info').addClass('info__box--hiddened');
+        $('.note').addClass('note__box--hiddened');
+        $('.ip-telephony').addClass('ip-telephony__box--hiddened');
+        $('.proposal').addClass('proposal__box--hiddened');
+        $('.partner-data').removeClass('partner-data__block--showed');
+        modalOpen = false;
+    });
+
+    $('.final__box-button').click(function () {
+        $('.final').removeClass('final__box--showed');
+        $('.general-mobile').removeClass('general-mobile__box--hiddened');
+        $('.balance').removeClass('balance__box--hiddened');
+        $('.support').removeClass('support__box--hiddened');
+        $('.profile').removeClass('profile__box--hiddened');
+        $('.info').removeClass('info__box--hiddened');
+        $('.note').removeClass('note__box--hiddened');
+        $('.ip-telephony').removeClass('ip-telephony__box--hiddened');
+        $('.proposal').removeClass('proposal__box--hiddened');
     });
 
     $('.header__home').click(closeMenu);

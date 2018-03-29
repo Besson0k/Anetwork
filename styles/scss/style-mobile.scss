@@ -233,6 +233,71 @@ section {
   }
 }
 
+.final {
+  display: none;
+  position: fixed;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1000000;
+  color: white;
+  &__box {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 200px;
+    margin: auto;
+    border-radius: 10px;
+    &:before {
+      position: absolute;
+      content: " ";
+      width: 250px;
+      height: 200px;
+      margin: auto;
+      background-color: black;
+      opacity: .2;
+      border-radius: 20px;
+      z-index: -1000;
+    }
+  }
+  &__box-text {
+    display: block;
+    text-align: center;
+    width: 200px;
+    margin: 50px auto 30px;
+    font-size: 14px;
+    font-family: HNC-Thin, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+  }
+  &__box-button {
+    display: block;
+    cursor: pointer;
+    border: 1px white solid;
+    width: 70px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: HNC-Thin, sans-serif;
+    letter-spacing: 1px;
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      background-color: white;
+      opacity: 1;
+      color: #3C250F;
+    }
+  }
+  &__box--showed {
+    display: flex;
+    animation-name: menu-elements-border;
+    animation-duration: 0.7s;
+  }
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -317,6 +382,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -384,6 +452,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -459,6 +530,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -514,6 +588,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -590,6 +667,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -665,6 +745,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -751,6 +834,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__text {
     display: block;
     position: absolute;
@@ -826,6 +912,9 @@ section {
   width: 320px;
   height: 453px;
   margin: auto;
+  &__box--hiddened {
+    display: none;
+  }
   &__button {
     display: block;
     position: absolute;
