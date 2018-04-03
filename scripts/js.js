@@ -55,11 +55,9 @@ $(document).ready(function () {
       if (last === '#openElement' && rememberOpenElement && !(hash === '#getApp')) {
           closeMenuElement()
       }
-
-
-
     });
 
+    reductedRatio();
 
     $('#fullpage').fullpage(
     {
@@ -654,6 +652,17 @@ $(document).ready(function () {
         }
       }
     }
+  }
+
+  function reductedRatio() {
+      var scale = window.devicePixelRatio;
+      if (scale <1) {
+        $('section').removeClass('section__reduced');
+      }
+      if (1 <= scale) {
+        $('section').addClass('section__reduced');
+      }
+
   }
 
   function redirectToMobile() {

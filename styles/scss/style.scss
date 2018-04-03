@@ -41,6 +41,13 @@ body {
   font-family: sans-serif;
 }
 
+.section {
+  &__reduced {
+    margin-top: 3%;
+    transform: scale(0.71);
+  }
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -230,8 +237,10 @@ section {
     background-image: url("/Files/home_page/android/phone_call.png");
   }
   &__left-phone--shifted {
+    pointer-events: none;
     left: -500px;
     opacity: 0;
+    z-index: -1500;
   }
   &__left-phone--shifted-center {
     transform: none;
@@ -287,8 +296,9 @@ section {
     z-index: 500;
   }
   &__center-phone--shifted {
+    pointer-events: none;
     left: -500px;
-    z-index: -500;
+    z-index: -1500;
     opacity: 0;
   }
   &__center-phone--shifted-center {
