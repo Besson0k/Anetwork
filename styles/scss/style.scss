@@ -1469,6 +1469,9 @@ section {
     margin-bottom: 5px;
     color: red;
   }
+  &__error--showed {
+    display: block;
+  }
   &__form-button {
     display: block;
     z-index: 1000;
@@ -1485,6 +1488,7 @@ section {
     height: 47px;
     padding: auto;
     outline:none;
+    margin-top: 10px;
     &:hover {
       opacity: 0.6;
     }
