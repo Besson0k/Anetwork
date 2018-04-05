@@ -1460,6 +1460,15 @@ section {
       color: white;
     }
   }
+  &__error {
+    display: none;
+    font-size: 14px;
+    font-family: HNC-Medium, sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    color: red;
+  }
   &__form-button {
     display: block;
     z-index: 1000;

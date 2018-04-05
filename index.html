@@ -23,17 +23,19 @@
     <div class="modal__box-closes">
         <div class="modal__closes"></div>
     </div>
-    <div class="modal__box">
+    <form class="modal__box" id="partner-data" method="GET">
         <div class="modal__box-name">Партнерская программа для провайдеров</div>
         <div class="modal__box-content">Основным принципом партнерской программы для провайдеров является работа и сотрудничество на взаимовыгодной основе. Мы разработаем уникальное предложение специально для Вас. Лучшие условия для провайдеров. Удобный сервис для потенциальных клиентов.</div>
         <div class="modal__box-content">Оставьте заявку и мы свяжемся с Вами в ближайшее время.</div>
-        <form class="modal__form" id="partner-data" method="get">
-            <input type="text" class="modal__form-name modal__form-box" name="Name" placeholder="Имя">
-            <input type="text" class="modal__form-phone modal__form-box" name="Phone_number" placeholder="Телефон">
-            <input type="text" class="modal__form-email modal__form-box" name="E-mail" placeholder="E-mail">
-        </form>
+        <div class="modal__form">
+            <input type="text" maxlength="200" class="modal__form-name modal__form-box" name="name" placeholder="Имя">
+            <input type="text" maxlength="200" class="modal__form-phone modal__form-box" name="phone" placeholder="Телефон">
+            <input type="text" maxlength="200" class="modal__form-email modal__form-box" name="email" placeholder="E-mail">
+        </div>
+        <div class="modal__error modal__no-data">Необходимо ввести "Телефон" или "E-mail".</div>
+        <div class="modal__error modal__more-text">Слишком большое значение.</div>
         <input type="submit" class="modal__form-button" value="Оставить заявку">
-    </div>
+    </form>
 </div>
 
 <div class="final">

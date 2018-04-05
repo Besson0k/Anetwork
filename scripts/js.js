@@ -278,9 +278,50 @@ $(document).ready(function () {
       $('.menu-elements').addClass('menu-elements__box--hiddened');
       $('.get-ap').addClass('get-ap__box--hiddened');
       modalOpened = true;
+
   });
 
-  $('.final__box-button').click(function () {
+  $('#partner-data').on('submit', handlePartnerForm);
+
+  function handlePartnerForm(event) {
+      event.preventDefault();
+
+      var formValid = true;
+      var partnerForm = $('#partner-data')[0];
+      // console.log('isArray?: ', Array.isArray(allInputs));
+      var name = $(partnerForm).find("input[name^='name']")[0].value;
+      var phone = $(partnerForm).find("input[name^='phone']")[0].value;
+      var email = $(partnerForm).find("input[name^='email']")[0].value;
+
+
+      // if (!validateName(name)) {
+      //   formValid = false;
+      // }
+      // перед перепроверкой - убираешь все ошибки отображаемые (у юзера, он должен поверить что он не вагон, пока ты не проверила форму)
+      // проверяешь значения
+      // если они не валидны, показываешь юзеру что он вагон
+
+      // если всё ок:
+      // собираешь эти данные в объект data = {name, email, phone}
+      // отправить на куда-нибудь xmlHTTPRequest\\ или $.post() или $.ajax
+      // на колбеке смотришь - ошибка или нет
+      // если ошибка - показываешь юзеру что он не прав, просишь поправить
+      // если нет - закрываешь форму и показываешь окошко что всё ок
+
+
+      console.log('name: ', name, ' phone: ', phone, ' email: ', email);
+
+  }
+
+  function validateName(name) {
+
+    return //boolean;
+  }
+
+
+
+
+    $('.final__box-button').click(function () {
       $('.final').removeClass($final_showed);
       $('.home-page').removeClass('home-page__box--hiddened');
       $('.menu-elements').removeClass('menu-elements__box--hiddened');
@@ -290,28 +331,21 @@ $(document).ready(function () {
 
 
     $(document).on( 'click', function() {
-        console.log("oooooooo");
         var i = 1;
-        console.log("modalOpened: ", modalOpened);
         if (modalOpened &&  $(event.target).closest('modal__box')) {
             $(document).on( 'click', function() {
                 if (i===1) {
-                    console.log("blalalal");
                     $('.final').removeClass($final_showed);
                     $('.home-page').removeClass('home-page__box--hiddened');
                     $('.menu-elements').removeClass('menu-elements__box--hiddened');
                     $('.get-ap').removeClass('get-ap__box--hiddened');
                     modalOpened = false;
-                    console.log("modalOpened: ", modalOpened);
                     i = 5;
-                    console.log("i: ", i);
                 }
             })
         } else {
             return;
         }
-        console.log("yyyyyyyyy");
-        console.log("modalOpened: ", modalOpened);
     });
 
   function openIPhoneMenu() {
