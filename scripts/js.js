@@ -274,27 +274,15 @@ $(document).ready(function () {
       $('.modal__no-email').removeClass('modal__error--showed');
   });
 
-  // $('.modal__form-button').click(function () {
-  //     $('.modal').removeClass($modal_showed);
-  //     $('.final').addClass($final_showed);
-  //     $('.home-page').addClass('home-page__box--hiddened');
-  //     $('.menu-elements').addClass('menu-elements__box--hiddened');
-  //     $('.get-ap').addClass('get-ap__box--hiddened');
-  //     modalOpened = true;
-  //
-  // });
-
   $('#partner-data').on('submit', handlePartnerForm);
 
   function handlePartnerForm(event) {
-      // event.preventDefault();
 
-      var formValid = true;
       var partnerForm = $('#partner-data')[0];
-      // console.log('isArray?: ', Array.isArray(allInputs));
       var name = $(partnerForm).find("input[name^='name']")[0].value;
       var phone = $(partnerForm).find("input[name^='phone']")[0].value;
       var email = $(partnerForm).find("input[name^='email']")[0].value;
+      var data = {};
 
       if (name === "") {
           event.preventDefault();
@@ -303,6 +291,8 @@ $(document).ready(function () {
           $('.home-page').addClass('home-page__box--hiddened');
           $('.menu-elements').addClass('menu-elements__box--hiddened');
           $('.get-ap').addClass('get-ap__box--hiddened');
+      } else {
+          $('.modal__no-name').removeClass('modal__error--showed');
       }
       if (phone === "" && email === "") {
           event.preventDefault();
@@ -311,8 +301,11 @@ $(document).ready(function () {
           $('.home-page').addClass('home-page__box--hiddened');
           $('.menu-elements').addClass('menu-elements__box--hiddened');
           $('.get-ap').addClass('get-ap__box--hiddened');
+      } else {
+          $('.modal__no-data').removeClass('modal__error--showed');
       }
-      else {
+      // надо проверять данные data на колбеке?
+      if ( !(name === "") && !(phone === "" && email === "")) {
           $('.modal').removeClass($modal_showed);
           $('.final').addClass($final_showed);
           $('.home-page').addClass('home-page__box--hiddened');
@@ -320,36 +313,12 @@ $(document).ready(function () {
           $('.get-ap').addClass('get-ap__box--hiddened');
           modalOpened = true;
           event.preventDefault();
-          console.log('blalala');
+          data.name = name;
+          data.phone = phone;
+          data.email = email;
+          // отправить data куда?
       }
-
-
-      // if (!validateName(name)) {
-      //   formValid = false;
-      // }
-      // перед перепроверкой - убираешь все ошибки отображаемые (у юзера, он должен поверить что он не вагон, пока ты не проверила форму)
-      // проверяешь значения
-      // если они не валидны, показываешь юзеру что он вагон
-
-      // если всё ок:
-      // собираешь эти данные в объект data = {name, email, phone}
-      // отправить на куда-нибудь xmlHTTPRequest\\ или $.post() или $.ajax
-      // на колбеке смотришь - ошибка или нет
-      // если ошибка - показываешь юзеру что он не прав, просишь поправить
-      // если нет - закрываешь форму и показываешь окошко что всё ок
-
-
-      console.log('name: ', name, ' phone: ', phone, ' email: ', email);
-
   }
-
-  // function validateName(name) {
-  //
-  //   return //boolean;
-  // }
-
-
-
 
     $('.final__box-button').click(function () {
       $('.final').removeClass($final_showed);
@@ -361,25 +330,6 @@ $(document).ready(function () {
       $('.modal__no-email').removeClass('modal__error--showed');
       modalOpened = false;
   });
-
-
-    $(document).on( 'click', function() {
-        var i = 1;
-        if (modalOpened &&  $(event.target).closest('modal__box')) {
-            $(document).on( 'click', function() {
-                if (i===1) {
-                    $('.final').removeClass($final_showed);
-                    $('.home-page').removeClass('home-page__box--hiddened');
-                    $('.menu-elements').removeClass('menu-elements__box--hiddened');
-                    $('.get-ap').removeClass('get-ap__box--hiddened');
-                    modalOpened = false;
-                    i = 5;
-                }
-            })
-        } else {
-            return;
-        }
-    });
 
   function openIPhoneMenu() {
     $('.home-page__text').addClass('home-page__text--hidden');

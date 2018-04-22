@@ -22,20 +22,17 @@ $(document).ready(function () {
 
     $('.partner-data__close').click(function () {
         $('.partner-data').removeClass('partner-data__block--showed');
-        modalOpen = false;
-    });
-
-    $('.partner-data__form-button').click(function () {
-        $('.final').addClass('final__box--showed');
-        $('.general-mobile').addClass('general-mobile__box--hiddened');
-        $('.balance').addClass('balance__box--hiddened');
-        $('.support').addClass('support__box--hiddened');
-        $('.profile').addClass('profile__box--hiddened');
-        $('.info').addClass('info__box--hiddened');
-        $('.note').addClass('note__box--hiddened');
-        $('.ip-telephony').addClass('ip-telephony__box--hiddened');
-        $('.proposal').addClass('proposal__box--hiddened');
-        $('.partner-data').removeClass('partner-data__block--showed');
+        $('.general-mobile').removeClass('general-mobile__box--hiddened');
+        $('.balance').removeClass('balance__box--hiddened');
+        $('.support').removeClass('support__box--hiddened');
+        $('.profile').removeClass('profile__box--hiddened');
+        $('.info').removeClass('info__box--hiddened');
+        $('.note').removeClass('note__box--hiddened');
+        $('.ip-telephony').removeClass('ip-telephony__box--hiddened');
+        $('.proposal').removeClass('proposal__box--hiddened');
+        $('.partner-data__no-name').removeClass('partner-data__error--showed');
+        $('.partner-data__no-data').removeClass('partner-data__error--showed');
+        $('.partner-data__no-phone').removeClass('partner-data__error--showed');
         modalOpen = false;
     });
 
@@ -49,10 +46,73 @@ $(document).ready(function () {
         $('.note').removeClass('note__box--hiddened');
         $('.ip-telephony').removeClass('ip-telephony__box--hiddened');
         $('.proposal').removeClass('proposal__box--hiddened');
+        $('.partner-data__no-name').removeClass('partner-data__error--showed');
+        $('.partner-data__no-data').removeClass('partner-data__error--showed');
+        $('.partner-data__no-phone').removeClass('partner-data__error--showed');
     });
 
     $('.header__home').click(closeMenu);
 
+    $('#partner-data').on('submit', handlePartnerForm);
+
+    function handlePartnerForm(event) {
+        var partnerForm = $('#partner-data')[0];
+        var name = $(partnerForm).find("input[name^='name']")[0].value;
+        var phone = $(partnerForm).find("input[name^='phone']")[0].value;
+        var email = $(partnerForm).find("input[name^='email']")[0].value;
+        var data = {};
+
+        if (name === "") {
+            event.preventDefault();
+            $('.partner-data__no-name').addClass('partner-data__error--showed');
+            $('.partner-data').addClass('partner-data__block--showed');
+            $('.general-mobile').addClass('general-mobile__box--hiddened');
+            $('.balance').addClass('balance__box--hiddened');
+            $('.support').addClass('support__box--hiddened');
+            $('.profile').addClass('profile__box--hiddened');
+            $('.info').addClass('info__box--hiddened');
+            $('.note').addClass('note__box--hiddened');
+            $('.ip-telephony').addClass('ip-telephony__box--hiddened');
+            $('.proposal').addClass('proposal__box--hiddened');
+            modalOpen = true;
+        } else {
+            $('.partner-data__no-name').removeClass('partner-data__error--showed');
+        }
+        if (phone === "" && email === "") {
+            event.preventDefault();
+            $('.partner-data__no-data').addClass('partner-data__error--showed');
+            $('.partner-data').addClass('partner-data__block--showed');
+            $('.general-mobile').addClass('general-mobile__box--hiddened');
+            $('.balance').addClass('balance__box--hiddened');
+            $('.support').addClass('support__box--hiddened');
+            $('.profile').addClass('profile__box--hiddened');
+            $('.info').addClass('info__box--hiddened');
+            $('.note').addClass('note__box--hiddened');
+            $('.ip-telephony').addClass('ip-telephony__box--hiddened');
+            $('.proposal').addClass('proposal__box--hiddened');
+            modalOpen = true;
+        } else {
+            $('.partner-data__no-data').removeClass('partner-data__error--showed');
+        }
+        // надо проверять данные data на колбеке?
+        if ( !(name === "") && !(phone === "" && email === "")) {
+            $('.partner-data').removeClass('partner-data__block--showed');
+            $('.final').addClass('final__box--showed');
+            $('.general-mobile').addClass('general-mobile__box--hiddened');
+            $('.balance').addClass('balance__box--hiddened');
+            $('.support').addClass('support__box--hiddened');
+            $('.profile').addClass('profile__box--hiddened');
+            $('.info').addClass('info__box--hiddened');
+            $('.note').addClass('note__box--hiddened');
+            $('.ip-telephony').addClass('ip-telephony__box--hiddened');
+            $('.proposal').addClass('proposal__box--hiddened');
+            event.preventDefault();
+            data.name = name;
+            data.phone = phone;
+            data.email = email;
+            // отправить data куда?
+        }
+    }
 
     function choosePhone() {
         if (isAndroid()) {
@@ -88,8 +148,6 @@ $(document).ready(function () {
     function closeMenu() {
         $.fn.fullpage.moveTo(1);
         modalOpen = false;
-        console.log("modalOpen: ", modalOpen);
-
     }
 
     function redirectToMobile() {
@@ -137,6 +195,5 @@ $(document).ready(function () {
 
         return (/android/i.test(userAgent));
     }
-
 
 });
